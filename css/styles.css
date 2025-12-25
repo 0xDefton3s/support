@@ -121,8 +121,25 @@ body::before {
 .game-card-content {
     position: relative;
     z-index: 2;
-    padding: 1rem;
-    background: linear-gradient(to top, rgba(13, 5, 13, 0.95) 0%, rgba(13, 5, 13, 0.8) 50%, transparent 100%);
+    padding: 0.5rem 0.6rem;
+    background: rgba(0, 0, 0, 0.75);
+}
+
+/* Game Card Text Info Box */
+.game-card-content h3,
+.game-card-content p {
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.game-card-content h3 {
+    margin-bottom: 0.15rem;
+    font-size: 0.85rem;
+    line-height: 1.2;
+}
+
+.game-card-content p {
+    margin-bottom: 0;
+    font-size: 0.7rem;
 }
 
 /* Compact Card Content */
@@ -138,6 +155,21 @@ body::before {
 }
 
 /* Platform badges - compact */
+.platform-badges {
+    position: absolute;
+    top: 0.5rem;
+    left: 0.5rem;
+    z-index: 10;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.25rem;
+}
+
+.platform-badges span {
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+}
+
 .platform-pc {
     background: linear-gradient(135deg, #ec4899, #db2777);
 }
