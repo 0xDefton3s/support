@@ -69,29 +69,242 @@
             <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
 
                 <!-- Antivirüs -->
-                <div id="antivirus" class="solution-card p-4 scroll-mt-20">
+                <div id="antivirus" class="solution-card p-4 scroll-mt-20 md:col-span-2">
                     <h3 class="font-semibold flex items-center gap-2 mb-3 text-pink-400">
                         <span>🛡️</span> Antivirüs Devre Dışı Bırakma
                     </h3>
-                    <p class="text-[#b8a3b8] text-sm mb-3">Antivirüs yazılımları yama dosyalarını yanlışlıkla tehdit olarak algılayabilir.</p>
+                    <p class="text-[#b8a3b8] text-sm mb-4">Antivirüs yazılımları yama dosyalarını yanlışlıkla tehdit olarak algılayabilir. Yamayı kurmadan önce antivirüsünüzü geçici olarak devre dışı bırakmanız önerilir.</p>
                     
-                    <div class="space-y-2 text-sm">
-                        <div class="problem-card p-2">
-                            <h4 class="font-medium text-pink-300 mb-1">Windows Defender</h4>
-                            <ul class="text-gray-300 space-y-0.5 list-disc list-inside">
-                                <li>Ayarlar → Gizlilik ve Güvenlik → Windows Güvenliği</li>
-                                <li>Virüs koruması → Gerçek zamanlı korumayı kapatın</li>
-                                <li>Cihaz güvenliği → Çekirdek yalıtımı → Kapatın</li>
-                                <li>Uygulama denetimi → Akıllı Uygulama Denetimi → Kapalı</li>
-                            </ul>
+                    <!-- Tab Navigation -->
+                    <div class="flex flex-wrap gap-2 mb-4 border-b border-gray-700 pb-3">
+                        <button onclick="showAntivirusTab('defender')" id="tab-defender" class="av-tab av-tab-active px-3 py-1.5 rounded-lg text-sm font-medium transition-all">
+                            🪟 Windows Defender
+                        </button>
+                        <button onclick="showAntivirusTab('avast')" id="tab-avast" class="av-tab px-3 py-1.5 rounded-lg text-sm font-medium transition-all">
+                            🔶 Avast / AVG
+                        </button>
+                        <button onclick="showAntivirusTab('kaspersky')" id="tab-kaspersky" class="av-tab px-3 py-1.5 rounded-lg text-sm font-medium transition-all">
+                            🔴 Kaspersky
+                        </button>
+                        <button onclick="showAntivirusTab('eset')" id="tab-eset" class="av-tab px-3 py-1.5 rounded-lg text-sm font-medium transition-all">
+                            🟢 ESET
+                        </button>
+                        <button onclick="showAntivirusTab('bitdefender')" id="tab-bitdefender" class="av-tab px-3 py-1.5 rounded-lg text-sm font-medium transition-all">
+                            🔵 Bitdefender
+                        </button>
+                        <button onclick="showAntivirusTab('malwarebytes')" id="tab-malwarebytes" class="av-tab px-3 py-1.5 rounded-lg text-sm font-medium transition-all">
+                            🟣 Malwarebytes
+                        </button>
+                    </div>
+                    
+                    <!-- Tab Contents -->
+                    <div class="av-tab-contents">
+                        <!-- Windows Defender -->
+                        <div id="content-defender" class="av-content">
+                            <div class="problem-card p-4">
+                                <h4 class="font-medium text-pink-300 mb-3 flex items-center gap-2">
+                                    <span>🪟</span> Windows Defender (Windows 10/11)
+                                </h4>
+                                
+                                <div class="space-y-4 text-sm">
+                                    <div>
+                                        <p class="text-amber-300 font-medium mb-1">1. Gerçek Zamanlı Koruma</p>
+                                        <ul class="text-gray-300 space-y-0.5 list-disc list-inside ml-2">
+                                            <li>Ayarlar → Gizlilik ve Güvenlik → Windows Güvenliği</li>
+                                            <li>Virüs ve tehdit koruması → Ayarları yönet</li>
+                                            <li>"Gerçek zamanlı koruma" → Kapalı</li>
+                                        </ul>
+                                        <div class="mt-2 bg-gray-800/50 border border-dashed border-gray-600 rounded-lg p-4 text-center">
+                                            <img src="images/guide/defender-realtime.webp" alt="Windows Defender Gerçek Zamanlı Koruma" class="hidden w-full rounded">
+                                            <p class="text-gray-500 text-xs">📷 defender-realtime.webp</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div>
+                                        <p class="text-amber-300 font-medium mb-1">2. Çekirdek Yalıtımı (Bellek Bütünlüğü)</p>
+                                        <ul class="text-gray-300 space-y-0.5 list-disc list-inside ml-2">
+                                            <li>Windows Güvenliği → Cihaz güvenliği</li>
+                                            <li>Çekirdek yalıtımı ayrıntıları</li>
+                                            <li>"Bellek bütünlüğü" → Kapalı</li>
+                                            <li><span class="text-yellow-400">Bilgisayarı yeniden başlatın</span></li>
+                                        </ul>
+                                        <div class="mt-2 bg-gray-800/50 border border-dashed border-gray-600 rounded-lg p-4 text-center">
+                                            <img src="images/guide/defender-core-isolation.webp" alt="Windows Defender Çekirdek Yalıtımı" class="hidden w-full rounded">
+                                            <p class="text-gray-500 text-xs">📷 defender-core-isolation.webp</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div>
+                                        <p class="text-amber-300 font-medium mb-1">3. Akıllı Uygulama Denetimi (Windows 11)</p>
+                                        <ul class="text-gray-300 space-y-0.5 list-disc list-inside ml-2">
+                                            <li>Windows Güvenliği → Uygulama ve tarayıcı denetimi</li>
+                                            <li>Akıllı Uygulama Denetimi ayarları</li>
+                                            <li>"Kapalı" seçeneğini seçin</li>
+                                            <li><span class="text-red-400">⚠️ Kapatıldıktan sonra tekrar açılamaz!</span></li>
+                                        </ul>
+                                        <div class="mt-2 bg-gray-800/50 border border-dashed border-gray-600 rounded-lg p-4 text-center">
+                                            <img src="images/guide/defender-smart-app.webp" alt="Windows Defender Akıllı Uygulama Denetimi" class="hidden w-full rounded">
+                                            <p class="text-gray-500 text-xs">📷 defender-smart-app.webp</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div>
+                                        <p class="text-amber-300 font-medium mb-1">4. Dışlama Ekleme (Önerilen)</p>
+                                        <ul class="text-gray-300 space-y-0.5 list-disc list-inside ml-2">
+                                            <li>Virüs ve tehdit koruması → Ayarları yönet</li>
+                                            <li>Dışlamalar → Dışlama ekle veya kaldır</li>
+                                            <li>Klasör ekle → Oyun klasörünü seçin</li>
+                                            <li><span class="text-green-400">✅ Böylece antivirüsü kapatmanıza gerek kalmaz</span></li>
+                                        </ul>
+                                        <div class="mt-2 bg-gray-800/50 border border-dashed border-gray-600 rounded-lg p-4 text-center">
+                                            <img src="images/guide/defender-exclusions.webp" alt="Windows Defender Dışlama Ekleme" class="hidden w-full rounded">
+                                            <p class="text-gray-500 text-xs">📷 defender-exclusions.webp</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <div class="problem-card p-2">
-                            <h4 class="font-medium text-pink-300 mb-1">Avast / AVG / Diğer</h4>
-                            <ul class="text-gray-300 space-y-0.5 list-disc list-inside">
-                                <li>Sistem tepsisinde sağ tık → Kalıcı devre dışı bırak</li>
-                            </ul>
+                        
+                        <!-- Avast / AVG -->
+                        <div id="content-avast" class="av-content hidden">
+                            <div class="problem-card p-4">
+                                <h4 class="font-medium text-pink-300 mb-3 flex items-center gap-2">
+                                    <span>🔶</span> Avast / AVG
+                                </h4>
+                                <div class="space-y-3 text-sm">
+                                    <div>
+                                        <p class="text-amber-300 font-medium mb-1">Geçici Devre Dışı Bırakma</p>
+                                        <ul class="text-gray-300 space-y-0.5 list-disc list-inside ml-2">
+                                            <li>Sistem tepsisinde Avast/AVG simgesine sağ tık</li>
+                                            <li>Avast kalkanları denetimi → Kalıcı olarak devre dışı bırak</li>
+                                        </ul>
+                                    </div>
+                                    <div>
+                                        <p class="text-amber-300 font-medium mb-1">Ayarlardan Kapatma</p>
+                                        <ul class="text-gray-300 space-y-0.5 list-disc list-inside ml-2">
+                                            <li>Ayarlar → Koruma → Dosya Kalkanı → Kapalı</li>
+                                        </ul>
+                                    </div>
+                                    <div>
+                                        <p class="text-amber-300 font-medium mb-1">Dışlama Ekleme (Önerilen)</p>
+                                        <ul class="text-gray-300 space-y-0.5 list-disc list-inside ml-2">
+                                            <li>Menü → Ayarlar → Genel → İstisnalar</li>
+                                            <li>İstisna ekle → Klasör seçin</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <p class="text-yellow-400 text-sm">⚠️ Oyuna girmeden önce kapatın!</p>
+                        
+                        <!-- Kaspersky -->
+                        <div id="content-kaspersky" class="av-content hidden">
+                            <div class="problem-card p-4">
+                                <h4 class="font-medium text-pink-300 mb-3 flex items-center gap-2">
+                                    <span>🔴</span> Kaspersky
+                                </h4>
+                                <div class="space-y-3 text-sm">
+                                    <div>
+                                        <p class="text-amber-300 font-medium mb-1">Geçici Devre Dışı Bırakma</p>
+                                        <ul class="text-gray-300 space-y-0.5 list-disc list-inside ml-2">
+                                            <li>Sistem tepsisinde simgeye sağ tık → Korumayı duraklat</li>
+                                            <li>Süre seçin veya "Kullanıcı tarafından devam ettirilene kadar"</li>
+                                        </ul>
+                                    </div>
+                                    <div>
+                                        <p class="text-amber-300 font-medium mb-1">Dışlama Ekleme (Önerilen)</p>
+                                        <ul class="text-gray-300 space-y-0.5 list-disc list-inside ml-2">
+                                            <li>Ayarlar → Tehditler ve Dışlamalar</li>
+                                            <li>Dışlamaları yönet → Ekle</li>
+                                            <li>Dosya veya klasör seçin</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- ESET -->
+                        <div id="content-eset" class="av-content hidden">
+                            <div class="problem-card p-4">
+                                <h4 class="font-medium text-pink-300 mb-3 flex items-center gap-2">
+                                    <span>🟢</span> ESET NOD32 / Smart Security
+                                </h4>
+                                <div class="space-y-3 text-sm">
+                                    <div>
+                                        <p class="text-amber-300 font-medium mb-1">Geçici Devre Dışı Bırakma</p>
+                                        <ul class="text-gray-300 space-y-0.5 list-disc list-inside ml-2">
+                                            <li>Ana ekran → Kurulum → Bilgisayar koruması</li>
+                                            <li>Gerçek zamanlı dosya sistemi koruması → Duraklat</li>
+                                        </ul>
+                                    </div>
+                                    <div>
+                                        <p class="text-amber-300 font-medium mb-1">Dışlama Ekleme (Önerilen)</p>
+                                        <ul class="text-gray-300 space-y-0.5 list-disc list-inside ml-2">
+                                            <li>Gelişmiş kurulum (F5) → Algılama Motoru</li>
+                                            <li>Dışlamalar → Düzenle</li>
+                                            <li>Yol dışlaması ekle → Klasör seçin</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Bitdefender -->
+                        <div id="content-bitdefender" class="av-content hidden">
+                            <div class="problem-card p-4">
+                                <h4 class="font-medium text-pink-300 mb-3 flex items-center gap-2">
+                                    <span>🔵</span> Bitdefender
+                                </h4>
+                                <div class="space-y-3 text-sm">
+                                    <div>
+                                        <p class="text-amber-300 font-medium mb-1">Geçici Devre Dışı Bırakma</p>
+                                        <ul class="text-gray-300 space-y-0.5 list-disc list-inside ml-2">
+                                            <li>Koruma → Antivirüs → Aç/Kapat düğmesi</li>
+                                            <li>Veya: Gelişmiş Tehdit Savunması → Kapalı</li>
+                                        </ul>
+                                    </div>
+                                    <div>
+                                        <p class="text-amber-300 font-medium mb-1">Dışlama Ekleme (Önerilen)</p>
+                                        <ul class="text-gray-300 space-y-0.5 list-disc list-inside ml-2">
+                                            <li>Koruma → Antivirüs → Ayarlar</li>
+                                            <li>Dışlamalar → Dosya/Klasör ekle</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Malwarebytes -->
+                        <div id="content-malwarebytes" class="av-content hidden">
+                            <div class="problem-card p-4">
+                                <h4 class="font-medium text-pink-300 mb-3 flex items-center gap-2">
+                                    <span>🟣</span> Malwarebytes
+                                </h4>
+                                <div class="space-y-3 text-sm">
+                                    <div>
+                                        <p class="text-amber-300 font-medium mb-1">Geçici Devre Dışı Bırakma</p>
+                                        <ul class="text-gray-300 space-y-0.5 list-disc list-inside ml-2">
+                                            <li>Ayarlar → Güvenlik</li>
+                                            <li>Gerçek Zamanlı Koruma → Kapalı</li>
+                                        </ul>
+                                    </div>
+                                    <div>
+                                        <p class="text-amber-300 font-medium mb-1">Dışlama Ekleme (Önerilen)</p>
+                                        <ul class="text-gray-300 space-y-0.5 list-disc list-inside ml-2">
+                                            <li>Ayarlar → İzin Listesi</li>
+                                            <li>Ekle → Dosya veya Klasör</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-4 p-3 bg-gradient-to-r from-amber-900/30 to-red-900/30 border border-amber-500/30 rounded-lg">
+                        <p class="text-amber-400 text-sm font-medium mb-1">⚠️ Önemli Notlar:</p>
+                        <ul class="text-gray-300 text-sm space-y-1 list-disc list-inside">
+                            <li>En güvenli yöntem: Antivirüsü kapatmak yerine oyun klasörünü dışlamalara eklemek</li>
+                            <li>Bazı antivirüsler yeniden başlatma sonrası otomatik açılır, kontrol edin</li>
+                        </ul>
                     </div>
                 </div>
 
@@ -122,29 +335,6 @@
                     </div>
                 </div>
 
-                <!-- Klasör İzinleri -->
-                <div id="klasor-izinleri" class="solution-card p-4 scroll-mt-20">
-                    <h3 class="font-semibold flex items-center gap-2 mb-3 text-pink-400">
-                        <span>📁</span> Klasör İzinleri
-                    </h3>
-                    <p class="text-[#b8a3b8] text-sm mb-3">"Program Files" klasöründeki oyunlarda izin sorunları yaşanabilir.</p>
-                    
-                    <div class="space-y-2 text-sm">
-                        <div class="problem-card p-2">
-                            <h4 class="font-medium text-pink-300 mb-1">Yöntem 1</h4>
-                            <p class="text-gray-300">Yama dosyasına sağ tık → "Yönetici olarak çalıştır"</p>
-                        </div>
-                        <div class="problem-card p-2">
-                            <h4 class="font-medium text-pink-300 mb-1">Yöntem 2</h4>
-                            <ul class="text-gray-300 space-y-0.5 list-disc list-inside">
-                                <li>Oyun klasörü → Özellikler → Güvenlik</li>
-                                <li>Düzenle → Users → "Tam denetim"</li>
-                            </ul>
-                        </div>
-                        <p class="text-green-400 text-sm">✅ Oyunları D:\Oyunlar gibi farklı klasöre kurun.</p>
-                    </div>
-                </div>
-
                 <!-- DirectX -->
                 <div id="directx" class="solution-card p-4 scroll-mt-20">
                     <h3 class="font-semibold flex items-center gap-2 mb-3 text-pink-400">
@@ -170,6 +360,88 @@
                         <p class="text-pink-300 text-sm">ℹ️ Win 10/11'de DirectX 9 bileşenlerini ayrıca kurmanız gerekir.</p>
                     </div>
                 </div>
+                <div id="klasor-izinleri" class="solution-card p-4 scroll-mt-20 md:col-span-2">
+                    <h3 class="font-semibold flex items-center gap-2 mb-3 text-pink-400">
+                        <span>📁</span> Klasör İzinleri
+                    </h3>
+                    <p class="text-[#b8a3b8] text-sm mb-4">"Program Files" veya "Program Files (x86)" klasöründeki oyunlarda Windows izin kısıtlamaları nedeniyle yama kurulumu başarısız olabilir.</p>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <!-- Yöntem 1: Klasör İzinlerini Değiştir -->
+                        <div class="problem-card p-3 md:col-span-2">
+                            <h4 class="font-medium text-pink-300 mb-2 flex items-center gap-2">
+                                <span>⚙️</span> Yöntem 1: Klasör İzinlerini Değiştir
+                            </h4>
+                            <p class="text-gray-300 text-sm mb-3">Kalıcı çözüm için klasöre tam yetki verin.</p>
+                            
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
+                                <div class="text-center">
+                                    <a href="images/guide/folder-step-1.webp" target="_blank" class="block bg-gray-800/50 border border-gray-600 hover:border-pink-500 rounded-lg p-3 transition-all cursor-zoom-in">
+                                        <img src="images/guide/folder-step-1.webp" alt="Adım 1" class="w-full rounded mb-2">
+                                        <p><span class="text-pink-400 font-medium">1.</span> <span class="text-gray-300">Sağ tık → Özellikler</span></p>
+                                    </a>
+                                </div>
+                                <div class="text-center">
+                                    <a href="images/guide/folder-step-2.webp" target="_blank" class="block bg-gray-800/50 border border-gray-600 hover:border-pink-500 rounded-lg p-3 transition-all cursor-zoom-in">
+                                        <img src="images/guide/folder-step-2.webp" alt="Adım 2" class="w-full rounded mb-2">
+                                        <p><span class="text-pink-400 font-medium">2.</span> <span class="text-gray-300">Güvenlik sekmesi</span></p>
+                                    </a>
+                                </div>
+                                <div class="text-center">
+                                    <a href="images/guide/folder-step-3.webp" target="_blank" class="block bg-gray-800/50 border border-gray-600 hover:border-pink-500 rounded-lg p-3 transition-all cursor-zoom-in">
+                                        <img src="images/guide/folder-step-3.webp" alt="Adım 3" class="w-full rounded mb-2">
+                                        <p><span class="text-pink-400 font-medium">3.</span> <span class="text-gray-300">Düzenle</span></p>
+                                    </a>
+                                </div>
+                                <div class="text-center">
+                                    <a href="images/guide/folder-step-4.webp" target="_blank" class="block bg-gray-800/50 border border-gray-600 hover:border-pink-500 rounded-lg p-3 transition-all cursor-zoom-in">
+                                        <img src="images/guide/folder-step-4.webp" alt="Adım 4" class="w-full rounded mb-2">
+                                        <p><span class="text-pink-400 font-medium">4.</span> <span class="text-gray-300">Users → Tam denetim → İzin Ver → Uygula</span></p>
+                                    </a>
+                                </div>
+                            </div>
+                            <p class="text-gray-500 text-xs mt-3 text-center">💡 Görsele tıklayarak büyütebilirsiniz</p>
+                        </div>
+                        
+                        <!-- Yöntem 2: Oyunu Farklı Konuma Taşı -->
+                        <div class="problem-card p-3">
+                            <h4 class="font-medium text-pink-300 mb-2 flex items-center gap-2">
+                                <span>📂</span> Yöntem 2: Oyunu Farklı Konuma Taşı
+                            </h4>
+                            <p class="text-gray-300 text-sm mb-2">En güvenli ve önerilen yöntem.</p>
+                            <ul class="text-gray-300 text-sm space-y-1 list-disc list-inside">
+                                <li>Oyunu <code>D:\Oyunlar</code> gibi bir klasöre kurun</li>
+                                <li>Steam: Kütüphane → Oyun → Özellikler → Yerel Dosyalar → Taşı</li>
+                                <li>Epic: Ayarlar → Kurulum konumunu değiştir</li>
+                                <li>Rockstar: Oyunu kaldırıp farklı konuma yeniden kurun</li>
+                            </ul>
+                            <p class="text-green-400 text-sm mt-2">✅ Bu yöntemle izin sorunları tamamen ortadan kalkar</p>
+                        </div>
+                        
+                        <!-- Yöntem 3: Sahipliği Al -->
+                        <div class="problem-card p-3">
+                            <h4 class="font-medium text-pink-300 mb-2 flex items-center gap-2">
+                                <span>👤</span> Yöntem 3: Klasör Sahipliğini Al
+                            </h4>
+                            <p class="text-gray-300 text-sm mb-2">İzin değiştirme işe yaramazsa sahipliği alın.</p>
+                            <ul class="text-gray-300 text-sm space-y-1 list-disc list-inside">
+                                <li>Oyun klasörüne sağ tık → Özellikler</li>
+                                <li>Güvenlik → Gelişmiş</li>
+                                <li>Sahip: yanındaki "Değiştir" bağlantısı</li>
+                                <li>Kullanıcı adınızı yazın → Adları Denetle → Tamam</li>
+                                <li>"Alt kapsayıcılar ve nesneler üzerinde sahibi değiştir" işaretleyin</li>
+                                <li>Uygula → Tamam</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-4 p-3 bg-gradient-to-r from-pink-900/30 to-purple-900/30 border border-pink-500/30 rounded-lg">
+                        <p class="text-pink-400 text-sm font-medium mb-1">💡 İpucu:</p>
+                        <p class="text-gray-300 text-sm">
+                            Oyunlarınızı her zaman <code>C:\Program Files</code> dışında bir konuma kurun. Örneğin <code>D:\Games</code> veya <code>D:\Oyunlar</code> klasörü oluşturup oyunları oraya kurarsanız hiçbir izin sorunu yaşamazsınız.
+                        </p>
+                    </div>
+                </div>
 
             </div>
 
@@ -188,5 +460,17 @@
 
     <div id="footer-placeholder"></div>
     <script src="js/partials.js"></script>
+    <script>
+        function showAntivirusTab(tabName) {
+            // Hide all contents
+            document.querySelectorAll('.av-content').forEach(el => el.classList.add('hidden'));
+            // Remove active from all tabs
+            document.querySelectorAll('.av-tab').forEach(el => el.classList.remove('av-tab-active'));
+            // Show selected content
+            document.getElementById('content-' + tabName).classList.remove('hidden');
+            // Activate selected tab
+            document.getElementById('tab-' + tabName).classList.add('av-tab-active');
+        }
+    </script>
 </body>
 </html>

@@ -409,3 +409,22 @@ code {
         padding: 1rem;
     }
 }
+
+
+/* Antivirus Tabs */
+.av-tab {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    color: var(--text-secondary);
+}
+
+.av-tab:hover {
+    background: var(--bg-card-hover);
+    border-color: var(--primary);
+}
+
+.av-tab-active {
+    background: linear-gradient(135deg, var(--primary), var(--accent)) !important;
+    border-color: var(--primary) !important;
+    color: white !important;
+}
