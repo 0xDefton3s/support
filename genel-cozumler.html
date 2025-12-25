@@ -27,21 +27,37 @@
     <section class="py-4">
         <div class="container mx-auto px-4 max-w-5xl">
             <div class="info-box warning p-4">
-                <h3 class="font-semibold text-amber-400 mb-2">⚠️ VirusTotal False-Positive Uyarısı</h3>
-                <p class="text-gray-300 text-sm mb-2">
-                    Yamalarımız VirusTotal'da bazı antivirüs motorları tarafından yanlış pozitif (false-positive) olarak işaretlenebilir. Bu durum oldukça yaygındır ve aşağıdaki nedenlerden kaynaklanır:
+                <h3 class="font-semibold text-amber-400 mb-3">⚠️ VirusTotal False-Positive Uyarısı</h3>
+                
+                <p class="text-gray-300 text-sm mb-3">
+                    Yamalarımız VirusTotal'da bazı antivirüs motorları tarafından yanlış pozitif (false-positive) olarak işaretlenebilir. Bu durum oyun modlama topluluğunda oldukça yaygındır.
                 </p>
-                <ul class="text-gray-300 text-sm mb-3 list-disc list-inside space-y-1">
+
+                <h4 class="text-amber-300 font-medium text-sm mb-2">🔍 Neden False-Positive Oluşur?</h4>
+                <ul class="text-gray-300 text-sm mb-4 list-disc list-inside space-y-1">
                     <li>Yama dosyaları oyunun orijinal dosyalarını değiştirir veya üzerine yazar</li>
-                    <li>Bazı yamalar bellek üzerinde işlem yapar (injection)</li>
-                    <li>Küçük antivirüs firmaları bilinmeyen dosyaları otomatik olarak şüpheli işaretler</li>
-                    <li>Heuristic (davranışsal) taramalar yama araçlarını yanlış algılayabilir</li>
+                    <li>Bazı yamalar bellek üzerinde işlem yapar (DLL injection, hooking)</li>
+                    <li>Küçük/bilinmeyen antivirüs firmaları imzasız dosyaları otomatik olarak şüpheli işaretler</li>
+                    <li>Heuristic (davranışsal) taramalar yama araçlarını crack veya malware ile karıştırabilir</li>
+                    <li>Paketlenmiş (packed) veya sıkıştırılmış .exe, .dll, .asi dosyaları şüpheli görünebilir</li>
+                    <li>Yeni yüklenen ve henüz "güvenilir" veritabanına eklenmemiş dosyalar uyarı verebilir</li>
                 </ul>
+
+                <h4 class="text-amber-300 font-medium text-sm mb-2">📊 Sonuçları Nasıl Yorumlamalı?</h4>
+                <ul class="text-gray-300 text-sm mb-4 list-disc list-inside space-y-1">
+                    <li>VirusTotal'da <span class="text-white font-medium">70+ antivirüs motoru</span> bulunur</li>
+                    <li>Bunlardan <span class="text-white font-medium">2-5 tanesinin</span> uyarı vermesi genellikle false-positive'dir</li>
+                    <li><span class="text-green-400 font-medium">Güvenilir motorlar:</span> Microsoft Defender, Kaspersky, ESET, Bitdefender, Malwarebytes, Avira</li>
+                    <li><span class="text-red-400 font-medium">Sık false-positive veren motorlar:</span> Jiangmin, Cyren, MaxSecure, SecureAge, Zillya gibi az bilinen firmalar</li>
+                    <li>Eğer büyük firmalar temiz gösteriyorsa ve sadece küçük firmalar uyarı veriyorsa, dosya büyük ihtimalle güvenlidir</li>
+                </ul>
+
+                <h4 class="text-amber-300 font-medium text-sm mb-2">✅ Güvenlik Garantimiz</h4>
                 <p class="text-gray-300 text-sm mb-2">
-                    <span class="text-amber-400 font-medium">Önemli:</span> VirusTotal'da 70+ antivirüs motoru bulunur. Bunlardan 2-5 tanesinin uyarı vermesi genellikle false-positive'dir. Kaspersky, ESET, Bitdefender, Microsoft gibi büyük firmaların sonuçlarına dikkat edin.
+                    Tüm yamalarımız tarafımızca hazırlanmakta ve test edilmektedir. Hiçbir yamada zararlı yazılım, kripto madenci, keylogger veya benzeri tehdit bulunmamaktadır.
                 </p>
                 <p class="text-gray-300 text-sm">
-                    Tüm yamalarımız güvenlidir. Şüpheniz varsa Discord sunucumuzdan bize ulaşabilirsiniz.
+                    Şüpheniz varsa veya detaylı bilgi almak isterseniz Discord sunucumuzdan bize ulaşabilirsiniz.
                 </p>
             </div>
         </div>
