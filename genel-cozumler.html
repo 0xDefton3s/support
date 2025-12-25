@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Türkçe yamalar için genel hata çözümleri. Antivirüs, Visual C++, klasör izinleri ve DirectX sorunlarını çözün.">
+    <meta name="keywords" content="türkçe yama hata, antivirüs devre dışı, visual c++ kurulum, klasör izinleri, directx">
+    <meta name="author" content="Türkçe Yama Ekibi">
+    <title>Genel Hata Çözümleri - Türkçe Yama Destek</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="bg-gray-900 text-gray-100 min-h-screen">
+    <!-- Header -->
+    <div id="header-placeholder"></div>
+
+    <!-- Page Header -->
+    <section class="bg-gradient-to-b from-gray-800 to-gray-900 py-12">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-4xl font-bold mb-4">🔧 Genel Hata Çözümleri</h1>
+            <p class="text-gray-400 max-w-2xl mx-auto">
+                Türkçe yamalarla ilgili en sık karşılaşılan sorunların çözümleri. 
+                Bu adımları uygulamadan önce oyununuzu tamamen kapatın.
+            </p>
+        </div>
+    </section>
+
+    <!-- Quick Navigation -->
+    <section class="py-8 bg-gray-850">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-wrap justify-center gap-4">
+                <a href="#antivirus" class="bg-gray-800 hover:bg-gray-700 px-4 py-2 rounded-lg transition-colors">🛡️ Antivirüs</a>
+                <a href="#vcredist" class="bg-gray-800 hover:bg-gray-700 px-4 py-2 rounded-lg transition-colors">⚙️ Visual C++</a>
+                <a href="#klasor-izinleri" class="bg-gray-800 hover:bg-gray-700 px-4 py-2 rounded-lg transition-colors">📁 Klasör İzinleri</a>
+                <a href="#directx" class="bg-gray-800 hover:bg-gray-700 px-4 py-2 rounded-lg transition-colors">🎮 DirectX</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Solutions -->
+    <section class="py-12">
+        <div class="container mx-auto px-4 max-w-4xl">
+
+            <!-- Antivirüs Section -->
+            <div id="antivirus" class="mb-12 scroll-mt-24">
+                <div class="bg-gray-800 rounded-xl overflow-hidden">
+                    <button onclick="toggleAccordion(this)" class="w-full px-6 py-5 text-left flex justify-between items-center hover:bg-gray-750 transition-colors">
+                        <span class="text-xl font-bold flex items-center gap-3">
+                            <span class="text-2xl">🛡️</span>
+                            Antivirüs Yazılımını Devre Dışı Bırakma
+                        </span>
+                        <svg class="w-6 h-6 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </button>
+                    <div class="accordion-content open px-6 pb-6">
+                        <p class="text-gray-400 mb-6">
+                            Antivirüs yazılımları bazen yama dosyalarını yanlışlıkla tehdit olarak algılayabilir. 
+                            Kurulum sırasında geçici olarak devre dışı bırakmanız gerekebilir.
+                        </p>
+
+                        <div class="bg-gray-900 rounded-lg p-5 mb-4">
+                            <h4 class="font-bold text-blue-400 mb-3">Windows Defender</h4>
+                            <ol class="list-decimal list-inside space-y-2 text-gray-300">
+                                <li>Windows Ayarları'nı açın (Win + I)</li>
+                                <li>"Gizlilik ve Güvenlik" > "Windows Güvenliği" seçin</li>
+                                <li>"Virüs ve tehdit koruması" tıklayın</li>
+                                <li>"Ayarları yönet" bağlantısına tıklayın</li>
+                                <li>"Gerçek zamanlı koruma"yı kapatın</li>
+                                <li class="text-yellow-400">⚠️ Kurulum sonrası tekrar açmayı unutmayın!</li>
+                            </ol>
+                        </div>
+
+                        <div class="bg-gray-900 rounded-lg p-5 mb-4">
+                            <h4 class="font-bold text-blue-400 mb-3">Avast / AVG</h4>
+                            <ol class="list-decimal list-inside space-y-2 text-gray-300">
+                                <li>Sistem tepsisindeki simgeye sağ tıklayın</li>
+                                <li>"Avast kalkanları denetimi" seçin</li>
+                                <li>"10 dakika devre dışı bırak" seçin</li>
+                                <li>Yamayı kurun</li>
+                            </ol>
+                        </div>
+
+                        <div class="bg-gray-900 rounded-lg p-5">
+                            <h4 class="font-bold text-blue-400 mb-3">Kaspersky / ESET / Diğer</h4>
+                            <ol class="list-decimal list-inside space-y-2 text-gray-300">
+                                <li>Sistem tepsisindeki simgeye sağ tıklayın</li>
+                                <li>"Korumayı duraklat" veya benzeri seçeneği bulun</li>
+                                <li>Süre seçin ve yamayı kurun</li>
+                                <li>Kurulum sonrası korumayı tekrar aktif edin</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Visual C++ Section -->
+            <div id="vcredist" class="mb-12 scroll-mt-24">
+                <div class="bg-gray-800 rounded-xl overflow-hidden">
+                    <button onclick="toggleAccordion(this)" class="w-full px-6 py-5 text-left flex justify-between items-center hover:bg-gray-750 transition-colors">
+                        <span class="text-xl font-bold flex items-center gap-3">
+                            <span class="text-2xl">⚙️</span>
+                            Visual C++ Redistributable Kurulumu
+                        </span>
+                        <svg class="w-6 h-6 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </button>
+                    <div class="accordion-content open px-6 pb-6">
+                        <p class="text-gray-400 mb-6">
+                            Birçok oyun ve yama, Microsoft Visual C++ Redistributable paketlerine ihtiyaç duyar. 
+                            Eksik DLL hataları genellikle bu paketlerin kurulu olmamasından kaynaklanır.
+                        </p>
+
+                        <!-- All-in-One Önerisi -->
+                        <div class="bg-green-900/30 border border-green-600 rounded-lg p-5 mb-6">
+                            <h4 class="font-bold text-green-400 mb-3">✅ Önerilen: All-in-One Paket (Tüm Sürümler)</h4>
+                            <p class="text-gray-300 mb-4">
+                                Tüm Visual C++ sürümlerini tek seferde kurmak için bu paketi kullanabilirsiniz. 
+                                2005'ten 2022'ye kadar tüm sürümleri içerir.
+                            </p>
+                            <a href="https://www.techpowerup.com/download/visual-c-redistributable-runtime-package-all-in-one/" 
+                               target="_blank" 
+                               class="inline-block bg-green-600 hover:bg-green-700 px-4 py-2 rounded-lg font-medium transition-colors">
+                                📦 Visual C++ All-in-One İndir (TechPowerUp)
+                            </a>
+                            <p class="text-gray-400 text-sm mt-3">
+                                İndirdikten sonra arşivi çıkartın ve <code class="bg-gray-700 px-2 py-1 rounded">install_all.bat</code> dosyasını yönetici olarak çalıştırın.
+                            </p>
+                        </div>
+
+                        <div class="bg-gray-900 rounded-lg p-5 mb-4">
+                            <h4 class="font-bold text-blue-400 mb-3">Alternatif: Microsoft'tan Tek Tek İndirme</h4>
+                            <ol class="list-decimal list-inside space-y-3 text-gray-300">
+                                <li>
+                                    <a href="https://aka.ms/vs/17/release/vc_redist.x64.exe" class="text-blue-400 hover:underline" target="_blank">
+                                        Visual C++ 2015-2022 (x64)
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://aka.ms/vs/17/release/vc_redist.x86.exe" class="text-blue-400 hover:underline" target="_blank">
+                                        Visual C++ 2015-2022 (x86)
+                                    </a>
+                                </li>
+                                <li>Her iki dosyayı da çalıştırın ve kurulumu tamamlayın</li>
+                                <li>Bilgisayarınızı yeniden başlatın</li>
+                            </ol>
+                        </div>
+
+                        <div class="bg-yellow-900/30 border border-yellow-600 rounded-lg p-4">
+                            <p class="text-yellow-400 text-sm">
+                                💡 <strong>İpucu:</strong> Eski oyunlar (2010 öncesi) için Visual C++ 2005, 2008, 2010 sürümlerine de ihtiyaç duyabilirsiniz. 
+                                All-in-One paketi bunların hepsini içerir.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Klasör İzinleri Section -->
+            <div id="klasor-izinleri" class="mb-12 scroll-mt-24">
+                <div class="bg-gray-800 rounded-xl overflow-hidden">
+                    <button onclick="toggleAccordion(this)" class="w-full px-6 py-5 text-left flex justify-between items-center hover:bg-gray-750 transition-colors">
+                        <span class="text-xl font-bold flex items-center gap-3">
+                            <span class="text-2xl">📁</span>
+                            Klasör İzinleri Düzenleme
+                        </span>
+                        <svg class="w-6 h-6 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </button>
+                    <div class="accordion-content open px-6 pb-6">
+                        <p class="text-gray-400 mb-6">
+                            Yama dosyaları oyun klasörüne yazılamıyorsa, klasör izinlerini düzenlemeniz gerekebilir.
+                            Özellikle "Program Files" klasöründeki oyunlarda bu sorun sık yaşanır.
+                        </p>
+
+                        <div class="bg-gray-900 rounded-lg p-5 mb-4">
+                            <h4 class="font-bold text-blue-400 mb-3">Yöntem 1: Yönetici Olarak Çalıştırma</h4>
+                            <ol class="list-decimal list-inside space-y-2 text-gray-300">
+                                <li>Yama kurulum dosyasına sağ tıklayın</li>
+                                <li>"Yönetici olarak çalıştır" seçin</li>
+                                <li>UAC uyarısında "Evet" tıklayın</li>
+                            </ol>
+                        </div>
+
+                        <div class="bg-gray-900 rounded-lg p-5 mb-4">
+                            <h4 class="font-bold text-blue-400 mb-3">Yöntem 2: Klasör İzinlerini Değiştirme</h4>
+                            <ol class="list-decimal list-inside space-y-2 text-gray-300">
+                                <li>Oyun klasörüne sağ tıklayın > "Özellikler"</li>
+                                <li>"Güvenlik" sekmesine gidin</li>
+                                <li>"Düzenle" butonuna tıklayın</li>
+                                <li>"Users" grubunu seçin</li>
+                                <li>"Tam denetim" kutusunu işaretleyin</li>
+                                <li>"Uygula" ve "Tamam" tıklayın</li>
+                            </ol>
+                        </div>
+
+                        <div class="bg-green-900/30 border border-green-600 rounded-lg p-4">
+                            <p class="text-green-400 text-sm">
+                                ✅ <strong>Öneri:</strong> Oyunları "Program Files" yerine farklı bir klasöre 
+                                (örn: D:\Oyunlar) kurmanız izin sorunlarını önler.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- DirectX Section -->
+            <div id="directx" class="mb-12 scroll-mt-24">
+                <div class="bg-gray-800 rounded-xl overflow-hidden">
+                    <button onclick="toggleAccordion(this)" class="w-full px-6 py-5 text-left flex justify-between items-center hover:bg-gray-750 transition-colors">
+                        <span class="text-xl font-bold flex items-center gap-3">
+                            <span class="text-2xl">🎮</span>
+                            DirectX Kurulumu
+                        </span>
+                        <svg class="w-6 h-6 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </button>
+                    <div class="accordion-content open px-6 pb-6">
+                        <p class="text-gray-400 mb-6">
+                            DirectX, oyunların grafik ve ses sistemleriyle iletişim kurmasını sağlar. 
+                            Eksik d3dx9_xx.dll veya benzeri hatalar DirectX sorunlarına işaret eder.
+                        </p>
+
+                        <div class="bg-gray-900 rounded-lg p-5 mb-4">
+                            <h4 class="font-bold text-blue-400 mb-3">DirectX End-User Runtime Kurulumu</h4>
+                            <ol class="list-decimal list-inside space-y-3 text-gray-300">
+                                <li>
+                                    <a href="https://www.microsoft.com/en-us/download/details.aspx?id=35" class="text-blue-400 hover:underline" target="_blank">
+                                        Microsoft DirectX End-User Runtime Web Installer indirin
+                                    </a>
+                                </li>
+                                <li>İndirilen dosyayı çalıştırın</li>
+                                <li>Lisans sözleşmesini kabul edin</li>
+                                <li>Kurulumun tamamlanmasını bekleyin</li>
+                                <li>Bilgisayarınızı yeniden başlatın</li>
+                            </ol>
+                        </div>
+
+                        <div class="bg-gray-900 rounded-lg p-5 mb-4">
+                            <h4 class="font-bold text-blue-400 mb-3">Sık Karşılaşılan DirectX Hataları</h4>
+                            <ul class="space-y-2 text-gray-300">
+                                <li>• <code class="bg-gray-700 px-2 py-1 rounded">d3dx9_43.dll bulunamadı</code></li>
+                                <li>• <code class="bg-gray-700 px-2 py-1 rounded">XINPUT1_3.dll eksik</code></li>
+                                <li>• <code class="bg-gray-700 px-2 py-1 rounded">d3dcompiler_43.dll hatası</code></li>
+                            </ul>
+                        </div>
+
+                        <div class="bg-blue-900/30 border border-blue-600 rounded-lg p-4">
+                            <p class="text-blue-400 text-sm">
+                                ℹ️ <strong>Not:</strong> Windows 10/11'de DirectX 12 varsayılan olarak yüklüdür, 
+                                ancak eski oyunlar için DirectX 9 bileşenlerini ayrıca kurmanız gerekir.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <div id="footer-placeholder"></div>
+
+    <script src="js/partials.js"></script>
+    <script>
+        function toggleAccordion(button) {
+            const content = button.nextElementSibling;
+            const icon = button.querySelector('svg');
+            content.classList.toggle('open');
+            icon.classList.toggle('rotate-180');
+        }
+    </script>
+</body>
+</html>
