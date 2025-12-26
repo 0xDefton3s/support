@@ -1074,21 +1074,20 @@ a, button, .game-card, .quick-nav-btn, .solution-card, .stat-item {
 
 /* ==================== GAME DETAIL PAGE STYLES ==================== */
 
-/* Game Detail Hero - Enhanced Modern Version */
+/* Game Detail Hero - Ultra Modern Version */
 .game-detail-hero {
     position: relative;
     padding: 2.5rem 0 4rem;
     overflow: hidden;
-    background: linear-gradient(135deg, #0d0515 0%, #1a0a2e 25%, #2d1240 50%, #1a0a2e 75%, #0d0515 100%);
-    background-size: 400% 400%;
-    animation: heroDetailGradient 15s ease infinite;
+    background: 
+        linear-gradient(135deg, #0d0515 0%, #1a0a2e 30%, #2d1240 50%, #1a0a2e 70%, #0d0515 100%);
+    background-size: 300% 300%;
+    animation: heroDetailGradient 20s ease infinite;
 }
 
 @keyframes heroDetailGradient {
     0%, 100% { background-position: 0% 50%; }
-    25% { background-position: 100% 25%; }
-    50% { background-position: 100% 75%; }
-    75% { background-position: 0% 100%; }
+    50% { background-position: 100% 50%; }
 }
 
 .game-detail-hero::before {
@@ -1099,28 +1098,17 @@ a, button, .game-card, .quick-nav-btn, .solution-card, .stat-item {
     right: 0;
     bottom: 0;
     background: 
-        radial-gradient(ellipse at 20% 10%, rgba(168, 85, 247, 0.25) 0%, transparent 45%),
-        radial-gradient(ellipse at 80% 20%, rgba(236, 72, 153, 0.2) 0%, transparent 40%),
-        radial-gradient(ellipse at 60% 90%, rgba(192, 38, 211, 0.15) 0%, transparent 45%),
-        radial-gradient(ellipse at 10% 80%, rgba(244, 114, 182, 0.12) 0%, transparent 40%);
-    animation: heroGlowOrbit 8s ease-in-out infinite;
+        radial-gradient(ellipse 80% 50% at 20% 20%, rgba(168, 85, 247, 0.2) 0%, transparent 50%),
+        radial-gradient(ellipse 60% 40% at 80% 30%, rgba(236, 72, 153, 0.18) 0%, transparent 50%),
+        radial-gradient(ellipse 70% 50% at 50% 80%, rgba(192, 38, 211, 0.12) 0%, transparent 50%);
+    animation: heroGlowPulse 6s ease-in-out infinite;
     pointer-events: none;
     z-index: 1;
 }
 
-@keyframes heroGlowOrbit {
-    0%, 100% { 
-        opacity: 0.7; 
-        transform: scale(1) rotate(0deg);
-    }
-    33% { 
-        opacity: 1; 
-        transform: scale(1.05) rotate(1deg);
-    }
-    66% { 
-        opacity: 0.8; 
-        transform: scale(1.02) rotate(-1deg);
-    }
+@keyframes heroGlowPulse {
+    0%, 100% { opacity: 0.6; }
+    50% { opacity: 1; }
 }
 
 .game-detail-hero::after {
@@ -1129,13 +1117,13 @@ a, button, .game-card, .quick-nav-btn, .solution-card, .stat-item {
     bottom: 0;
     left: 0;
     right: 0;
-    height: 120px;
-    background: linear-gradient(180deg, transparent 0%, rgba(10, 6, 16, 0.6) 40%, rgba(10, 6, 16, 0.95) 100%);
+    height: 150px;
+    background: linear-gradient(180deg, transparent 0%, rgba(10, 6, 16, 0.5) 30%, rgba(10, 6, 16, 0.95) 100%);
     pointer-events: none;
     z-index: 2;
 }
 
-/* Floating Particles Effect */
+/* Floating Particles Effect - Enhanced */
 .game-detail-hero .hero-particles {
     position: absolute;
     top: 0;
@@ -1149,38 +1137,44 @@ a, button, .game-card, .quick-nav-btn, .solution-card, .stat-item {
 
 .game-detail-hero .particle {
     position: absolute;
-    width: 4px;
-    height: 4px;
-    background: radial-gradient(circle, rgba(168, 85, 247, 0.8) 0%, transparent 70%);
+    width: 3px;
+    height: 3px;
+    background: rgba(168, 85, 247, 0.6);
     border-radius: 50%;
-    animation: floatParticle 20s infinite linear;
+    box-shadow: 0 0 6px rgba(168, 85, 247, 0.4);
+    animation: floatParticle 18s infinite linear;
 }
 
-.game-detail-hero .particle:nth-child(1) { left: 10%; animation-delay: 0s; animation-duration: 25s; }
-.game-detail-hero .particle:nth-child(2) { left: 20%; animation-delay: 2s; animation-duration: 20s; }
-.game-detail-hero .particle:nth-child(3) { left: 30%; animation-delay: 4s; animation-duration: 28s; }
-.game-detail-hero .particle:nth-child(4) { left: 40%; animation-delay: 1s; animation-duration: 22s; }
-.game-detail-hero .particle:nth-child(5) { left: 50%; animation-delay: 3s; animation-duration: 26s; }
-.game-detail-hero .particle:nth-child(6) { left: 60%; animation-delay: 5s; animation-duration: 24s; }
-.game-detail-hero .particle:nth-child(7) { left: 70%; animation-delay: 2s; animation-duration: 21s; }
-.game-detail-hero .particle:nth-child(8) { left: 80%; animation-delay: 4s; animation-duration: 27s; }
-.game-detail-hero .particle:nth-child(9) { left: 90%; animation-delay: 1s; animation-duration: 23s; }
+.game-detail-hero .particle:nth-child(odd) {
+    background: rgba(236, 72, 153, 0.6);
+    box-shadow: 0 0 6px rgba(236, 72, 153, 0.4);
+}
+
+.game-detail-hero .particle:nth-child(1) { left: 8%; animation-delay: 0s; animation-duration: 22s; }
+.game-detail-hero .particle:nth-child(2) { left: 18%; animation-delay: 3s; animation-duration: 18s; }
+.game-detail-hero .particle:nth-child(3) { left: 28%; animation-delay: 1s; animation-duration: 24s; }
+.game-detail-hero .particle:nth-child(4) { left: 42%; animation-delay: 4s; animation-duration: 20s; }
+.game-detail-hero .particle:nth-child(5) { left: 55%; animation-delay: 2s; animation-duration: 23s; }
+.game-detail-hero .particle:nth-child(6) { left: 65%; animation-delay: 5s; animation-duration: 19s; }
+.game-detail-hero .particle:nth-child(7) { left: 75%; animation-delay: 1s; animation-duration: 21s; }
+.game-detail-hero .particle:nth-child(8) { left: 85%; animation-delay: 3s; animation-duration: 25s; }
+.game-detail-hero .particle:nth-child(9) { left: 92%; animation-delay: 2s; animation-duration: 17s; }
 
 @keyframes floatParticle {
     0% { 
-        transform: translateY(100vh) scale(0);
+        transform: translateY(100vh) scale(0.5);
         opacity: 0;
     }
-    10% {
-        opacity: 1;
-        transform: translateY(80vh) scale(1);
+    5% {
+        opacity: 0.8;
+        transform: translateY(90vh) scale(1);
     }
-    90% {
-        opacity: 1;
-        transform: translateY(10vh) scale(1);
+    95% {
+        opacity: 0.8;
+        transform: translateY(5vh) scale(1);
     }
     100% { 
-        transform: translateY(-10vh) scale(0);
+        transform: translateY(-5vh) scale(0.5);
         opacity: 0;
     }
 }
@@ -1208,19 +1202,18 @@ a, button, .game-card, .quick-nav-btn, .solution-card, .stat-item {
     50% { opacity: 1; }
 }
 
-/* Game Cover Card - Enhanced 3D Effect */
+/* Game Cover Card - Modern Stable Effect (No Jump Bug) */
 .game-cover-card {
     position: relative;
     border-radius: 20px;
     overflow: hidden;
     box-shadow: 
-        0 25px 60px rgba(0, 0, 0, 0.6),
-        0 0 40px rgba(168, 85, 247, 0.25),
+        0 20px 50px rgba(0, 0, 0, 0.5),
+        0 0 30px rgba(168, 85, 247, 0.2),
         inset 0 1px 0 rgba(255, 255, 255, 0.1);
-    border: 1px solid rgba(168, 85, 247, 0.3);
-    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-    transform-style: preserve-3d;
-    perspective: 1000px;
+    border: 2px solid rgba(168, 85, 247, 0.3);
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    background: linear-gradient(145deg, rgba(26, 15, 34, 0.9), rgba(15, 10, 20, 0.95));
 }
 
 .game-cover-card::before {
@@ -1230,34 +1223,36 @@ a, button, .game-card, .quick-nav-btn, .solution-card, .stat-item {
     left: -100%;
     width: 100%;
     height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.15), transparent);
-    transition: left 0.8s ease;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.12), transparent);
+    transition: left 0.7s ease;
     z-index: 10;
+    pointer-events: none;
 }
 
 .game-cover-card::after {
     content: '';
     position: absolute;
-    inset: 0;
-    border-radius: 20px;
-    padding: 2px;
-    background: linear-gradient(135deg, rgba(168, 85, 247, 0.5), rgba(236, 72, 153, 0.5), rgba(168, 85, 247, 0.5));
-    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-    -webkit-mask-composite: xor;
-    mask-composite: exclude;
+    inset: -2px;
+    border-radius: 22px;
+    background: linear-gradient(135deg, #a855f7, #ec4899, #f472b6, #a855f7);
+    background-size: 300% 300%;
+    animation: borderGlow 4s ease infinite paused;
+    z-index: -1;
     opacity: 0;
-    transition: opacity 0.5s ease;
-    pointer-events: none;
+    transition: opacity 0.4s ease;
+}
+
+@keyframes borderGlow {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
 }
 
 .game-cover-card:hover {
-    transform: translateY(-10px) rotateX(5deg) scale(1.03);
+    border-color: transparent;
     box-shadow: 
-        0 35px 70px rgba(0, 0, 0, 0.7),
-        0 0 60px rgba(236, 72, 153, 0.35),
-        0 0 100px rgba(168, 85, 247, 0.2);
-    border-color: rgba(236, 72, 153, 0.5);
+        0 25px 60px rgba(0, 0, 0, 0.6),
+        0 0 50px rgba(236, 72, 153, 0.3),
+        0 0 80px rgba(168, 85, 247, 0.15);
 }
 
 .game-cover-card:hover::before {
@@ -1266,18 +1261,19 @@ a, button, .game-card, .quick-nav-btn, .solution-card, .stat-item {
 
 .game-cover-card:hover::after {
     opacity: 1;
+    animation-play-state: running;
 }
 
 .game-cover-card img {
     width: 100%;
     height: auto;
     display: block;
-    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1), filter 0.5s ease;
+    transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94), filter 0.4s ease;
 }
 
 .game-cover-card:hover img {
-    transform: scale(1.08);
-    filter: brightness(1.1) saturate(1.1);
+    transform: scale(1.05);
+    filter: brightness(1.08) saturate(1.05);
 }
 
 /* Game Info Section */
@@ -1342,18 +1338,18 @@ a, button, .game-card, .quick-nav-btn, .solution-card, .stat-item {
     animation: pulse-glow 2s infinite;
 }
 
-/* Quick Info Cards - Glassmorphism Style */
+/* Quick Info Cards - Ultra Modern Glassmorphism */
 .quick-info-card {
     background: linear-gradient(145deg, 
-        rgba(26, 15, 34, 0.7), 
-        rgba(18, 10, 24, 0.8));
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
+        rgba(26, 15, 34, 0.6), 
+        rgba(18, 10, 24, 0.75));
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
     border: 1px solid rgba(168, 85, 247, 0.2);
-    border-radius: 16px;
-    padding: 1.25rem 1rem;
+    border-radius: 18px;
+    padding: 1.35rem 1rem;
     text-align: center;
-    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: all 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);
     position: relative;
     overflow: hidden;
 }
@@ -1364,29 +1360,31 @@ a, button, .game-card, .quick-nav-btn, .solution-card, .stat-item {
     top: 0;
     left: 0;
     right: 0;
-    height: 1px;
-    background: linear-gradient(90deg, transparent, rgba(168, 85, 247, 0.5), rgba(236, 72, 153, 0.5), transparent);
+    height: 2px;
+    background: linear-gradient(90deg, transparent 10%, rgba(168, 85, 247, 0.6) 50%, transparent 90%);
     opacity: 0;
-    transition: opacity 0.4s ease;
+    transition: opacity 0.35s ease;
 }
 
 .quick-info-card::after {
     content: '';
     position: absolute;
     inset: 0;
-    background: radial-gradient(circle at 50% 0%, rgba(168, 85, 247, 0.15) 0%, transparent 60%);
+    background: radial-gradient(circle at 50% 0%, rgba(168, 85, 247, 0.12) 0%, transparent 70%);
     opacity: 0;
-    transition: opacity 0.4s ease;
+    transition: opacity 0.35s ease;
     pointer-events: none;
 }
 
 .quick-info-card:hover {
-    border-color: rgba(236, 72, 153, 0.45);
-    transform: translateY(-6px) scale(1.02);
+    border-color: rgba(236, 72, 153, 0.4);
+    background: linear-gradient(145deg, 
+        rgba(30, 18, 40, 0.7), 
+        rgba(22, 12, 30, 0.85));
     box-shadow: 
-        0 15px 40px rgba(0, 0, 0, 0.4),
-        0 0 30px rgba(168, 85, 247, 0.2),
-        inset 0 1px 0 rgba(255, 255, 255, 0.1);
+        0 12px 35px rgba(0, 0, 0, 0.35),
+        0 0 25px rgba(168, 85, 247, 0.15),
+        inset 0 1px 0 rgba(255, 255, 255, 0.08);
 }
 
 .quick-info-card:hover::before,
@@ -1395,27 +1393,25 @@ a, button, .game-card, .quick-nav-btn, .solution-card, .stat-item {
 }
 
 .quick-info-icon {
-    width: 48px;
-    height: 48px;
-    margin: 0 auto 0.75rem;
+    width: 52px;
+    height: 52px;
+    margin: 0 auto 0.85rem;
     display: flex;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(135deg, rgba(168, 85, 247, 0.25), rgba(236, 72, 153, 0.2));
+    background: linear-gradient(135deg, rgba(168, 85, 247, 0.2), rgba(236, 72, 153, 0.15));
+    border: 1px solid rgba(168, 85, 247, 0.15);
     border-radius: 14px;
-    font-size: 1.4rem;
-    transition: all 0.4s ease;
+    font-size: 1.5rem;
+    transition: all 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);
     position: relative;
     z-index: 1;
 }
 
 .quick-info-card:hover .quick-info-icon {
-    transform: scale(1.1) rotate(-5deg);
-    background: linear-gradient(135deg, rgba(168, 85, 247, 0.4), rgba(236, 72, 153, 0.35));
-    box-shadow: 0 8px 20px rgba(168, 85, 247, 0.3);
-}(168, 85, 247, 0.2), rgba(236, 72, 153, 0.15));
-    border-radius: 10px;
-    font-size: 1.25rem;
+    background: linear-gradient(135deg, rgba(168, 85, 247, 0.35), rgba(236, 72, 153, 0.28));
+    border-color: rgba(236, 72, 153, 0.3);
+    box-shadow: 0 6px 18px rgba(168, 85, 247, 0.25);
 }
 
 .quick-info-label {
@@ -1440,17 +1436,17 @@ a, button, .game-card, .quick-nav-btn, .solution-card, .stat-item {
     background-clip: text;
 }
 
-/* Section Cards Enhanced - Modern Glassmorphism */
+/* Section Cards - Modern Glassmorphism */
 .detail-section-card {
     background: linear-gradient(145deg, 
-        rgba(26, 15, 34, 0.85), 
-        rgba(18, 10, 24, 0.9));
-    backdrop-filter: blur(16px);
-    -webkit-backdrop-filter: blur(16px);
+        rgba(26, 15, 34, 0.8), 
+        rgba(18, 10, 24, 0.88));
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
     border: 1px solid rgba(168, 85, 247, 0.15);
     border-radius: 20px;
     overflow: hidden;
-    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: all 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);
     position: relative;
 }
 
@@ -1460,36 +1456,28 @@ a, button, .game-card, .quick-nav-btn, .solution-card, .stat-item {
     top: 0;
     left: 0;
     right: 0;
-    height: 3px;
-    background: linear-gradient(90deg, #a855f7, #ec4899, #f472b6, #a855f7);
-    background-size: 300% 100%;
+    height: 2px;
+    background: linear-gradient(90deg, #a855f7, #ec4899, #f472b6);
     opacity: 0;
-    transition: opacity 0.4s ease;
-    animation: borderGradientFlow 3s linear infinite;
-}
-
-@keyframes borderGradientFlow {
-    0% { background-position: 0% 50%; }
-    100% { background-position: 300% 50%; }
+    transition: opacity 0.35s ease;
 }
 
 .detail-section-card::after {
     content: '';
     position: absolute;
     inset: 0;
-    background: radial-gradient(ellipse at 50% 0%, rgba(168, 85, 247, 0.08) 0%, transparent 50%);
+    background: radial-gradient(ellipse at 50% 0%, rgba(168, 85, 247, 0.06) 0%, transparent 60%);
     opacity: 0;
-    transition: opacity 0.4s ease;
+    transition: opacity 0.35s ease;
     pointer-events: none;
 }
 
 .detail-section-card:hover {
-    border-color: rgba(236, 72, 153, 0.4);
+    border-color: rgba(236, 72, 153, 0.35);
     box-shadow: 
-        0 20px 50px rgba(0, 0, 0, 0.4),
-        0 0 40px rgba(168, 85, 247, 0.15),
-        inset 0 1px 0 rgba(255, 255, 255, 0.05);
-    transform: translateY(-4px);
+        0 16px 45px rgba(0, 0, 0, 0.35),
+        0 0 30px rgba(168, 85, 247, 0.12),
+        inset 0 1px 0 rgba(255, 255, 255, 0.04);
 }
 
 .detail-section-card:hover::before,
@@ -2114,11 +2102,11 @@ a, button, .game-card, .quick-nav-btn, .solution-card, .stat-item {
     50% { background-position: 100% 50%; }
 }
 
-/* Themed Cover Card - Enhanced 3D */
+/* Themed Cover Card - Modern Stable */
 [data-game-theme] .game-cover-card {
     box-shadow: 
-        0 25px 60px rgba(0, 0, 0, 0.6),
-        0 0 40px var(--theme-glow),
+        0 20px 50px rgba(0, 0, 0, 0.5),
+        0 0 30px var(--theme-glow),
         inset 0 1px 0 rgba(255, 255, 255, 0.1);
     border-color: var(--theme-primary);
 }
@@ -2129,27 +2117,27 @@ a, button, .game-card, .quick-nav-btn, .solution-card, .stat-item {
 
 [data-game-theme] .game-cover-card:hover {
     box-shadow: 
-        0 35px 70px rgba(0, 0, 0, 0.7),
-        0 0 60px var(--theme-glow),
-        0 0 100px rgba(var(--theme-accent-rgb, 236, 72, 153), 0.2);
-    border-color: var(--theme-accent);
+        0 25px 60px rgba(0, 0, 0, 0.6),
+        0 0 50px var(--theme-glow),
+        0 0 80px rgba(var(--theme-accent-rgb, 236, 72, 153), 0.15);
+    border-color: transparent;
 }
 
-/* Themed Quick Info Cards - Enhanced Glassmorphism */
+/* Themed Quick Info Cards - Modern */
 [data-game-theme] .quick-info-card {
     border-color: rgba(var(--theme-primary-rgb, 168, 85, 247), 0.25);
-    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: all 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
 [data-game-theme] .quick-info-card::before {
-    background: linear-gradient(90deg, transparent, var(--theme-primary), var(--theme-accent), transparent);
+    background: linear-gradient(90deg, transparent 10%, var(--theme-primary) 50%, transparent 90%);
 }
 
 [data-game-theme] .quick-info-card:hover {
     border-color: var(--theme-primary);
     box-shadow: 
-        0 15px 40px var(--theme-glow),
-        inset 0 1px 0 rgba(255, 255, 255, 0.1);
+        0 12px 35px var(--theme-glow),
+        inset 0 1px 0 rgba(255, 255, 255, 0.08);
     transform: translateY(-6px) scale(1.02);
 }
 
@@ -2363,20 +2351,6 @@ a, button, .game-card, .quick-nav-btn, .solution-card, .stat-item {
     animation: iconPulse 0.6s ease-in-out;
 }
 
-/* Glow pulse for themed elements */
-@keyframes glowPulse {
-    0%, 100% { 
-        box-shadow: 0 0 20px var(--theme-glow, rgba(168, 85, 247, 0.3));
-    }
-    50% { 
-        box-shadow: 0 0 40px var(--theme-glow, rgba(168, 85, 247, 0.5));
-    }
-}
-
-[data-game-theme] .game-cover-card:hover {
-    animation: glowPulse 2s ease-in-out infinite;
-}
-
 /* Smooth color transitions */
 .game-detail-hero,
 .game-cover-card,
@@ -2389,5 +2363,5 @@ a, button, .game-card, .quick-nav-btn, .solution-card, .stat-item {
 .issue-item,
 .faq-item-enhanced {
     transition-property: all;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
