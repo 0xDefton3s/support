@@ -13,80 +13,158 @@
 <body class="min-h-screen">
     <div id="header-placeholder"></div>
 
-    <section class="hero-gradient py-6">
+    <section class="game-detail-hero">
         <div class="container mx-auto px-4">
-            <div class="max-w-5xl mx-auto">
-                <a href="../index.html" class="text-pink-400 hover:text-pink-300 text-sm mb-2 inline-block">← Tüm Oyunlar</a>
-                <h1 class="text-2xl md:text-3xl font-bold mb-1">Red Dead Redemption GOTY & Undead Nightmare</h1>
-                <p class="text-[#b8a3b8] text-sm mb-2">Türkçe Yama (Emülatör)</p>
-                <div class="flex flex-wrap gap-1.5">
-                    <span class="px-2 py-0.5 platform-emulator rounded-full text-sm font-medium">Xenia</span>
-                    <span class="px-2 py-0.5 platform-emulator rounded-full text-sm font-medium">Ryujinx</span>
+            <div class="max-w-6xl mx-auto">
+                <a href="../index.html" class="back-link mb-6 inline-flex">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M19 12H5M12 19l-7-7 7-7"/>
+                    </svg>
+                    Tüm Oyunlar
+                </a>
+
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-start game-info-section">
+                    <div class="lg:col-span-3">
+                        <div class="game-cover-card">
+                            <img src="../images/rdr-goty.webp" alt="RDR GOTY Cover" class="w-full">
+                        </div>
+                    </div>
+
+                    <div class="lg:col-span-9">
+                        <div class="flex flex-wrap items-center gap-3 mb-3">
+                            <span class="platform-tag platform-tag-emulator">🎮 Xenia</span>
+                            <span class="platform-tag platform-tag-emulator">🎮 Ryujinx</span>
+                        </div>
+                        
+                        <h1 class="text-3xl md:text-4xl font-bold mb-2 game-title-gradient">Red Dead Redemption GOTY & Undead Nightmare</h1>
+                        <p class="text-[#c4b5fd] text-lg mb-4">Türkçe Yama (Emülatör)</p>
+                        
+                        <p class="text-[#b8a3c8] text-sm mb-6 max-w-2xl">
+                            Xbox 360 ve Nintendo Switch sürümleri için emülatörler üzerinde çalışan Türkçe yama.
+                        </p>
+
+                        <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-6">
+                            <div class="quick-info-card">
+                                <div class="quick-info-icon">🎮</div>
+                                <div class="quick-info-label">Platform</div>
+                                <div class="quick-info-value">Emülatör</div>
+                            </div>
+                            <div class="quick-info-card">
+                                <div class="quick-info-icon">📅</div>
+                                <div class="quick-info-label">Sürüm</div>
+                                <div class="quick-info-value">2024</div>
+                            </div>
+                            <div class="quick-info-card">
+                                <div class="quick-info-icon">💾</div>
+                                <div class="quick-info-label">Gereksinim</div>
+                                <div class="quick-info-value">16GB+ RAM</div>
+                            </div>
+                            <div class="quick-info-card">
+                                <div class="quick-info-icon">✅</div>
+                                <div class="quick-info-label">Durum</div>
+                                <div class="quick-info-value">Tamamlandı</div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="py-6">
-        <div class="container mx-auto px-4 max-w-5xl">
-            <div class="info-box info mb-4 text-sm">
-                <p>ℹ️ Bu yama Xbox 360 ve Nintendo Switch sürümleri için emülatörler üzerinde çalışır.</p>
+    <section class="py-8">
+        <div class="container mx-auto px-4 max-w-6xl">
+            <!-- VirusTotal Warning -->
+            <div class="info-banner mb-6">
+                <div class="info-banner-icon">🛡️</div>
+                <div class="info-banner-content">
+                    <p>Antivirüs programları yama dosyalarını yanlışlıkla tehdit olarak algılayabilir. Bu bir <strong>false positive</strong> durumudur. Yamalarımız güvenlidir. Detaylı bilgi için <a href="../genel-cozumler.html#virustotal" class="text-pink-400 underline">Genel Çözümler</a> sayfasına bakın.</p>
+                </div>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <!-- Kurulum -->
-                <div class="solution-card p-4">
-                    <h3 class="font-semibold flex items-center gap-2 mb-3 text-pink-400">
-                        <span>📥</span> Kurulum
-                    </h3>
-                    <div class="info-box info p-2 text-sm">
-                        <p>📄 İndirdiğiniz yama arşivini açın ve içindeki <code>Beni Oku.txt</code> dosyasını okuyun.</p>
-                    </div>
+            <div class="info-banner mb-6">
+                <div class="info-banner-icon">ℹ️</div>
+                <div class="info-banner-content">
+                    <p>Bu yama Xbox 360 ve Nintendo Switch sürümleri için emülatörler üzerinde çalışır. PC portu için <a href="rdr-pc.html" class="text-pink-400 underline">RDR PC sayfasına</a> bakın.</p>
                 </div>
+            </div>
 
-                <!-- Bilinen Sorunlar -->
-                <div class="solution-card p-4">
-                    <h3 class="font-semibold flex items-center gap-2 mb-3 text-pink-400">
-                        <span>⚠️</span> Bilinen Sorunlar
-                    </h3>
-                    <div class="space-y-2 text-sm">
-                        <div class="problem-card p-2">
-                            <h4 class="text-yellow-400 font-medium">Xenia'da düşük FPS</h4>
-                            <p class="text-[#b8a3b8]">Vulkan backend kullanın. GPU ayarlarını kontrol edin.</p>
-                        </div>
-                        <div class="problem-card p-2">
-                            <h4 class="text-yellow-400 font-medium">Ryujinx'te shader kasmaları</h4>
-                            <p class="text-[#b8a3b8]">İlk açılışta normal. Shader cache oluştukça düzelir.</p>
-                        </div>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-5">
+                <div class="detail-section-card">
+                    <div class="detail-section-header">
+                        <div class="detail-section-icon">📥</div>
+                        <h3 class="detail-section-title">Kurulum Rehberi</h3>
                     </div>
-                </div>
-
-                <!-- SSS -->
-                <div class="solution-card p-4">
-                    <h3 class="font-semibold flex items-center gap-2 mb-3 text-pink-400">
-                        <span>❓</span> Sık Sorulan Sorular
-                    </h3>
-                    <div class="space-y-2 text-sm">
-                        <div class="problem-card p-2">
-                            <h4 class="text-white font-medium">Hangi emülatör daha iyi?</h4>
-                            <p class="text-[#b8a3b8]">Switch için Ryujinx, Xbox 360 için Xenia Canary.</p>
+                    <div class="detail-section-body space-y-3">
+                        <div class="install-step">
+                            <div class="install-step-number">1</div>
+                            <div class="install-step-content">Yama arşivini indirin ve açın</div>
                         </div>
-                        <div class="problem-card p-2">
-                            <h4 class="text-white font-medium">Minimum sistem gereksinimleri?</h4>
-                            <p class="text-[#b8a3b8]">En az 16GB RAM ve modern bir GPU gerekir.</p>
+                        <div class="install-step">
+                            <div class="install-step-number">2</div>
+                            <div class="install-step-content"><code>Beni Oku.txt</code> dosyasını okuyun</div>
+                        </div>
+                        <div class="install-step">
+                            <div class="install-step-number">3</div>
+                            <div class="install-step-content">Emülatör için uygun yama dosyalarını uygulayın</div>
+                        </div>
+                        <div class="install-step">
+                            <div class="install-step-number">4</div>
+                            <div class="install-step-content">Emülatörü başlatın ve oyunu açın</div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Yardım -->
-                <div class="solution-card p-4">
-                    <h3 class="font-semibold flex items-center gap-2 mb-3 text-pink-400">
-                        <span>💬</span> Yardım
-                    </h3>
-                    <p class="text-[#b8a3b8] text-sm mb-3">Sorununuzu bulamadınız mı?</p>
-                    <div class="flex flex-wrap gap-2">
-                        <a href="../genel-cozumler.html" class="bg-pink-600 hover:bg-pink-700 px-3 py-1.5 rounded text-sm font-medium transition-colors">🔧 Genel Çözümler</a>
-                        <a href="https://discord.com/invite/zJJKfPrWqR" target="_blank" class="discord-btn text-sm py-1.5">Discord</a>
+                <div class="detail-section-card">
+                    <div class="detail-section-header">
+                        <div class="detail-section-icon">⚠️</div>
+                        <h3 class="detail-section-title">Bilinen Sorunlar</h3>
+                    </div>
+                    <div class="detail-section-body space-y-3">
+                        <div class="issue-item">
+                            <div class="issue-icon">📉</div>
+                            <div class="issue-content">
+                                <h4>Xenia'da düşük FPS</h4>
+                                <p>Vulkan backend kullanın. GPU ayarlarını kontrol edin.</p>
+                            </div>
+                        </div>
+                        <div class="issue-item">
+                            <div class="issue-icon">⏳</div>
+                            <div class="issue-content">
+                                <h4>Ryujinx'te shader kasmaları</h4>
+                                <p>İlk açılışta normal. Shader cache oluştukça düzelir.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="detail-section-card">
+                    <div class="detail-section-header">
+                        <div class="detail-section-icon">❓</div>
+                        <h3 class="detail-section-title">Sık Sorulan Sorular</h3>
+                    </div>
+                    <div class="detail-section-body space-y-3">
+                        <div class="faq-item-enhanced">
+                            <h4>Hangi emülatör daha iyi?</h4>
+                            <p>Switch için Ryujinx, Xbox 360 için Xenia Canary önerilir.</p>
+                        </div>
+                        <div class="faq-item-enhanced">
+                            <h4>Minimum sistem gereksinimleri?</h4>
+                            <p>En az 16GB RAM ve modern bir GPU gerekir.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="detail-section-card">
+                    <div class="detail-section-header">
+                        <div class="detail-section-icon">💬</div>
+                        <h3 class="detail-section-title">Yardım & Destek</h3>
+                    </div>
+                    <div class="detail-section-body">
+                        <p class="text-[#b8a3c8] text-sm mb-4">Sorununuzu bulamadıysanız:</p>
+                        <div class="flex flex-wrap gap-3">
+                            <a href="../genel-cozumler.html" class="action-btn-primary">🔧 Genel Çözümler</a>
+                            <a href="https://discord.com/invite/zJJKfPrWqR" target="_blank" class="action-btn-secondary">Discord</a>
+                        </div>
                     </div>
                 </div>
             </div>
