@@ -106,72 +106,56 @@
                                     <span>🪟</span> Windows Defender (Windows 10/11)
                                 </h4>
                                 
-                                <div class="space-y-4 text-sm">
-                                    <div>
-                                        <p class="text-amber-300 font-medium mb-1">1. Gerçek Zamanlı Koruma</p>
-                                        <ul class="text-gray-300 space-y-0.5 list-disc list-inside ml-2">
-                                            <li>Ayarlar → Gizlilik ve Güvenlik → Windows Güvenliği</li>
-                                            <li>Virüs ve tehdit koruması → Ayarları yönet</li>
-                                            <li>"Gerçek zamanlı koruma" → Kapalı</li>
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-3 text-sm">
+                                    <!-- Gerçek Zamanlı Koruma -->
+                                    <div class="bg-gray-800/40 rounded-lg p-3 border border-gray-700/50">
+                                        <p class="text-amber-300 font-medium mb-2">1. Gerçek Zamanlı Koruma</p>
+                                        <ul class="text-gray-300 space-y-1 list-disc list-inside ml-1 mb-3 text-xs">
+                                            <li>Aşağıdaki butona tıklayın</li>
+                                            <li>"Gerçek zamanlı koruma" → <span class="text-red-400 font-medium">Kapalı</span></li>
                                         </ul>
-                                        <a href="windowsdefender://threatsettings/" class="inline-flex items-center gap-2 mt-2 px-3 py-1.5 bg-blue-600 hover:bg-blue-700 rounded-lg text-sm font-medium transition-colors">
-                                            <span>🔗</span> Virüs Koruma Ayarlarını Aç
+                                        <a href="windowsdefender://threatsettings/" class="inline-flex items-center gap-2 px-3 py-1.5 bg-blue-600 hover:bg-blue-700 rounded-lg text-xs font-medium transition-colors w-full justify-center">
+                                            🔗 Ayarları Aç
                                         </a>
-                                        <div class="mt-2 bg-gray-800/50 border border-dashed border-gray-600 rounded-lg p-4 text-center">
-                                            <img src="images/guide/defender-realtime.webp" alt="Windows Defender Gerçek Zamanlı Koruma" class="hidden w-full rounded">
-                                            <p class="text-gray-500 text-xs">📷 defender-realtime.webp</p>
-                                        </div>
                                     </div>
                                     
-                                    <div>
-                                        <p class="text-amber-300 font-medium mb-1">2. Çekirdek Yalıtımı (Bellek Bütünlüğü)</p>
-                                        <ul class="text-gray-300 space-y-0.5 list-disc list-inside ml-2">
-                                            <li>Windows Güvenliği → Cihaz güvenliği</li>
-                                            <li>Çekirdek yalıtımı ayrıntıları</li>
-                                            <li>"Bellek bütünlüğü" → Kapalı</li>
-                                            <li><span class="text-yellow-400">Bilgisayarı yeniden başlatın</span></li>
+                                    <!-- Çekirdek Yalıtımı -->
+                                    <div class="bg-gray-800/40 rounded-lg p-3 border border-gray-700/50">
+                                        <p class="text-amber-300 font-medium mb-2">2. Çekirdek Yalıtımı</p>
+                                        <ul class="text-gray-300 space-y-1 list-disc list-inside ml-1 mb-3 text-xs">
+                                            <li>Aşağıdaki butona tıklayın</li>
+                                            <li>"Bellek bütünlüğü" → <span class="text-red-400 font-medium">Kapalı</span></li>
+                                            <li><span class="text-yellow-400">Yeniden başlatma gerekir</span></li>
                                         </ul>
-                                        <a href="windowsdefender://coreisolation/" class="inline-flex items-center gap-2 mt-2 px-3 py-1.5 bg-blue-600 hover:bg-blue-700 rounded-lg text-sm font-medium transition-colors">
-                                            <span>🔗</span> Çekirdek Yalıtımı'nı Aç
+                                        <a href="windowsdefender://coreisolation/" class="inline-flex items-center gap-2 px-3 py-1.5 bg-blue-600 hover:bg-blue-700 rounded-lg text-xs font-medium transition-colors w-full justify-center">
+                                            🔗 Ayarları Aç
                                         </a>
-                                        <div class="mt-2 bg-gray-800/50 border border-dashed border-gray-600 rounded-lg p-4 text-center">
-                                            <img src="images/guide/defender-core-isolation.webp" alt="Windows Defender Çekirdek Yalıtımı" class="hidden w-full rounded">
-                                            <p class="text-gray-500 text-xs">📷 defender-core-isolation.webp</p>
-                                        </div>
                                     </div>
                                     
-                                    <div>
-                                        <p class="text-amber-300 font-medium mb-1">3. Akıllı Uygulama Denetimi (Windows 11)</p>
-                                        <ul class="text-gray-300 space-y-0.5 list-disc list-inside ml-2">
-                                            <li>Windows Güvenliği → Uygulama ve tarayıcı denetimi</li>
-                                            <li>Akıllı Uygulama Denetimi ayarları</li>
+                                    <!-- Akıllı Uygulama Denetimi -->
+                                    <div class="bg-gray-800/40 rounded-lg p-3 border border-gray-700/50">
+                                        <p class="text-amber-300 font-medium mb-2">3. Akıllı Uygulama Denetimi <span class="text-gray-500 text-xs">(Win 11)</span></p>
+                                        <ul class="text-gray-300 space-y-1 list-disc list-inside ml-1 mb-3 text-xs">
+                                            <li>Aşağıdaki butona tıklayın</li>
                                             <li>"Kapalı" seçeneğini seçin</li>
-                                            <li><span class="text-red-400">⚠️ Kapatıldıktan sonra tekrar açılamaz!</span></li>
+                                            <li><span class="text-red-400">⚠️ Tekrar açılamaz!</span></li>
                                         </ul>
-                                        <a href="windowsdefender://smartapp/" class="inline-flex items-center gap-2 mt-2 px-3 py-1.5 bg-blue-600 hover:bg-blue-700 rounded-lg text-sm font-medium transition-colors">
-                                            <span>🔗</span> Akıllı Uygulama Denetimi'ni Aç
+                                        <a href="windowsdefender://smartapp/" class="inline-flex items-center gap-2 px-3 py-1.5 bg-blue-600 hover:bg-blue-700 rounded-lg text-xs font-medium transition-colors w-full justify-center">
+                                            🔗 Ayarları Aç
                                         </a>
-                                        <div class="mt-2 bg-gray-800/50 border border-dashed border-gray-600 rounded-lg p-4 text-center">
-                                            <img src="images/guide/defender-smart-app.webp" alt="Windows Defender Akıllı Uygulama Denetimi" class="hidden w-full rounded">
-                                            <p class="text-gray-500 text-xs">📷 defender-smart-app.webp</p>
-                                        </div>
                                     </div>
                                     
-                                    <div>
-                                        <p class="text-amber-300 font-medium mb-1">4. Dışlama Ekleme (Önerilen)</p>
-                                        <ul class="text-gray-300 space-y-0.5 list-disc list-inside ml-2">
-                                            <li>Virüs ve tehdit koruması → Ayarları yönet</li>
-                                            <li>Dışlamalar → Dışlama ekle veya kaldır</li>
-                                            <li>Klasör ekle → Oyun klasörünü seçin</li>
-                                            <li><span class="text-green-400">✅ Böylece antivirüsü kapatmanıza gerek kalmaz</span></li>
+                                    <!-- Dışlama Ekleme -->
+                                    <div class="bg-green-900/30 rounded-lg p-3 border border-green-600/50">
+                                        <p class="text-green-400 font-medium mb-2">4. Dışlama Ekle ✅ Önerilen</p>
+                                        <ul class="text-gray-300 space-y-1 list-disc list-inside ml-1 mb-3 text-xs">
+                                            <li>Aşağıdaki butona tıklayın</li>
+                                            <li>"Klasör" seçip oyun klasörünü ekleyin</li>
+                                            <li><span class="text-green-400">Antivirüsü kapatmaya gerek kalmaz</span></li>
                                         </ul>
-                                        <a href="windowsdefender://exclusions/" class="inline-flex items-center gap-2 mt-2 px-3 py-1.5 bg-green-600 hover:bg-green-700 rounded-lg text-sm font-medium transition-colors">
-                                            <span>🔗</span> Dışlama Ayarlarını Aç
+                                        <a href="windowsdefender://exclusions/" class="inline-flex items-center gap-2 px-3 py-1.5 bg-green-600 hover:bg-green-700 rounded-lg text-xs font-medium transition-colors w-full justify-center">
+                                            🔗 Dışlama Ekle
                                         </a>
-                                        <div class="mt-2 bg-gray-800/50 border border-dashed border-gray-600 rounded-lg p-4 text-center">
-                                            <img src="images/guide/defender-exclusions.webp" alt="Windows Defender Dışlama Ekleme" class="hidden w-full rounded">
-                                            <p class="text-gray-500 text-xs">📷 defender-exclusions.webp</p>
-                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -314,7 +298,7 @@
                     <div class="mt-4 p-3 bg-gradient-to-r from-amber-900/30 to-red-900/30 border border-amber-500/30 rounded-lg">
                         <p class="text-amber-400 text-sm font-medium mb-1">⚠️ Önemli Notlar:</p>
                         <ul class="text-gray-300 text-sm space-y-1 list-disc list-inside">
-                            <li>En güvenli yöntem: Antivirüsü kapatmak yerine oyun klasörünü dışlamalara eklemek</li>
+                            <li>Oyunun klasörünü istisnalara eklemeniz önerilir, böylece antivirüsü kapatmanıza gerek kalmaz</li>
                             <li>Bazı antivirüsler yeniden başlatma sonrası otomatik açılır, kontrol edin</li>
                         </ul>
                     </div>
