@@ -2722,3 +2722,312 @@ a, button, .game-card, .quick-nav-btn, .solution-card, .stat-item {
         display: none;
     }
 }
+
+
+/* ==================== SOLUTIONS PAGE MODERN STYLES ==================== */
+
+/* Solutions Hero - High Quality */
+.solutions-hero {
+    background: linear-gradient(135deg, 
+        #0d0515 0%,
+        #1a0a2e 30%,
+        #2d1240 50%,
+        #1a0a2e 70%,
+        #0d0515 100%);
+    background-size: 300% 300%;
+    animation: heroDetailGradient 20s ease infinite;
+    padding: 2rem 0 3rem;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    image-rendering: -webkit-optimize-contrast;
+}
+
+/* Quick Nav Cards - High Quality */
+.quick-nav-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1rem 0.75rem;
+    background: linear-gradient(145deg, rgba(26, 15, 34, 0.9), rgba(18, 10, 24, 0.95));
+    border: 1px solid rgba(168, 85, 247, 0.2);
+    border-radius: 14px;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    transform: translateZ(0);
+    -webkit-transform: translateZ(0);
+    will-change: transform, box-shadow;
+}
+
+.quick-nav-card:hover {
+    background: linear-gradient(145deg, rgba(35, 20, 45, 0.95), rgba(25, 15, 32, 0.98));
+    border-color: rgba(236, 72, 153, 0.5);
+    transform: translateY(-5px) translateZ(0);
+    box-shadow: 
+        0 15px 35px rgba(168, 85, 247, 0.2),
+        0 0 0 1px rgba(236, 72, 153, 0.1);
+}
+
+.quick-nav-icon {
+    font-size: 1.75rem;
+    transition: transform 0.3s ease;
+}
+
+.quick-nav-card:hover .quick-nav-icon {
+    transform: scale(1.15);
+}
+
+.quick-nav-text {
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: var(--text-secondary);
+    transition: color 0.3s ease;
+}
+
+.quick-nav-card:hover .quick-nav-text {
+    color: var(--text-primary);
+}
+
+/* Modern Solution Cards */
+.solution-card-modern {
+    background: linear-gradient(145deg, rgba(26, 15, 34, 0.95), rgba(18, 10, 24, 0.98));
+    border: 1px solid rgba(168, 85, 247, 0.15);
+    border-radius: 20px;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+.solution-card-modern::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: var(--gradient-accent);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.solution-card-modern:hover {
+    border-color: rgba(236, 72, 153, 0.4);
+    box-shadow: 
+        0 20px 50px rgba(0, 0, 0, 0.4),
+        0 0 30px rgba(168, 85, 247, 0.15);
+    transform: translateY(-3px);
+}
+
+.solution-card-modern:hover::before {
+    opacity: 1;
+}
+
+/* Solution Card Header */
+.solution-card-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1.25rem 1.5rem;
+    border-bottom: 1px solid rgba(168, 85, 247, 0.1);
+    background: linear-gradient(135deg, rgba(168, 85, 247, 0.08), rgba(236, 72, 153, 0.05));
+}
+
+.solution-card-icon {
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--gradient-accent);
+    border-radius: 12px;
+    font-size: 1.5rem;
+    box-shadow: 0 4px 15px rgba(168, 85, 247, 0.3);
+}
+
+.solution-card-title {
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.solution-card-subtitle {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    margin-top: 0.15rem;
+}
+
+/* Solution Card Body */
+.solution-card-body {
+    padding: 1.25rem 1.5rem;
+}
+
+/* Ticket Card Special - High Quality */
+.ticket-card {
+    background: linear-gradient(145deg, rgba(30, 15, 40, 0.95), rgba(20, 10, 28, 0.98));
+    border: 1px solid rgba(236, 72, 153, 0.25);
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+    transform: translateZ(0);
+    -webkit-transform: translateZ(0);
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+}
+
+.ticket-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #ec4899 0%, #f472b6 50%, #ec4899 100%);
+    background-size: 200% 100%;
+    animation: ticketGlow 3s ease infinite;
+}
+
+@keyframes ticketGlow {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+}
+
+.ticket-card-header {
+    padding: 1.5rem;
+    background: linear-gradient(135deg, rgba(236, 72, 153, 0.12), rgba(168, 85, 247, 0.08));
+    border-bottom: 1px solid rgba(236, 72, 153, 0.15);
+}
+
+.ticket-card-body {
+    padding: 1.5rem;
+}
+
+/* Warning Box Modern - High Quality */
+.warning-box-modern {
+    background: linear-gradient(135deg, rgba(239, 68, 68, 0.1) 0%, rgba(251, 191, 36, 0.06) 100%);
+    border: 1px solid rgba(239, 68, 68, 0.3);
+    border-radius: 14px;
+    padding: 1.25rem;
+    position: relative;
+    overflow: hidden;
+    transform: translateZ(0);
+    -webkit-transform: translateZ(0);
+}
+
+.warning-box-modern::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background: linear-gradient(180deg, #ef4444 0%, #f59e0b 100%);
+}
+
+/* Rules List Modern - High Quality */
+.rules-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.rule-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    padding: 0.75rem 1rem;
+    background: linear-gradient(135deg, rgba(20, 10, 28, 0.5) 0%, rgba(26, 12, 35, 0.3) 100%);
+    border: 1px solid rgba(168, 85, 247, 0.1);
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    transform: translateZ(0);
+    -webkit-transform: translateZ(0);
+}
+
+.rule-item:hover {
+    border-color: rgba(236, 72, 153, 0.2);
+    background: linear-gradient(135deg, rgba(25, 12, 32, 0.6) 0%, rgba(30, 15, 40, 0.4) 100%);
+}
+
+.rule-icon {
+    flex-shrink: 0;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, rgba(239, 68, 68, 0.2), rgba(251, 191, 36, 0.15));
+    border-radius: 6px;
+    font-size: 0.75rem;
+}
+
+.rule-text {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    line-height: 1.5;
+}
+
+.rule-text strong {
+    color: var(--text-primary);
+}
+
+/* Log Files Badge */
+.log-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    background: linear-gradient(135deg, rgba(168, 85, 247, 0.15), rgba(236, 72, 153, 0.1));
+    border: 1px solid rgba(168, 85, 247, 0.3);
+    border-radius: 8px;
+    font-family: monospace;
+    font-size: 0.875rem;
+    color: #f472b6;
+    transition: all 0.3s ease;
+}
+
+.log-badge:hover {
+    border-color: rgba(236, 72, 153, 0.5);
+    box-shadow: 0 4px 15px rgba(168, 85, 247, 0.2);
+}
+
+/* Discord Button Modern - High Quality */
+.discord-btn-modern {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    padding: 1rem 2rem;
+    background: linear-gradient(135deg, #5865F2 0%, #6d7ce4 50%, #5865F2 100%);
+    background-size: 200% 200%;
+    color: white;
+    font-weight: 600;
+    font-size: 1rem;
+    border-radius: 14px;
+    border: 1px solid rgba(114, 137, 218, 0.4);
+    transition: all 0.4s ease;
+    box-shadow: 0 6px 20px rgba(88, 101, 242, 0.35);
+    animation: discordGradient 3s ease infinite;
+    transform: translateZ(0);
+    -webkit-transform: translateZ(0);
+    will-change: transform, box-shadow;
+}
+
+.discord-btn-modern:hover {
+    transform: translateY(-4px) scale(1.02) translateZ(0);
+    box-shadow: 
+        0 12px 30px rgba(88, 101, 242, 0.45),
+        0 0 0 1px rgba(114, 137, 218, 0.3);
+}
+
+/* Section Divider */
+.section-divider {
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(168, 85, 247, 0.3), rgba(236, 72, 153, 0.3), transparent);
+    margin: 2rem 0;
+}
+
+/* Smooth scroll offset for anchors */
+[id] {
+    scroll-margin-top: 100px;
+}
