@@ -1,0 +1,14 @@
+- [XIII - Classic Türkçe Yama](https://forum.donanimhaber.com/xiii-classic-turkce-yama--148555577) Platformlar : PC
+- [Grand Theft Auto III, Vice City & San Andreas - 2023 Türkçe Yamaları](https://forum.donanimhaber.com/grand-theft-auto-san-andreas-2020-turkce-yama-pc-ps2--144764586) Platformlar : PC & PS2
+- [Grand Theft Auto: Vice City Stories - 2022 Türkçe Yama](https://forum.donanimhaber.com/grand-theft-auto-vice-city-stories-2022-turkce-yama-ps2-psp--150470593) Platformlar : PC & PS2
+- [Grand Theft Auto: The Trilogy - The Definitive Edition Türkçe Yama](https://forum.donanimhaber.com/grand-theft-auto-the-trilogy-the-definitive-edition-turkce-yama--151120550) Platformlar : PC
+- [Red Dead Redemption GOTY & Undead Nightmare Türkçe Yama](https://forum.donanimhaber.com/yapim-asamasinda-red-dead-redemption-turkce-yama-rpsc3-xenia--152141033) Platformlar : Xenia, Ryujinx & Yuzu
+- [Grand Theft Auto: Liberty City Stories - 2023 Türkçe Yama](https://forum.donanimhaber.com/grand-theft-auto-liberty-city-stories-2023-turkce-yama-ps2-psp--154778210) Platformlar : PC & PS2 & PSP
+- [Grand Theft Auto V Legacy & Enhanced Türkçe Yama](https://forum.donanimhaber.com/yapim-asamasinda-grand-theft-auto-v-2024-turkce-yama--156350086) Platformlar : PC
+- [Manhunt - 2024 Türkçe Yama](https://forum.donanimhaber.com/manhunt-2024-turkce-yama--158325122) Platformlar : PC
+- [Manhunt 2 - 2024 Türkçe Yama](https://forum.donanimhaber.com/manhunt-2-2024-turkce-yama--158463407) Platformlar : PC & PSP
+- [(Beta) Red Dead Redemption II - 2025 Türkçe Yama](https://forum.donanimhaber.com/red-dead-redemption-ii-2025-turkce-yama--158486074) Platformlar : PC
+- [Red Dead Redemption Türkçe Yama](https://forum.donanimhaber.com/red-dead-redemption-turkce-yama-pc--159748572) Platformlar : PC
+- [Grand Theft Auto: Vice City Nextgen Edition Türkçe Yama](https://forum.donanimhaber.com/grand-theft-auto-vice-city-nextgen-edition-turkce-yama--160549618) Platformlar : PC
+- [Bully - 2025 Türkçe Yama](https://forum.donanimhaber.com/bully-2025-turkce-yama-pc-ps2--162071840) Platformlar : PC & PS2
+- [L.A Noire - 2025 Türkçe Yama]() Platformlar : PC
