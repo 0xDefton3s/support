@@ -28,6 +28,11 @@ document.addEventListener('DOMContentLoaded', function() {
                 const mobileNavGenel = headerPlaceholder.querySelector('.mobile-nav-link.nav-genel');
                 const mobileNavOyunlar = headerPlaceholder.querySelector('.mobile-nav-link.nav-oyunlar');
                 
+                // Mobil linkleri de güncelle
+                if (mobileNavHome) mobileNavHome.href = basePath + 'index.html';
+                if (mobileNavGenel) mobileNavGenel.href = basePath + 'genel-cozumler.html';
+                if (mobileNavOyunlar) mobileNavOyunlar.href = basePath + 'index.html#oyunlar';
+                
                 if (currentPage.includes('genel-cozumler')) {
                     navGenel?.classList.add('nav-active');
                     mobileNavGenel?.classList.add('nav-active');
