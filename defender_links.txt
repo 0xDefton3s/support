@@ -1,0 +1,40 @@
+windowsdefender://	Windows Security dashboard
+windowsdefender://account/	Account Protection
+windowsdefender://accountprotection/	Account Protection
+windowsdefender://allowappthroughfolder/	Allow an app through Controlled Folder Access
+windowsdefender://appbrowser/	App & browser control
+windowsdefender://appguardsettings/	Application Guard settings
+windowsdefender://coreisolation/	Core Isolation
+windowsdefender://coreisolationreboot/	Reboots Windows immediately without warning
+windowsdefender://customscan	Scan Options
+windowsdefender://dataencryption/	Device security *Windows 11 only.
+windowsdefender://devicesecurity/	Device security
+windowsdefender://enableandupdate/	Enable Real-time protection and Update the definitions
+windowsdefender://enablertp/	Enable Real-time protection
+windowsdefender://exclusions/	Exclusions – Add or remove items to scan exclusions
+windowsdefender://exploitprotection/	Exploit protection
+windowsdefender://family/	Family options
+windowsdefender://freshstart/	Fresh start. *Since Windows 10 v2004, Fresh start has been moved to Reset this PC.
+windowsdefender://fullhistory/	Protection History
+windowsdefender://fullscan/	Start a Full scan (Scan Options)
+windowsdefender://hardware/	Device security
+windowsdefender://history	Protection History
+windowsdefender://network/	Firewall & network protection
+windowsdefender://perfhealth/	Device performance & health
+windowsdefender://protectedfolders/	Protected folders (Controlled Folder Access)
+windowsdefender://providers/	Security providers
+windowsdefender://quarantinehistory/	Protection history, filtered by quarantined items.
+windowsdefender://quickscan/	Start a quick scan (Scan Options)
+windowsdefender://ransomwareprotection/	Ransomware protection
+windowsdefender://reboot/	Reboots Windows without warning
+windowsdefender://samples	Virus & threat protection dashboard
+windowsdefender://securityprocessor/	Security processor details (TPM)
+windowsdefender://securityprocessortroubleshooting/	Security processor troubleshooting (TPM)
+windowsdefender://settings/	Windows Security Notification settings
+windowsdefender://smartapp/	Smart App Control. *Windows 11 only.
+windowsdefender://smartscreenpua/	Reputation-based protection
+windowsdefender://threat/	Virus & threat protection dashboard
+windowsdefender://threatsettings/	Virus & threat protection settings
+windowsdefender://update/	Update the definitions immediately (Protection updates)
+windowsdefender://updateandquickscan/	Update the definitions immediately and run a quick scan.
+windowsdefender://wdoscan/	Start Windows Defender Offline Scan.
