@@ -131,16 +131,8 @@
             <h2 class="text-xl font-bold mb-2 text-center">🎮 Desteklenen Yamalar</h2>
             <p class="text-[#b8a3b8] text-center mb-4 text-sm">Aşağıdaki oyunlar için özel destek sayfalarımız mevcuttur</p>
             
-            <!-- Year Filter -->
-            <div class="flex flex-wrap justify-center gap-2 mb-6" id="year-filter">
-                <button class="filter-btn filter-active" data-filter="all">Tümü</button>
-                <button class="filter-btn" data-filter="2019">2019</button>
-                <button class="filter-btn" data-filter="2022">2022</button>
-                <button class="filter-btn" data-filter="2023">2023</button>
-                <button class="filter-btn" data-filter="2024">2024</button>
-                <button class="filter-btn" data-filter="2025">2025</button>
-                <button class="filter-btn" data-filter="2026">2026</button>
-            </div>
+            <!-- Year Filter (Dinamik) -->
+            <div class="flex flex-wrap justify-center gap-2 mb-6" id="year-filter"></div>
             
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4" id="games-grid">
                 <!-- L.A. Noire -->
@@ -172,15 +164,29 @@
                 </a>
 
                 <!-- GTA Vice City Nextgen -->
-                <a href="oyunlar/gta-vice-city-nextgen.html" class="game-card" data-year="2024">
+                <a href="oyunlar/gta-vice-city-nextgen.html" class="game-card" data-year="2025">
                     <img src="images/gta-vice-city-nextgen.webp" alt="Grand Theft Auto Vice City Nextgen" class="game-card-cover">
                     <div class="platform-badges">
-                        <span class="px-2 py-0.5 platform-year rounded-full text-xs">2024</span>
+                        <span class="px-2 py-0.5 platform-year rounded-full text-xs">2025</span>
                         <span class="px-2 py-0.5 platform-pc rounded-full text-xs">PC</span>
                     </div>
                     <div class="game-card-content">
                         <h3 class="font-semibold text-white">Grand Theft Auto: Vice City Nextgen Edition</h3>
                         <p class="text-[#b8a3b8]">Modernize edilmiş Vice City</p>
+                    </div>
+                </a>
+
+                <!-- Red Dead Redemption 2 Beta -->
+                <a href="oyunlar/rdr2.html" class="game-card" data-year="2025">
+                    <img src="images/rdr2.webp" alt="Red Dead Redemption 2" class="game-card-cover">
+                    <div class="platform-badges">
+                        <span class="px-2 py-0.5 platform-year rounded-full text-xs">2025</span>
+                        <span class="px-2 py-0.5 platform-pc rounded-full text-xs">PC</span>
+                    </div>
+                    <span class="absolute top-3 right-3 badge-beta rounded text-sm font-bold z-10">BETA</span>
+                    <div class="game-card-content">
+                        <h3 class="font-semibold text-white">Red Dead Redemption II</h3>
+                        <p class="text-[#b8a3b8]">Arthur Morgan'ın epik destanı</p>
                     </div>
                 </a>
 
@@ -194,20 +200,6 @@
                     <div class="game-card-content">
                         <h3 class="font-semibold text-white">Red Dead Redemption</h3>
                         <p class="text-[#b8a3b8]">John Marston'ın intikam hikayesi</p>
-                    </div>
-                </a>
-
-                <!-- Red Dead Redemption 2 Beta -->
-                <a href="oyunlar/rdr2.html" class="game-card" data-year="2026">
-                    <img src="images/rdr2.webp" alt="Red Dead Redemption 2" class="game-card-cover">
-                    <div class="platform-badges">
-                        <span class="px-2 py-0.5 platform-year rounded-full text-xs">2026</span>
-                        <span class="px-2 py-0.5 platform-pc rounded-full text-xs">PC</span>
-                    </div>
-                    <span class="absolute top-3 right-3 badge-beta rounded text-sm font-bold z-10">BETA</span>
-                    <div class="game-card-content">
-                        <h3 class="font-semibold text-white">Red Dead Redemption II</h3>
-                        <p class="text-[#b8a3b8]">Arthur Morgan'ın epik destanı</p>
                     </div>
                 </a>
 
@@ -308,10 +300,10 @@
                 </a>
 
                 <!-- Grand Theft Auto Trilogy Classic -->
-                <a href="oyunlar/gta-trilogy-classic.html" class="game-card" data-year="2023">
+                <a href="oyunlar/gta-trilogy-classic.html" class="game-card" data-year="2020">
                     <img src="images/gta-trilogy-classic.webp" alt="Grand Theft Auto Trilogy Classic" class="game-card-cover">
                     <div class="platform-badges">
-                        <span class="px-2 py-0.5 platform-year rounded-full text-xs">2023</span>
+                        <span class="px-2 py-0.5 platform-year rounded-full text-xs">2020</span>
                         <span class="px-2 py-0.5 platform-pc rounded-full text-xs">PC</span>
                         <span class="px-2 py-0.5 platform-ps2 rounded-full text-xs">PS2</span>
                     </div>
@@ -341,7 +333,7 @@
     <script src="js/partials.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            const filterBtns = document.querySelectorAll('.filter-btn');
+            const yearFilterContainer = document.getElementById('year-filter');
             const gameCards = document.querySelectorAll('.game-card[data-year]');
             const gameCountEl = document.getElementById('game-count');
             const gameCountTextEl = document.getElementById('game-count-text');
@@ -351,7 +343,26 @@
             if (gameCountEl) gameCountEl.textContent = count;
             if (gameCountTextEl) gameCountTextEl.textContent = count;
             
-            // Year Filter
+            // Oyun kartlarından yılları topla ve sırala
+            const years = [...new Set([...gameCards].map(card => card.dataset.year))].sort((a, b) => a - b);
+            
+            // Dinamik filtre butonları oluştur
+            const allBtn = document.createElement('button');
+            allBtn.className = 'filter-btn filter-active';
+            allBtn.dataset.filter = 'all';
+            allBtn.textContent = 'Tümü';
+            yearFilterContainer.appendChild(allBtn);
+            
+            years.forEach(year => {
+                const btn = document.createElement('button');
+                btn.className = 'filter-btn';
+                btn.dataset.filter = year;
+                btn.textContent = year;
+                yearFilterContainer.appendChild(btn);
+            });
+            
+            // Filtre işlevselliği
+            const filterBtns = yearFilterContainer.querySelectorAll('.filter-btn');
             filterBtns.forEach(btn => {
                 btn.addEventListener('click', function() {
                     const filter = this.dataset.filter;
