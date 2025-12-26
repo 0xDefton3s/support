@@ -72,9 +72,7 @@ body::before {
     position: relative;
     overflow: hidden;
     aspect-ratio: 3/4;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
+    display: block;
     background: transparent;
     transition: box-shadow 0.3s ease;
 }
@@ -101,14 +99,15 @@ body::before {
 
 /* Game Card Content Overlay */
 .game-card-content {
-    position: relative;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
     z-index: 3;
-    padding: 1.5rem 0.85rem 0.75rem 0.85rem;
-    background: linear-gradient(180deg, transparent 0%, rgba(10, 5, 15, 0.9) 30%, rgba(10, 5, 15, 0.98) 100%);
+    padding: 2rem 0.5rem 0.5rem 0.5rem;
+    background: linear-gradient(180deg, transparent 0%, rgba(10, 5, 15, 0.9) 40%, rgba(10, 5, 15, 0.98) 100%);
     backdrop-filter: blur(4px);
     -webkit-backdrop-filter: blur(4px);
-    border-radius: 0;
-    margin: 0;
 }
 
 /* Game Card Text Info Box */
