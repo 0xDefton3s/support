@@ -11,4 +11,4 @@
 - [Red Dead Redemption Türkçe Yama](https://forum.donanimhaber.com/red-dead-redemption-turkce-yama-pc--159748572) Platformlar : PC
 - [Grand Theft Auto: Vice City Nextgen Edition Türkçe Yama](https://forum.donanimhaber.com/grand-theft-auto-vice-city-nextgen-edition-turkce-yama--160549618) Platformlar : PC
 - [Bully - 2025 Türkçe Yama](https://forum.donanimhaber.com/bully-2025-turkce-yama-pc-ps2--162071840) Platformlar : PC & PS2
-- [L.A Noire - 2025 Türkçe Yama]() Platformlar : PC
+- [L.A Noire - 2026 Türkçe Yama]() Platformlar : PC
