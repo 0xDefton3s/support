@@ -1150,15 +1150,15 @@ a, button, .game-card, .quick-nav-btn, .solution-card, .stat-item {
     box-shadow: 0 0 6px rgba(236, 72, 153, 0.4);
 }
 
-.game-detail-hero .particle:nth-child(1) { left: 8%; animation-delay: 0s; animation-duration: 22s; }
-.game-detail-hero .particle:nth-child(2) { left: 18%; animation-delay: 3s; animation-duration: 18s; }
-.game-detail-hero .particle:nth-child(3) { left: 28%; animation-delay: 1s; animation-duration: 24s; }
-.game-detail-hero .particle:nth-child(4) { left: 42%; animation-delay: 4s; animation-duration: 20s; }
-.game-detail-hero .particle:nth-child(5) { left: 55%; animation-delay: 2s; animation-duration: 23s; }
-.game-detail-hero .particle:nth-child(6) { left: 65%; animation-delay: 5s; animation-duration: 19s; }
-.game-detail-hero .particle:nth-child(7) { left: 75%; animation-delay: 1s; animation-duration: 21s; }
-.game-detail-hero .particle:nth-child(8) { left: 85%; animation-delay: 3s; animation-duration: 25s; }
-.game-detail-hero .particle:nth-child(9) { left: 92%; animation-delay: 2s; animation-duration: 17s; }
+.game-detail-hero .particle:nth-child(1) { left: 8%; animation-duration: 22s; }
+.game-detail-hero .particle:nth-child(2) { left: 18%; animation-duration: 18s; }
+.game-detail-hero .particle:nth-child(3) { left: 28%; animation-duration: 24s; }
+.game-detail-hero .particle:nth-child(4) { left: 42%; animation-duration: 20s; }
+.game-detail-hero .particle:nth-child(5) { left: 55%; animation-duration: 23s; }
+.game-detail-hero .particle:nth-child(6) { left: 65%; animation-duration: 19s; }
+.game-detail-hero .particle:nth-child(7) { left: 75%; animation-duration: 21s; }
+.game-detail-hero .particle:nth-child(8) { left: 85%; animation-duration: 25s; }
+.game-detail-hero .particle:nth-child(9) { left: 92%; animation-duration: 17s; }
 
 @keyframes floatParticle {
     0% { 
@@ -1178,6 +1178,17 @@ a, button, .game-card, .quick-nav-btn, .solution-card, .stat-item {
         opacity: 0;
     }
 }
+
+/* Parçacıkların farklı başlangıç pozisyonları için */
+.game-detail-hero .particle:nth-child(1) { top: 20%; animation-delay: -5s; }
+.game-detail-hero .particle:nth-child(2) { top: 40%; animation-delay: -8s; }
+.game-detail-hero .particle:nth-child(3) { top: 60%; animation-delay: -12s; }
+.game-detail-hero .particle:nth-child(4) { top: 30%; animation-delay: -3s; }
+.game-detail-hero .particle:nth-child(5) { top: 70%; animation-delay: -15s; }
+.game-detail-hero .particle:nth-child(6) { top: 50%; animation-delay: -7s; }
+.game-detail-hero .particle:nth-child(7) { top: 25%; animation-delay: -10s; }
+.game-detail-hero .particle:nth-child(8) { top: 80%; animation-delay: -2s; }
+.game-detail-hero .particle:nth-child(9) { top: 45%; animation-delay: -18s; }
 
 /* Animated Grid Background */
 .game-detail-hero .hero-grid-bg {
