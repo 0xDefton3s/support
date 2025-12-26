@@ -988,11 +988,7 @@ code {
 }
 
 /* Responsive adjustments */
-@media (max-width: 768px) {
-    .game-card {
-        padding: 1rem;
-    }
-    
+@media (max-width: 768px) {   
     .content-section {
         padding: 1rem;
     }
@@ -2453,6 +2449,27 @@ a, button, .game-card, .quick-nav-btn, .solution-card, .stat-item {
     color: white;
     font-weight: 600;
     box-shadow: 0 2px 8px rgba(59, 130, 246, 0.4);
+}
+
+/* Testing Badge */
+.badge-testing {
+    background: linear-gradient(135deg, #f59e0b, #d97706);
+    padding: 0.25rem 0.6rem;
+    color: #1a1a2e;
+    font-weight: 700;
+    box-shadow: 0 2px 8px rgba(245, 158, 11, 0.4);
+    animation: pulse-glow-orange 2s infinite;
+}
+
+@keyframes pulse-glow-orange {
+    0%, 100% {
+        opacity: 1;
+        box-shadow: 0 0 8px rgba(245, 158, 11, 0.5);
+    }
+    50% {
+        opacity: 0.9;
+        box-shadow: 0 0 15px rgba(245, 158, 11, 0.7);
+    }
 }
 
 /* ==================== REDUCED GLOW BUTTONS ==================== */
