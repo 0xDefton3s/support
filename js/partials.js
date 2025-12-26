@@ -38,6 +38,16 @@ document.addEventListener('DOMContentLoaded', function() {
                     navHome?.classList.add('nav-active');
                     mobileNavHome?.classList.add('nav-active');
                 }
+                
+                // Mobil menü toggle fonksiyonunu ekle
+                const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+                const mobileMenu = document.getElementById('mobileMenu');
+                
+                if (mobileMenuBtn && mobileMenu) {
+                    mobileMenuBtn.addEventListener('click', function() {
+                        mobileMenu.classList.toggle('hidden');
+                    });
+                }
             })
             .catch(err => console.error('Header yüklenemedi:', err));
     }
