@@ -41,7 +41,7 @@
                 <!-- Subtitle -->
                 <p class="hero-subtitle text-base md:text-lg text-[#b8a3b8] mb-8 max-w-2xl mx-auto leading-relaxed">
                     Türkçe oyun yamalarınız için kapsamlı destek ve hata çözüm rehberleri. 
-                    <span class="text-pink-400">14+ oyun</span> için profesyonel destek.
+                    <span class="text-pink-400"><span id="game-count-text">14</span> Türkçe Çeviri Projesi</span> için profesyonel destek.
                 </p>
                 
                 <!-- CTA Buttons -->
@@ -71,8 +71,8 @@
                 <!-- Stats -->
                 <div class="hero-stats grid grid-cols-3 gap-4 max-w-lg mx-auto">
                     <div class="stat-item">
-                        <span class="stat-number">14+</span>
-                        <span class="stat-label">Oyun</span>
+                        <span class="stat-number" id="game-count">14</span>
+                        <span class="stat-label">Çeviri Projesi</span>
                     </div>
                     <div class="stat-item">
                         <span class="stat-number">50+</span>
@@ -129,16 +129,28 @@
     <section id="oyunlar" class="py-12">
         <div class="container mx-auto px-4">
             <h2 class="text-xl font-bold mb-2 text-center">🎮 Desteklenen Yamalar</h2>
-            <p class="text-[#b8a3b8] text-center mb-6 text-sm">Aşağıdaki oyunlar için özel destek sayfalarımız mevcuttur</p>
+            <p class="text-[#b8a3b8] text-center mb-4 text-sm">Aşağıdaki oyunlar için özel destek sayfalarımız mevcuttur</p>
             
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            <!-- Year Filter -->
+            <div class="flex flex-wrap justify-center gap-2 mb-6" id="year-filter">
+                <button class="filter-btn filter-active" data-filter="all">Tümü</button>
+                <button class="filter-btn" data-filter="2019">2019</button>
+                <button class="filter-btn" data-filter="2022">2022</button>
+                <button class="filter-btn" data-filter="2023">2023</button>
+                <button class="filter-btn" data-filter="2024">2024</button>
+                <button class="filter-btn" data-filter="2025">2025</button>
+                <button class="filter-btn" data-filter="2026">2026</button>
+            </div>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4" id="games-grid">
                 <!-- L.A. Noire -->
-                <a href="oyunlar/la-noire.html" class="game-card">
+                <a href="oyunlar/la-noire.html" class="game-card" data-year="2026">
                     <img src="images/la-noire.webp" alt="L.A. Noire" class="game-card-cover">
                     <div class="platform-badges">
-                        <span class="px-2 py-0.5 platform-year rounded-full text-xs">2024</span>
+                        <span class="px-2 py-0.5 platform-year rounded-full text-xs">2026</span>
                         <span class="px-2 py-0.5 platform-pc rounded-full text-xs">PC</span>
                     </div>
+                    <span class="absolute top-3 right-3 badge-translation rounded text-xs font-bold z-10">ÇEVİRİ AŞAMASINDA</span>
                     <div class="game-card-content">
                         <h3 class="font-semibold text-white">L.A. Noire</h3>
                         <p class="text-[#b8a3b8]">1940'lar Los Angeles dedektiflik</p>
@@ -146,7 +158,7 @@
                 </a>
 
                 <!-- Bully -->
-                <a href="oyunlar/bully.html" class="game-card">
+                <a href="oyunlar/bully.html" class="game-card" data-year="2025">
                     <img src="images/bully.webp" alt="Bully" class="game-card-cover">
                     <div class="platform-badges">
                         <span class="px-2 py-0.5 platform-year rounded-full text-xs">2025</span>
@@ -160,7 +172,7 @@
                 </a>
 
                 <!-- GTA Vice City Nextgen -->
-                <a href="oyunlar/gta-vice-city-nextgen.html" class="game-card">
+                <a href="oyunlar/gta-vice-city-nextgen.html" class="game-card" data-year="2024">
                     <img src="images/gta-vice-city-nextgen.webp" alt="GTA Vice City Nextgen" class="game-card-cover">
                     <div class="platform-badges">
                         <span class="px-2 py-0.5 platform-year rounded-full text-xs">2024</span>
@@ -173,7 +185,7 @@
                 </a>
 
                 <!-- RDR PC -->
-                <a href="oyunlar/rdr-pc.html" class="game-card">
+                <a href="oyunlar/rdr-pc.html" class="game-card" data-year="2024">
                     <img src="images/rdr-pc.webp" alt="Red Dead Redemption PC" class="game-card-cover">
                     <div class="platform-badges">
                         <span class="px-2 py-0.5 platform-year rounded-full text-xs">2024</span>
@@ -186,7 +198,7 @@
                 </a>
 
                 <!-- RDR2 Beta -->
-                <a href="oyunlar/rdr2.html" class="game-card">
+                <a href="oyunlar/rdr2.html" class="game-card" data-year="2026">
                     <img src="images/rdr2.webp" alt="Red Dead Redemption 2" class="game-card-cover">
                     <div class="platform-badges">
                         <span class="px-2 py-0.5 platform-year rounded-full text-xs">2026</span>
@@ -200,7 +212,7 @@
                 </a>
 
                 <!-- Manhunt 2 -->
-                <a href="oyunlar/manhunt-2.html" class="game-card">
+                <a href="oyunlar/manhunt-2.html" class="game-card" data-year="2024">
                     <img src="images/manhunt-2.webp" alt="Manhunt 2" class="game-card-cover">
                     <div class="platform-badges">
                         <span class="px-2 py-0.5 platform-year rounded-full text-xs">2024</span>
@@ -214,7 +226,7 @@
                 </a>
 
                 <!-- Manhunt -->
-                <a href="oyunlar/manhunt.html" class="game-card">
+                <a href="oyunlar/manhunt.html" class="game-card" data-year="2024">
                     <img src="images/manhunt.webp" alt="Manhunt" class="game-card-cover">
                     <div class="platform-badges">
                         <span class="px-2 py-0.5 platform-year rounded-full text-xs">2024</span>
@@ -227,7 +239,7 @@
                 </a>
 
                 <!-- GTA V -->
-                <a href="oyunlar/gta-v.html" class="game-card">
+                <a href="oyunlar/gta-v.html" class="game-card" data-year="2024">
                     <img src="images/gta-v.webp" alt="GTA V" class="game-card-cover">
                     <div class="platform-badges">
                         <span class="px-2 py-0.5 platform-year rounded-full text-xs">2024</span>
@@ -240,7 +252,7 @@
                 </a>
 
                 <!-- GTA Liberty City Stories -->
-                <a href="oyunlar/gta-liberty-city-stories.html" class="game-card">
+                <a href="oyunlar/gta-liberty-city-stories.html" class="game-card" data-year="2023">
                     <img src="images/gta-liberty-city-stories.webp" alt="GTA Liberty City Stories" class="game-card-cover">
                     <div class="platform-badges">
                         <span class="px-2 py-0.5 platform-year rounded-full text-xs">2023</span>
@@ -255,7 +267,7 @@
                 </a>
 
                 <!-- RDR GOTY -->
-                <a href="oyunlar/rdr-goty.html" class="game-card">
+                <a href="oyunlar/rdr-goty.html" class="game-card" data-year="2023">
                     <img src="images/rdr-goty.webp" alt="Red Dead Redemption GOTY" class="game-card-cover">
                     <div class="platform-badges">
                         <span class="px-2 py-0.5 platform-year rounded-full text-xs">2023</span>
@@ -269,7 +281,7 @@
                 </a>
 
                 <!-- GTA Trilogy Definitive -->
-                <a href="oyunlar/gta-trilogy-definitive.html" class="game-card">
+                <a href="oyunlar/gta-trilogy-definitive.html" class="game-card" data-year="2022">
                     <img src="images/gta-trilogy-definitive.webp" alt="GTA Trilogy Definitive" class="game-card-cover">
                     <div class="platform-badges">
                         <span class="px-2 py-0.5 platform-year rounded-full text-xs">2022</span>
@@ -282,7 +294,7 @@
                 </a>
 
                 <!-- GTA Vice City Stories -->
-                <a href="oyunlar/gta-vice-city-stories.html" class="game-card">
+                <a href="oyunlar/gta-vice-city-stories.html" class="game-card" data-year="2022">
                     <img src="images/gta-vice-city-stories.webp" alt="GTA Vice City Stories" class="game-card-cover">
                     <div class="platform-badges">
                         <span class="px-2 py-0.5 platform-year rounded-full text-xs">2022</span>
@@ -296,7 +308,7 @@
                 </a>
 
                 <!-- GTA Trilogy Classic -->
-                <a href="oyunlar/gta-trilogy-classic.html" class="game-card">
+                <a href="oyunlar/gta-trilogy-classic.html" class="game-card" data-year="2023">
                     <img src="images/gta-trilogy-classic.webp" alt="GTA Trilogy Classic" class="game-card-cover">
                     <div class="platform-badges">
                         <span class="px-2 py-0.5 platform-year rounded-full text-xs">2023</span>
@@ -310,10 +322,10 @@
                 </a>
 
                 <!-- XIII Classic -->
-                <a href="oyunlar/xiii-classic.html" class="game-card">
+                <a href="oyunlar/xiii-classic.html" class="game-card" data-year="2019">
                     <img src="images/xiii-classic.webp" alt="XIII Classic" class="game-card-cover">
                     <div class="platform-badges">
-                        <span class="px-2 py-0.5 platform-year rounded-full text-xs">2024</span>
+                        <span class="px-2 py-0.5 platform-year rounded-full text-xs">2019</span>
                         <span class="px-2 py-0.5 platform-pc rounded-full text-xs">PC</span>
                     </div>
                     <div class="game-card-content">
@@ -327,5 +339,36 @@
 
     <div id="footer-placeholder"></div>
     <script src="js/partials.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const filterBtns = document.querySelectorAll('.filter-btn');
+            const gameCards = document.querySelectorAll('.game-card[data-year]');
+            const gameCountEl = document.getElementById('game-count');
+            const gameCountTextEl = document.getElementById('game-count-text');
+            
+            // Dinamik oyun sayısı
+            const count = gameCards.length;
+            if (gameCountEl) gameCountEl.textContent = count;
+            if (gameCountTextEl) gameCountTextEl.textContent = count;
+            
+            // Year Filter
+            filterBtns.forEach(btn => {
+                btn.addEventListener('click', function() {
+                    const filter = this.dataset.filter;
+                    
+                    filterBtns.forEach(b => b.classList.remove('filter-active'));
+                    this.classList.add('filter-active');
+                    
+                    gameCards.forEach(card => {
+                        if (filter === 'all' || card.dataset.year === filter) {
+                            card.style.display = '';
+                        } else {
+                            card.style.display = 'none';
+                        }
+                    });
+                });
+            });
+        });
+    </script>
 </body>
 </html>
