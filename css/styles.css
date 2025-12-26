@@ -305,6 +305,43 @@ body::before {
     box-shadow: 0 4px 15px rgba(88, 101, 242, 0.4);
 }
 
+/* Discord Action Button - Game Detail Pages */
+.action-btn-discord {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.65rem 1.25rem;
+    background: linear-gradient(135deg, #5865F2 0%, #7289DA 50%, #5865F2 100%);
+    background-size: 200% 200%;
+    color: white;
+    font-weight: 600;
+    font-size: 0.875rem;
+    border-radius: 10px;
+    border: 1px solid rgba(114, 137, 218, 0.4);
+    transition: all 0.4s ease;
+    box-shadow: 0 4px 15px rgba(88, 101, 242, 0.35);
+    animation: discordGradient 3s ease infinite;
+}
+
+@keyframes discordGradient {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+}
+
+.action-btn-discord:hover {
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 
+        0 8px 25px rgba(88, 101, 242, 0.5),
+        0 0 30px rgba(114, 137, 218, 0.3);
+    border-color: rgba(114, 137, 218, 0.7);
+}
+
+.action-btn-discord svg {
+    width: 18px;
+    height: 18px;
+    filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.2));
+}
+
 /* Quick nav buttons */
 .quick-nav-btn {
     background: linear-gradient(145deg, rgba(26, 15, 34, 0.9), rgba(18, 10, 24, 0.95));
