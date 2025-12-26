@@ -1,4 +1,5 @@
 // Partials Loader - Header ve Footer'ı dinamik olarak yükler
+
 document.addEventListener('DOMContentLoaded', function() {
     const isSubPage = window.location.pathname.includes('/oyunlar/');
     const basePath = isSubPage ? '../' : '';
