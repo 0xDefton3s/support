@@ -23,10 +23,19 @@ document.addEventListener('DOMContentLoaded', function() {
                 
                 // Aktif sayfa vurgulama
                 const currentPage = window.location.pathname;
+                const mobileNavHome = headerPlaceholder.querySelector('.mobile-nav-link.nav-home');
+                const mobileNavGenel = headerPlaceholder.querySelector('.mobile-nav-link.nav-genel');
+                const mobileNavOyunlar = headerPlaceholder.querySelector('.mobile-nav-link.nav-oyunlar');
+                
                 if (currentPage.includes('genel-cozumler')) {
-                    navGenel?.classList.add('text-blue-400');
+                    navGenel?.classList.add('nav-active');
+                    mobileNavGenel?.classList.add('nav-active');
                 } else if (currentPage.includes('/oyunlar/')) {
-                    navOyunlar?.classList.add('text-blue-400');
+                    navOyunlar?.classList.add('nav-active');
+                    mobileNavOyunlar?.classList.add('nav-active');
+                } else if (currentPage.endsWith('index.html') || currentPage.endsWith('/') || currentPage === '') {
+                    navHome?.classList.add('nav-active');
+                    mobileNavHome?.classList.add('nav-active');
                 }
             })
             .catch(err => console.error('Header yüklenemedi:', err));
@@ -39,6 +48,11 @@ document.addEventListener('DOMContentLoaded', function() {
             .then(response => response.text())
             .then(html => {
                 footerPlaceholder.innerHTML = html;
+                // currentYear'ı set et
+                const yearElement = document.getElementById('currentYear');
+                if (yearElement) {
+                    yearElement.textContent = new Date().getFullYear();
+                }
             })
             .catch(err => console.error('Footer yüklenemedi:', err));
     }
