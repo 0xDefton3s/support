@@ -2073,6 +2073,19 @@ a, button, .game-card, .quick-nav-btn, .solution-card, .stat-item {
     animation: titleShimmerEnhanced 4s ease-in-out infinite;
     background-size: 300% 300%;
     filter: drop-shadow(0 2px 10px var(--theme-glow));
+    font-size: 1.25rem !important;
+}
+
+@media (min-width: 768px) {
+    [data-game-theme] .game-title-gradient {
+        font-size: 1.5rem !important;
+    }
+}
+
+@media (min-width: 1024px) {
+    [data-game-theme] .game-title-gradient {
+        font-size: 1.75rem !important;
+    }
 }
 
 @keyframes titleShimmerEnhanced {
