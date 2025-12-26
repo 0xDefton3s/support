@@ -2537,3 +2537,188 @@ a, button, .game-card, .quick-nav-btn, .solution-card, .stat-item {
     box-shadow: 0 5px 18px rgba(34, 197, 94, 0.3);
     background: linear-gradient(135deg, #16a34a, #15803d);
 }
+
+
+/* ==================== QUICK SOLUTIONS - MODERN ==================== */
+.quick-solutions-wrapper {
+    position: relative;
+}
+
+.quick-solutions-header {
+    position: relative;
+}
+
+/* Quick Solution Card */
+.quick-solution-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 1.75rem 1.25rem;
+    background: linear-gradient(145deg, rgba(26, 15, 34, 0.95), rgba(18, 10, 24, 0.98));
+    border: 1px solid rgba(168, 85, 247, 0.15);
+    border-radius: 20px;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    overflow: hidden;
+}
+
+.quick-solution-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(168, 85, 247, 0.08), rgba(236, 72, 153, 0.05));
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.quick-solution-card::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: conic-gradient(from 0deg, transparent, rgba(168, 85, 247, 0.1), transparent 30%);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    animation: rotateGlow 4s linear infinite;
+    pointer-events: none;
+    z-index: 0;
+}
+
+@keyframes rotateGlow {
+    100% { transform: rotate(360deg); }
+}
+
+.quick-solution-card:hover {
+    border-color: rgba(236, 72, 153, 0.4);
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 
+        0 20px 40px rgba(0, 0, 0, 0.4),
+        0 0 30px rgba(168, 85, 247, 0.15),
+        0 0 60px rgba(236, 72, 153, 0.1);
+}
+
+.quick-solution-card:hover::before {
+    opacity: 1;
+}
+
+.quick-solution-card:hover::after {
+    opacity: 1;
+}
+
+/* Icon Container */
+.quick-solution-icon {
+    position: relative;
+    z-index: 1;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, rgba(168, 85, 247, 0.15), rgba(236, 72, 153, 0.1));
+    border: 1px solid rgba(168, 85, 247, 0.25);
+    border-radius: 16px;
+    margin-bottom: 1rem;
+    color: #c4b5fd;
+    transition: all 0.4s ease;
+}
+
+.quick-solution-card:hover .quick-solution-icon {
+    background: linear-gradient(135deg, rgba(168, 85, 247, 0.25), rgba(236, 72, 153, 0.2));
+    border-color: rgba(236, 72, 153, 0.4);
+    color: #f0abfc;
+    transform: scale(1.1) rotate(-5deg);
+    box-shadow: 0 8px 25px rgba(168, 85, 247, 0.3);
+}
+
+/* Title */
+.quick-solution-title {
+    position: relative;
+    z-index: 1;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #fff;
+    margin-bottom: 0.35rem;
+    transition: color 0.3s ease;
+}
+
+.quick-solution-card:hover .quick-solution-title {
+    background: linear-gradient(135deg, #a855f7, #ec4899);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* Description */
+.quick-solution-desc {
+    position: relative;
+    z-index: 1;
+    font-size: 0.8rem;
+    color: #9ca3af;
+    margin-bottom: 0.75rem;
+    transition: color 0.3s ease;
+}
+
+.quick-solution-card:hover .quick-solution-desc {
+    color: #c4b5fd;
+}
+
+/* Arrow */
+.quick-solution-arrow {
+    position: relative;
+    z-index: 1;
+    width: 28px;
+    height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, rgba(168, 85, 247, 0.1), rgba(236, 72, 153, 0.08));
+    border-radius: 50%;
+    color: #a78bfa;
+    opacity: 0;
+    transform: translateX(-10px);
+    transition: all 0.4s ease;
+}
+
+.quick-solution-card:hover .quick-solution-arrow {
+    opacity: 1;
+    transform: translateX(0);
+    background: linear-gradient(135deg, #a855f7, #ec4899);
+    color: white;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .quick-solution-card {
+        padding: 1.25rem 1rem;
+    }
+    
+    .quick-solution-icon {
+        width: 50px;
+        height: 50px;
+    }
+    
+    .quick-solution-icon svg {
+        width: 24px;
+        height: 24px;
+    }
+    
+    .quick-solution-title {
+        font-size: 0.9rem;
+    }
+    
+    .quick-solution-desc {
+        font-size: 0.75rem;
+    }
+    
+    .quick-solution-arrow {
+        display: none;
+    }
+}
