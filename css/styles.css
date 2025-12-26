@@ -1529,3 +1529,299 @@ a, button, .game-card, .quick-nav-btn, .solution-card, .stat-item {
 .install-step-content code {
     font-size: 0.8rem;
 }
+
+/* ==================== GAME THEME SYSTEM ==================== */
+
+/* GTA V Theme - Yeşil/Sarı */
+[data-game-theme="gta-v"] {
+    --theme-primary: #9acd32;
+    --theme-secondary: #32cd32;
+    --theme-accent: #ffd700;
+    --theme-glow: rgba(154, 205, 50, 0.4);
+    --theme-gradient: linear-gradient(135deg, #9acd32 0%, #32cd32 50%, #228b22 100%);
+}
+
+/* RDR2 Theme - Kırmızı/Turuncu */
+[data-game-theme="rdr2"] {
+    --theme-primary: #dc2626;
+    --theme-secondary: #ea580c;
+    --theme-accent: #f97316;
+    --theme-glow: rgba(220, 38, 38, 0.4);
+    --theme-gradient: linear-gradient(135deg, #dc2626 0%, #ea580c 50%, #c2410c 100%);
+}
+
+/* L.A. Noire Theme - Kırmızı/Sarı (1940s Noir) */
+[data-game-theme="la-noire"] {
+    --theme-primary: #b91c1c;
+    --theme-secondary: #991b1b;
+    --theme-accent: #fbbf24;
+    --theme-glow: rgba(185, 28, 28, 0.4);
+    --theme-gradient: linear-gradient(135deg, #b91c1c 0%, #7f1d1d 50%, #fbbf24 100%);
+}
+
+/* Bully Theme - Mavi/Sarı */
+[data-game-theme="bully"] {
+    --theme-primary: #1e40af;
+    --theme-secondary: #1d4ed8;
+    --theme-accent: #fbbf24;
+    --theme-glow: rgba(30, 64, 175, 0.4);
+    --theme-gradient: linear-gradient(135deg, #1e40af 0%, #3b82f6 50%, #fbbf24 100%);
+}
+
+/* Manhunt Theme - Kırmızı/Siyah */
+[data-game-theme="manhunt"] {
+    --theme-primary: #991b1b;
+    --theme-secondary: #7f1d1d;
+    --theme-accent: #ef4444;
+    --theme-glow: rgba(153, 27, 27, 0.5);
+    --theme-gradient: linear-gradient(135deg, #991b1b 0%, #450a0a 50%, #ef4444 100%);
+}
+
+/* Manhunt 2 Theme - Koyu Kırmızı/Kan (Şiddet Temalı) */
+[data-game-theme="manhunt-2"] {
+    --theme-primary: #7f1d1d;
+    --theme-secondary: #450a0a;
+    --theme-accent: #dc2626;
+    --theme-glow: rgba(127, 29, 29, 0.5);
+    --theme-gradient: linear-gradient(135deg, #7f1d1d 0%, #450a0a 50%, #dc2626 100%);
+}
+
+/* GTA Trilogy Classic - Turuncu/Mavi */
+[data-game-theme="gta-trilogy-classic"] {
+    --theme-primary: #f97316;
+    --theme-secondary: #ea580c;
+    --theme-accent: #06b6d4;
+    --theme-glow: rgba(249, 115, 22, 0.4);
+    --theme-gradient: linear-gradient(135deg, #f97316 0%, #ea580c 50%, #06b6d4 100%);
+}
+
+/* GTA Trilogy Definitive - Neon Pembe/Mavi */
+[data-game-theme="gta-trilogy-definitive"] {
+    --theme-primary: #ec4899;
+    --theme-secondary: #db2777;
+    --theme-accent: #06b6d4;
+    --theme-glow: rgba(236, 72, 153, 0.4);
+    --theme-gradient: linear-gradient(135deg, #ec4899 0%, #db2777 50%, #06b6d4 100%);
+}
+
+/* GTA Vice City Stories - Pembe/Turkuaz */
+[data-game-theme="gta-vice-city-stories"] {
+    --theme-primary: #f472b6;
+    --theme-secondary: #ec4899;
+    --theme-accent: #2dd4bf;
+    --theme-glow: rgba(244, 114, 182, 0.4);
+    --theme-gradient: linear-gradient(135deg, #f472b6 0%, #ec4899 50%, #2dd4bf 100%);
+}
+
+/* GTA Vice City Nextgen - Neon Pembe/Mor */
+[data-game-theme="gta-vice-city-nextgen"] {
+    --theme-primary: #f0abfc;
+    --theme-secondary: #e879f9;
+    --theme-accent: #22d3ee;
+    --theme-glow: rgba(240, 171, 252, 0.4);
+    --theme-gradient: linear-gradient(135deg, #f0abfc 0%, #e879f9 50%, #22d3ee 100%);
+}
+
+/* GTA Liberty City Stories - Turuncu/Gri */
+[data-game-theme="gta-liberty-city-stories"] {
+    --theme-primary: #fb923c;
+    --theme-secondary: #f97316;
+    --theme-accent: #94a3b8;
+    --theme-glow: rgba(251, 146, 60, 0.4);
+    --theme-gradient: linear-gradient(135deg, #fb923c 0%, #f97316 50%, #64748b 100%);
+}
+
+/* XIII Classic - Siyah/Beyaz/Kırmızı */
+[data-game-theme="xiii-classic"] {
+    --theme-primary: #f8fafc;
+    --theme-secondary: #e2e8f0;
+    --theme-accent: #ef4444;
+    --theme-glow: rgba(248, 250, 252, 0.3);
+    --theme-gradient: linear-gradient(135deg, #f8fafc 0%, #1e293b 50%, #ef4444 100%);
+}
+
+/* RDR GOTY - Kahverengi/Altın */
+[data-game-theme="rdr-goty"] {
+    --theme-primary: #92400e;
+    --theme-secondary: #78350f;
+    --theme-accent: #fbbf24;
+    --theme-glow: rgba(146, 64, 14, 0.4);
+    --theme-gradient: linear-gradient(135deg, #92400e 0%, #78350f 50%, #fbbf24 100%);
+}
+
+/* RDR PC - Kırmızı/Kahverengi */
+[data-game-theme="rdr-pc"] {
+    --theme-primary: #b91c1c;
+    --theme-secondary: #991b1b;
+    --theme-accent: #d97706;
+    --theme-glow: rgba(185, 28, 28, 0.4);
+    --theme-gradient: linear-gradient(135deg, #b91c1c 0%, #7f1d1d 50%, #d97706 100%);
+}
+
+/* ==================== THEMED HERO SECTION ==================== */
+[data-game-theme] .game-detail-hero {
+    background: linear-gradient(135deg, 
+        rgba(26, 10, 35, 0.95) 0%,
+        rgba(var(--theme-primary-rgb, 168, 85, 247), 0.15) 50%,
+        rgba(26, 10, 35, 0.95) 100%);
+}
+
+[data-game-theme] .game-detail-hero::before {
+    background: 
+        radial-gradient(ellipse at 30% 20%, var(--theme-glow) 0%, transparent 50%),
+        radial-gradient(ellipse at 70% 80%, rgba(var(--theme-accent-rgb, 236, 72, 153), 0.15) 0%, transparent 50%);
+    animation: themeGlowPulse 4s ease-in-out infinite;
+}
+
+@keyframes themeGlowPulse {
+    0%, 100% { opacity: 0.6; transform: scale(1); }
+    50% { opacity: 1; transform: scale(1.02); }
+}
+
+/* Themed Game Title */
+[data-game-theme] .game-title-gradient {
+    background: var(--theme-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: titleShimmer 3s ease-in-out infinite;
+    background-size: 200% 200%;
+}
+
+@keyframes titleShimmer {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+}
+
+/* Themed Cover Card */
+[data-game-theme] .game-cover-card {
+    box-shadow: 
+        0 20px 50px rgba(0, 0, 0, 0.5),
+        0 0 30px var(--theme-glow);
+    border-color: var(--theme-primary);
+}
+
+[data-game-theme] .game-cover-card:hover {
+    box-shadow: 
+        0 25px 60px rgba(0, 0, 0, 0.6),
+        0 0 50px var(--theme-glow);
+    border-color: var(--theme-accent);
+}
+
+/* Themed Quick Info Cards */
+[data-game-theme] .quick-info-card {
+    border-color: rgba(var(--theme-primary-rgb, 168, 85, 247), 0.2);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+[data-game-theme] .quick-info-card:hover {
+    border-color: var(--theme-primary);
+    box-shadow: 0 8px 25px var(--theme-glow);
+    transform: translateY(-4px);
+}
+
+[data-game-theme] .quick-info-icon {
+    background: linear-gradient(135deg, 
+        rgba(var(--theme-primary-rgb, 168, 85, 247), 0.25), 
+        rgba(var(--theme-accent-rgb, 236, 72, 153), 0.15));
+}
+
+/* Themed Section Cards */
+[data-game-theme] .detail-section-card:hover {
+    border-color: var(--theme-primary);
+    box-shadow: 0 15px 40px var(--theme-glow);
+}
+
+[data-game-theme] .detail-section-header {
+    background: linear-gradient(135deg, 
+        rgba(var(--theme-primary-rgb, 168, 85, 247), 0.1), 
+        rgba(var(--theme-accent-rgb, 236, 72, 153), 0.05));
+}
+
+[data-game-theme] .detail-section-icon {
+    background: linear-gradient(135deg, 
+        rgba(var(--theme-primary-rgb, 168, 85, 247), 0.3), 
+        rgba(var(--theme-accent-rgb, 236, 72, 153), 0.2));
+}
+
+/* Themed Action Buttons */
+[data-game-theme] .action-btn-primary {
+    background: var(--theme-gradient);
+    box-shadow: 0 4px 20px var(--theme-glow);
+}
+
+[data-game-theme] .action-btn-primary:hover {
+    box-shadow: 0 8px 30px var(--theme-glow);
+}
+
+[data-game-theme] .action-btn-secondary {
+    border-color: var(--theme-primary);
+}
+
+[data-game-theme] .action-btn-secondary:hover {
+    border-color: var(--theme-accent);
+    background: linear-gradient(135deg, 
+        rgba(var(--theme-primary-rgb, 168, 85, 247), 0.2), 
+        rgba(var(--theme-accent-rgb, 236, 72, 153), 0.1));
+}
+
+/* Themed Install Steps */
+[data-game-theme] .install-step-number {
+    background: var(--theme-gradient);
+}
+
+/* Themed Back Link */
+[data-game-theme] .back-link:hover {
+    border-color: var(--theme-primary);
+    box-shadow: 0 4px 15px var(--theme-glow);
+}
+
+/* Themed Info Banner */
+[data-game-theme] .info-banner {
+    border-color: var(--theme-primary);
+    background: linear-gradient(135deg, 
+        rgba(var(--theme-primary-rgb, 168, 85, 247), 0.1), 
+        rgba(var(--theme-accent-rgb, 236, 72, 153), 0.05));
+}
+
+/* ==================== THEME ANIMATIONS ==================== */
+
+/* Floating particles effect for themed pages */
+[data-game-theme] .game-detail-hero::after {
+    background: linear-gradient(180deg, 
+        transparent 0%, 
+        rgba(var(--theme-primary-rgb, 10, 6, 16), 0.3) 50%,
+        rgba(10, 6, 16, 0.9) 100%);
+}
+
+/* Accent line animation */
+[data-game-theme] .detail-section-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: var(--theme-gradient);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+[data-game-theme] .detail-section-card:hover::before {
+    opacity: 1;
+}
+
+/* Scrollbar themed */
+[data-game-theme]::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, var(--theme-primary), var(--theme-accent));
+}
+
+/* Selection themed */
+[data-game-theme]::selection {
+    background: var(--theme-glow);
+}
+
+/* Focus states themed */
+[data-game-theme] *:focus-visible {
+    outline-color: var(--theme-primary);
+}
