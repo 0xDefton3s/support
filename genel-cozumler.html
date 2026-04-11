@@ -40,7 +40,7 @@
                 </p>
                 
                 <!-- Quick Nav Cards -->
-                <div class="grid grid-cols-3 md:grid-cols-5 gap-2 max-w-4xl mx-auto">
+                <div class="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-7 gap-2 max-w-5xl mx-auto">
                     <a href="#antivirus" class="quick-nav-card group">
                         <div class="quick-nav-icon">🛡️</div>
                         <span class="quick-nav-text">Antivirüs</span>
@@ -60,6 +60,14 @@
                     <a href="#linux" class="quick-nav-card group">
                         <div class="quick-nav-icon">🐧</div>
                         <span class="quick-nav-text">Linux</span>
+                    </a>
+                    <a href="#ses-aygiti" class="quick-nav-card group">
+                        <div class="quick-nav-icon">🔊</div>
+                        <span class="quick-nav-text">Ses Aygıtı</span>
+                    </a>
+                    <a href="#ticket" class="quick-nav-card group">
+                        <div class="quick-nav-icon">🎫</div>
+                        <span class="quick-nav-text">Ticket</span>
                     </a>
                 </div>
             </div>
@@ -109,10 +117,24 @@
     <!-- Solutions Grid -->
     <section class="py-6">
         <div class="container mx-auto px-4 max-w-5xl">
+            <div class="solutions-toolbar mb-5">
+                <div class="solutions-search-wrap">
+                    <label for="solution-search" class="solutions-toolbar-label">Çözüm Ara</label>
+                    <input id="solution-search" type="search" class="solutions-search-input" placeholder="Örn: antivirus, directx, linux, klasör..." autocomplete="off">
+                </div>
+                <div class="solutions-toolbar-meta">
+                    <p id="solutions-visible-info" class="solutions-visible-info">0 çözüm listeleniyor</p>
+                    <div class="solutions-toolbar-actions">
+                        <button id="expand-solutions-btn" type="button" class="solutions-toolbar-btn">Tümünü Aç</button>
+                        <button id="collapse-solutions-btn" type="button" class="solutions-toolbar-btn">Tümünü Kapat</button>
+                    </div>
+                </div>
+            </div>
+
             <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
 
                 <!-- Antivirüs -->
-                <div id="antivirus" class="solution-card p-4 scroll-mt-20 md:col-span-2">
+                <div id="antivirus" class="solution-card solution-item p-4 scroll-mt-20 md:col-span-2">
                     <h3 class="font-semibold flex items-center gap-2 mb-3 text-pink-400">
                         <span>🛡️</span> Antivirüs Devre Dışı Bırakma
                     </h3>
@@ -348,7 +370,7 @@
                 </div>
 
                 <!-- Visual C++ -->
-                <div id="vcredist" class="solution-card p-4 scroll-mt-20">
+                <div id="vcredist" class="solution-card solution-item p-4 scroll-mt-20">
                     <h3 class="font-semibold flex items-center gap-2 mb-3 text-pink-400">
                         <span>⚙️</span> Visual C++ Kurulumu
                     </h3>
@@ -375,7 +397,7 @@
                 </div>
 
                 <!-- DirectX -->
-                <div id="directx" class="solution-card p-4 scroll-mt-20">
+                <div id="directx" class="solution-card solution-item p-4 scroll-mt-20">
                     <h3 class="font-semibold flex items-center gap-2 mb-3 text-pink-400">
                         <span>🎮</span> DirectX Kurulumu
                     </h3>
@@ -400,7 +422,7 @@
                     </div>
                 </div>
                 <!-- Linux/Wine -->
-                <div id="linux" class="solution-card p-4 scroll-mt-20 md:col-span-2">
+                <div id="linux" class="solution-card solution-item p-4 scroll-mt-20 md:col-span-2">
                     <h3 class="font-semibold flex items-center gap-2 mb-3 text-pink-400">
                         <span>🐧</span> Linux/Wine ile Oynama
                     </h3>
@@ -514,7 +536,7 @@
                 </div>
 
                 <!-- Ses Aygıtı Sorunu -->
-                <div id="ses-aygiti" class="solution-card p-4 scroll-mt-20 md:col-span-2">
+                <div id="ses-aygiti" class="solution-card solution-item p-4 scroll-mt-20 md:col-span-2">
                     <h3 class="font-semibold flex items-center gap-2 mb-3 text-pink-400">
                         <span>🔊</span> Ses Aygıtı Değişiminde Çökme Sorunu
                     </h3>
@@ -535,7 +557,7 @@
                     </div>
                 </div>
 
-                <div id="klasor-izinleri" class="solution-card p-4 scroll-mt-20 md:col-span-2">
+                <div id="klasor-izinleri" class="solution-card solution-item p-4 scroll-mt-20 md:col-span-2">
                     <h3 class="font-semibold flex items-center gap-2 mb-3 text-pink-400">
                         <span>📁</span> Klasör İzinleri
                     </h3>
@@ -620,8 +642,13 @@
 
             </div>
 
+            <div id="solutions-empty-state" class="solutions-empty-state hidden" aria-live="polite">
+                <h3>Aramanıza uygun çözüm bulunamadı</h3>
+                <p>Daha kısa bir kelime ile tekrar deneyin veya tümünü açıp göz atın.</p>
+            </div>
+
             <!-- Ticket Oluşturma - Son Çare (Modern) -->
-            <div id="ticket" class="ticket-card scroll-mt-20 mt-8">
+            <div id="ticket" class="ticket-card solution-item scroll-mt-20 mt-8">
                 <div class="ticket-card-header">
                     <div class="flex items-center gap-4">
                         <div class="w-14 h-14 flex items-center justify-center bg-gradient-to-br from-pink-500 to-purple-600 rounded-xl text-2xl shadow-lg shadow-pink-500/30">
@@ -719,7 +746,130 @@
             document.getElementById('content-' + tabName).classList.remove('hidden');
             // Activate selected tab
             document.getElementById('tab-' + tabName).classList.add('av-tab-active');
+            document.dispatchEvent(new CustomEvent('av-tab-change'));
         }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const solutionItems = Array.from(document.querySelectorAll('.solution-item'));
+            const searchInput = document.getElementById('solution-search');
+            const visibleInfo = document.getElementById('solutions-visible-info');
+            const emptyState = document.getElementById('solutions-empty-state');
+            const expandBtn = document.getElementById('expand-solutions-btn');
+            const collapseBtn = document.getElementById('collapse-solutions-btn');
+
+            const collapsibleIds = new Set(['antivirus', 'linux', 'klasor-izinleri']);
+            const collapsibleCards = [];
+
+            function updateVisibleInfo() {
+                const visibleCount = solutionItems.filter(item => !item.classList.contains('hidden')).length;
+                if (visibleInfo) visibleInfo.textContent = visibleCount + ' çözüm listeleniyor';
+                if (emptyState) emptyState.classList.toggle('hidden', visibleCount > 0);
+            }
+
+            function setCollapsed(card, collapsed) {
+                const body = card._collapseBody;
+                const btn = card._collapseBtn;
+                if (!body || !btn) return;
+
+                card.dataset.collapsed = collapsed ? '1' : '0';
+                btn.setAttribute('aria-expanded', collapsed ? 'false' : 'true');
+                btn.querySelector('.solution-toggle-text').textContent = collapsed ? 'Detayları Aç' : 'Detayları Kapat';
+                body.style.maxHeight = collapsed ? '0px' : body.scrollHeight + 'px';
+            }
+
+            function recalcOpenHeights() {
+                collapsibleCards.forEach(card => {
+                    if (card.dataset.collapsed === '0' && card._collapseBody) {
+                        card._collapseBody.style.maxHeight = card._collapseBody.scrollHeight + 'px';
+                    }
+                });
+            }
+
+            function initCollapsible(card, startCollapsed) {
+                if (!card) return;
+                const heading = card.querySelector(':scope > h3');
+                if (!heading) return;
+
+                const headerRow = document.createElement('div');
+                headerRow.className = 'solution-collapsible-header';
+                heading.classList.add('solution-collapsible-title');
+                card.insertBefore(headerRow, heading);
+                headerRow.appendChild(heading);
+
+                const toggleBtn = document.createElement('button');
+                toggleBtn.type = 'button';
+                toggleBtn.className = 'solution-collapse-toggle';
+                toggleBtn.innerHTML = '<span class="solution-toggle-text"></span><span class="solution-toggle-icon">▾</span>';
+                headerRow.appendChild(toggleBtn);
+
+                const body = document.createElement('div');
+                body.className = 'solution-collapsible-body';
+
+                const nodesToMove = [];
+                let nextNode = headerRow.nextSibling;
+                while (nextNode) {
+                    nodesToMove.push(nextNode);
+                    nextNode = nextNode.nextSibling;
+                }
+                nodesToMove.forEach(node => body.appendChild(node));
+                card.appendChild(body);
+
+                card._collapseBody = body;
+                card._collapseBtn = toggleBtn;
+                collapsibleCards.push(card);
+
+                toggleBtn.addEventListener('click', function() {
+                    setCollapsed(card, card.dataset.collapsed !== '1');
+                });
+
+                setCollapsed(card, startCollapsed);
+            }
+
+            collapsibleIds.forEach(id => {
+                const card = document.getElementById(id);
+                initCollapsible(card, id !== 'antivirus');
+            });
+
+            if (expandBtn) {
+                expandBtn.addEventListener('click', function() {
+                    collapsibleCards.forEach(card => setCollapsed(card, false));
+                });
+            }
+
+            if (collapseBtn) {
+                collapseBtn.addEventListener('click', function() {
+                    collapsibleCards.forEach(card => setCollapsed(card, true));
+                });
+            }
+
+            function applySearchFilter() {
+                const query = (searchInput?.value || '').trim().toLowerCase();
+
+                solutionItems.forEach(item => {
+                    const text = item.textContent.toLowerCase();
+                    const isMatch = query === '' || text.includes(query);
+                    item.classList.toggle('hidden', !isMatch);
+
+                    if (query !== '' && isMatch && collapsibleIds.has(item.id)) {
+                        setCollapsed(item, false);
+                    }
+                });
+
+                updateVisibleInfo();
+                recalcOpenHeights();
+            }
+
+            if (searchInput) {
+                searchInput.addEventListener('input', applySearchFilter);
+            }
+
+            document.addEventListener('av-tab-change', function() {
+                setTimeout(recalcOpenHeights, 30);
+            });
+
+            window.addEventListener('resize', recalcOpenHeights);
+            updateVisibleInfo();
+        });
     </script>
 </body>
 </html>
