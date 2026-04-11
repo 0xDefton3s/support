@@ -206,11 +206,14 @@
                     </a>
                 </div>
                 
-                <!-- All Solutions Link -->
+                <!-- All Solutions Button -->
                 <div class="text-center mt-6">
-                    <a href="genel-cozumler.html" class="inline-flex items-center gap-2 text-sm text-purple-400 hover:text-pink-400 transition-colors">
-                        <span>Tüm çözümleri görüntüle</span>
-                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <a href="genel-cozumler.html" class="all-solutions-btn group">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
+                        </svg>
+                        <span>Tüm Çözümleri Görüntüle</span>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="transition-transform group-hover:translate-x-1">
                             <path d="M5 12h14M12 5l7 7-7 7"/>
                         </svg>
                     </a>
@@ -224,6 +227,12 @@
         <div class="container mx-auto px-4">
             <h2 class="text-xl font-bold mb-2 text-center">🎮 Desteklenen Yamalar</h2>
             <p class="text-[#b8a3b8] text-center mb-4 text-sm">Aşağıdaki oyunlar için özel destek sayfalarımız mevcuttur</p>
+
+            <div class="games-toolbar max-w-3xl mx-auto mb-5">
+                <label for="game-search" class="games-toolbar-label">Oyun Ara</label>
+                <input id="game-search" type="search" class="game-search-input" placeholder="Örn: gta, red dead, bully..." autocomplete="off">
+                <p id="visible-games-info" class="games-visible-info">14 oyun listeleniyor</p>
+            </div>
             
             <!-- Year Filter (Dinamik) -->
             <div class="flex flex-wrap justify-center gap-2 mb-6" id="year-filter"></div>
@@ -231,7 +240,7 @@
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4" id="games-grid">
                 <!-- L.A. Noire -->
                 <a href="oyunlar/la-noire.html" class="game-card" data-year="2026">
-                    <img src="images/la-noire.webp" alt="L.A. Noire" class="game-card-cover">
+                    <img src="images/la-noire.webp" alt="L.A. Noire" loading="lazy" decoding="async" class="game-card-cover">
                     <span class="absolute top-3 right-3 badge-translation rounded text-xs font-bold z-10">YAYINLANDI</span>
                     <div class="game-card-content">
                         <h3 class="font-semibold text-white">L.A. Noire</h3>
@@ -244,7 +253,7 @@
 
                 <!-- Bully -->
                 <a href="oyunlar/bully.html" class="game-card" data-year="2025">
-                    <img src="images/bully.webp" alt="Bully" class="game-card-cover">
+                    <img src="images/bully.webp" alt="Bully" loading="lazy" decoding="async" class="game-card-cover">
                     <span class="absolute top-3 right-3 badge-translation rounded text-xs font-bold z-10">YAYINLANDI</span>
                     <div class="game-card-content">
                         <h3 class="font-semibold text-white">Bully</h3>
@@ -258,7 +267,7 @@
 
                 <!-- GTA Vice City Nextgen -->
                 <a href="oyunlar/gta-vice-city-nextgen.html" class="game-card" data-year="2025">
-                    <img src="images/gta-vice-city-nextgen.webp" alt="Grand Theft Auto Vice City Nextgen" class="game-card-cover">
+                    <img src="images/gta-vice-city-nextgen.webp" alt="Grand Theft Auto Vice City Nextgen" loading="lazy" decoding="async" class="game-card-cover">
                     <span class="absolute top-3 right-3 badge-translation rounded text-xs font-bold z-10">YAYINLANDI</span>
                     <div class="game-card-content">
                         <h3 class="font-semibold text-white">Grand Theft Auto: Vice City Nextgen Edition</h3>
@@ -271,7 +280,7 @@
 
                 <!-- Red Dead Redemption 2 -->
                 <a href="oyunlar/rdr2.html" class="game-card" data-year="2025">
-                    <img src="images/rdr2.webp" alt="Red Dead Redemption 2" class="game-card-cover">
+                    <img src="images/rdr2.webp" alt="Red Dead Redemption 2" loading="lazy" decoding="async" class="game-card-cover">
                     <span class="absolute top-3 right-3 badge-translation rounded text-xs font-bold z-10">YAYINLANDI</span>
                     <span class="absolute top-12 right-3 badge-beta rounded text-xs font-bold z-10">BETA</span>
                     <div class="game-card-content">
@@ -285,7 +294,7 @@
 
                 <!-- Red Dead Redemption PC -->
                 <a href="oyunlar/rdr-pc.html" class="game-card" data-year="2024">
-                    <img src="images/rdr-pc.webp" alt="Red Dead Redemption PC" class="game-card-cover">
+                    <img src="images/rdr-pc.webp" alt="Red Dead Redemption PC" loading="lazy" decoding="async" class="game-card-cover">
                     <span class="absolute top-3 right-3 badge-translation rounded text-xs font-bold z-10">YAYINLANDI</span>
                     <div class="game-card-content">
                         <h3 class="font-semibold text-white">Red Dead Redemption</h3>
@@ -298,7 +307,7 @@
 
                 <!-- Manhunt 2 -->
                 <a href="oyunlar/manhunt-2.html" class="game-card" data-year="2024">
-                    <img src="images/manhunt-2.webp" alt="Manhunt 2" class="game-card-cover">
+                    <img src="images/manhunt-2.webp" alt="Manhunt 2" loading="lazy" decoding="async" class="game-card-cover">
                     <span class="absolute top-3 right-3 badge-translation rounded text-xs font-bold z-10">YAYINLANDI</span>
                     <div class="game-card-content">
                         <h3 class="font-semibold text-white">Manhunt 2</h3>
@@ -312,7 +321,7 @@
 
                 <!-- Manhunt -->
                 <a href="oyunlar/manhunt.html" class="game-card" data-year="2024">
-                    <img src="images/manhunt.webp" alt="Manhunt" class="game-card-cover">
+                    <img src="images/manhunt.webp" alt="Manhunt" loading="lazy" decoding="async" class="game-card-cover">
                     <span class="absolute top-3 right-3 badge-translation rounded text-xs font-bold z-10">YAYINLANDI</span>
                     <div class="game-card-content">
                         <h3 class="font-semibold text-white">Manhunt</h3>
@@ -325,7 +334,7 @@
 
                 <!-- Grand Theft Auto V -->
                 <a href="oyunlar/gta-v.html" class="game-card" data-year="2024">
-                    <img src="images/gta-v.webp" alt="Grand Theft Auto V" class="game-card-cover">
+                    <img src="images/gta-v.webp" alt="Grand Theft Auto V" loading="lazy" decoding="async" class="game-card-cover">
                     <span class="absolute top-3 right-3 badge-translation rounded text-xs font-bold z-10">YAYINLANDI</span>
                     <div class="game-card-content">
                         <h3 class="font-semibold text-white">Grand Theft Auto V: Legacy & Enhanced</h3>
@@ -338,7 +347,7 @@
 
                 <!-- Grand Theft Auto Liberty City Stories -->
                 <a href="oyunlar/gta-liberty-city-stories.html" class="game-card" data-year="2023">
-                    <img src="images/gta-liberty-city-stories.webp" alt="Grand Theft Auto Liberty City Stories" class="game-card-cover">
+                    <img src="images/gta-liberty-city-stories.webp" alt="Grand Theft Auto Liberty City Stories" loading="lazy" decoding="async" class="game-card-cover">
                     <span class="absolute top-3 right-3 badge-translation rounded text-xs font-bold z-10">YAYINLANDI</span>
                     <div class="game-card-content">
                         <h3 class="font-semibold text-white">Grand Theft Auto: Liberty City Stories</h3>
@@ -353,7 +362,7 @@
 
                 <!-- Red Dead Redemption GOTY -->
                 <a href="oyunlar/rdr-goty.html" class="game-card" data-year="2023">
-                    <img src="images/rdr-goty.webp" alt="Red Dead Redemption GOTY" class="game-card-cover">
+                    <img src="images/rdr-goty.webp" alt="Red Dead Redemption GOTY" loading="lazy" decoding="async" class="game-card-cover">
                     <span class="absolute top-3 right-3 badge-translation rounded text-xs font-bold z-10">YAYINLANDI</span>
                     <div class="game-card-content">
                         <h3 class="font-semibold text-white">Red Dead Redemption GOTY & Undead Nightmare</h3>
@@ -367,7 +376,7 @@
 
                 <!-- Grand Theft Auto Trilogy Definitive -->
                 <a href="oyunlar/gta-trilogy-definitive.html" class="game-card" data-year="2022">
-                    <img src="images/gta-trilogy-definitive.webp" alt="Grand Theft Auto Trilogy Definitive" class="game-card-cover">
+                    <img src="images/gta-trilogy-definitive.webp" alt="Grand Theft Auto Trilogy Definitive" loading="lazy" decoding="async" class="game-card-cover">
                     <span class="absolute top-3 right-3 badge-translation rounded text-xs font-bold z-10">YAYINLANDI</span>
                     <div class="game-card-content">
                         <h3 class="font-semibold text-white">Grand Theft Auto: The Trilogy - Definitive Edition</h3>
@@ -380,7 +389,7 @@
 
                 <!-- Grand Theft Auto Vice City Stories -->
                 <a href="oyunlar/gta-vice-city-stories.html" class="game-card" data-year="2022">
-                    <img src="images/gta-vice-city-stories.webp" alt="Grand Theft Auto Vice City Stories" class="game-card-cover">
+                    <img src="images/gta-vice-city-stories.webp" alt="Grand Theft Auto Vice City Stories" loading="lazy" decoding="async" class="game-card-cover">
                     <span class="absolute top-3 right-3 badge-translation rounded text-xs font-bold z-10">YAYINLANDI</span>
                     <div class="game-card-content">
                         <h3 class="font-semibold text-white">Grand Theft Auto: Vice City Stories</h3>
@@ -394,7 +403,7 @@
 
                 <!-- Grand Theft Auto Trilogy Classic -->
                 <a href="oyunlar/gta-trilogy-classic.html" class="game-card" data-year="2020">
-                    <img src="images/gta-trilogy-classic.webp" alt="Grand Theft Auto Trilogy Classic" class="game-card-cover">
+                    <img src="images/gta-trilogy-classic.webp" alt="Grand Theft Auto Trilogy Classic" loading="lazy" decoding="async" class="game-card-cover">
                     <span class="absolute top-3 right-3 badge-translation rounded text-xs font-bold z-10">YAYINLANDI</span>
                     <div class="game-card-content">
                         <h3 class="font-semibold text-white">Grand Theft Auto III, Vice City & San Andreas</h3>
@@ -408,7 +417,7 @@
 
                 <!-- XIII Classic -->
                 <a href="oyunlar/xiii-classic.html" class="game-card" data-year="2019">
-                    <img src="images/xiii-classic.webp" alt="XIII Classic" class="game-card-cover">
+                    <img src="images/xiii-classic.webp" alt="XIII Classic" loading="lazy" decoding="async" class="game-card-cover">
                     <span class="absolute top-3 right-3 badge-translation rounded text-xs font-bold z-10">YAYINLANDI</span>
                     <div class="game-card-content">
                         <h3 class="font-semibold text-white">XIII - Classic</h3>
@@ -418,6 +427,11 @@
                         </div>
                     </div>
                 </a>
+            </div>
+
+            <div id="games-empty-state" class="games-empty-state hidden" aria-live="polite">
+                <h3>Sonuç bulunamadı</h3>
+                <p>Farklı bir oyun adı yazmayı veya yıl filtresini “Tümü” yapmayı deneyin.</p>
             </div>
         </div>
     </section>
@@ -430,11 +444,16 @@
             const gameCards = document.querySelectorAll('.game-card[data-year]');
             const gameCountEl = document.getElementById('game-count');
             const gameCountTextEl = document.getElementById('game-count-text');
+            const gameSearchInput = document.getElementById('game-search');
+            const visibleGamesInfoEl = document.getElementById('visible-games-info');
+            const emptyStateEl = document.getElementById('games-empty-state');
+            let selectedYear = 'all';
             
             // Dinamik oyun sayısı
             const count = gameCards.length;
             if (gameCountEl) gameCountEl.textContent = count;
             if (gameCountTextEl) gameCountTextEl.textContent = count;
+            if (visibleGamesInfoEl) visibleGamesInfoEl.textContent = count + ' oyun listeleniyor';
             
             // Oyun kartlarından yılları topla ve sırala
             const years = [...new Set([...gameCards].map(card => card.dataset.year))].sort((a, b) => a - b);
@@ -454,25 +473,46 @@
                 yearFilterContainer.appendChild(btn);
             });
             
-            // Filtre işlevselliği
             const filterBtns = yearFilterContainer.querySelectorAll('.filter-btn');
+
+            function applyFilters() {
+                const query = (gameSearchInput?.value || '').trim().toLowerCase();
+                let visibleCount = 0;
+
+                gameCards.forEach(card => {
+                    const title = card.querySelector('h3')?.textContent?.toLowerCase() || '';
+                    const matchesYear = selectedYear === 'all' || card.dataset.year === selectedYear;
+                    const matchesSearch = query === '' || title.includes(query);
+                    const showCard = matchesYear && matchesSearch;
+
+                    card.style.display = showCard ? '' : 'none';
+                    if (showCard) visibleCount++;
+                });
+
+                if (visibleGamesInfoEl) {
+                    visibleGamesInfoEl.textContent = visibleCount + ' oyun listeleniyor';
+                }
+
+                if (emptyStateEl) {
+                    emptyStateEl.classList.toggle('hidden', visibleCount > 0);
+                }
+            }
+
+            // Filtre işlevselliği
             filterBtns.forEach(btn => {
                 btn.addEventListener('click', function() {
-                    const filter = this.dataset.filter;
-                    
+                    selectedYear = this.dataset.filter;
                     filterBtns.forEach(b => b.classList.remove('filter-active'));
                     this.classList.add('filter-active');
-                    
-                    gameCards.forEach(card => {
-                        if (filter === 'all' || card.dataset.year === filter) {
-                            card.style.display = '';
-                        } else {
-                            card.style.display = 'none';
-                        }
-                    });
+                    applyFilters();
                 });
             });
+
+            if (gameSearchInput) {
+                gameSearchInput.addEventListener('input', applyFilters);
+            }
         });
     </script>
 </body>
 </html>
+

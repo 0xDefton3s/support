@@ -49,8 +49,60 @@ document.addEventListener('DOMContentLoaded', function() {
                 const mobileMenu = document.getElementById('mobileMenu');
                 
                 if (mobileMenuBtn && mobileMenu) {
+                    mobileMenuBtn.setAttribute('aria-expanded', 'false');
+                    mobileMenuBtn.setAttribute('aria-controls', 'mobileMenu');
+                    mobileMenu.setAttribute('aria-hidden', 'true');
+                    // Tailwind `hidden` sınıfını bir kez kaldırıp animasyonlu aç/kapa yönetimine geçiyoruz.
+                    mobileMenu.classList.remove('hidden');
+
+                    function isMobileMenuOpen() {
+                        return mobileMenu.classList.contains('mobile-menu-open');
+                    }
+
+                    function openMobileMenu() {
+                        mobileMenu.classList.add('mobile-menu-open');
+                        mobileMenuBtn.setAttribute('aria-expanded', 'true');
+                        mobileMenu.setAttribute('aria-hidden', 'false');
+                    }
+
+                    function closeMobileMenu() {
+                        if (isMobileMenuOpen()) {
+                            mobileMenu.classList.remove('mobile-menu-open');
+                            mobileMenuBtn.setAttribute('aria-expanded', 'false');
+                            mobileMenu.setAttribute('aria-hidden', 'true');
+                        }
+                    }
+
                     mobileMenuBtn.addEventListener('click', function() {
-                        mobileMenu.classList.toggle('hidden');
+                        if (isMobileMenuOpen()) {
+                            closeMobileMenu();
+                        } else {
+                            openMobileMenu();
+                        }
+                    });
+
+                    mobileMenu.querySelectorAll('a').forEach(link => {
+                        link.addEventListener('click', closeMobileMenu);
+                    });
+
+                    document.addEventListener('click', function(event) {
+                        if (isMobileMenuOpen() &&
+                            !mobileMenu.contains(event.target) &&
+                            !mobileMenuBtn.contains(event.target)) {
+                            closeMobileMenu();
+                        }
+                    });
+
+                    document.addEventListener('keydown', function(event) {
+                        if (event.key === 'Escape' && isMobileMenuOpen()) {
+                            closeMobileMenu();
+                        }
+                    });
+
+                    window.addEventListener('resize', function() {
+                        if (window.innerWidth >= 768) {
+                            closeMobileMenu();
+                        }
                     });
                 }
             })
