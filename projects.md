@@ -7,7 +7,7 @@
 - [Grand Theft Auto V Legacy & Enhanced Türkçe Yama](https://forum.donanimhaber.com/yapim-asamasinda-grand-theft-auto-v-2024-turkce-yama--156350086) Platformlar : PC
 - [Manhunt - 2024 Türkçe Yama](https://forum.donanimhaber.com/manhunt-2024-turkce-yama--158325122) Platformlar : PC
 - [Manhunt 2 - 2024 Türkçe Yama](https://forum.donanimhaber.com/manhunt-2-2024-turkce-yama--158463407) Platformlar : PC & PSP
-- [(Beta) Red Dead Redemption II - 2025 Türkçe Yama](https://forum.donanimhaber.com/red-dead-redemption-ii-2025-turkce-yama--158486074) Platformlar : PC
+- [Red Dead Redemption II - 2025 Türkçe Yama](https://forum.donanimhaber.com/red-dead-redemption-ii-2025-turkce-yama--158486074) Platformlar : PC
 - [Red Dead Redemption Türkçe Yama](https://forum.donanimhaber.com/red-dead-redemption-turkce-yama-pc--159748572) Platformlar : PC
 - [Grand Theft Auto: Vice City Nextgen Edition Türkçe Yama](https://forum.donanimhaber.com/grand-theft-auto-vice-city-nextgen-edition-turkce-yama--160549618) Platformlar : PC
 - [Bully - 2025 Türkçe Yama](https://forum.donanimhaber.com/bully-2025-turkce-yama-pc-ps2--162071840) Platformlar : PC & PS2
