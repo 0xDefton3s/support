@@ -757,7 +757,7 @@
             const expandBtn = document.getElementById('expand-solutions-btn');
             const collapseBtn = document.getElementById('collapse-solutions-btn');
 
-            const collapsibleIds = new Set(['antivirus', 'linux', 'klasor-izinleri']);
+            const collapsibleIds = new Set(['linux']);
             const collapsibleCards = [];
 
             function updateVisibleInfo() {
@@ -827,7 +827,7 @@
 
             collapsibleIds.forEach(id => {
                 const card = document.getElementById(id);
-                initCollapsible(card, id !== 'antivirus');
+                initCollapsible(card, true);
             });
 
             if (expandBtn) {
