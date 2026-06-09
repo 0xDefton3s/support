@@ -78,37 +78,32 @@
     <section id="virustotal" class="py-4">
         <div class="container mx-auto px-4 max-w-5xl">
             <div class="info-box warning p-4">
-                <h3 class="font-semibold text-amber-400 mb-3">⚠️ VirusTotal False-Positive Uyarısı</h3>
-                
-                <p class="text-gray-300 text-sm mb-3">
-                    Yamalarımız VirusTotal'da bazı antivirüs motorları tarafından yanlış pozitif (false-positive) olarak işaretlenebilir. Bu durum oyun modlama topluluğunda oldukça yaygındır.
+                <h3 class="font-semibold text-amber-400 mb-1">⚠️ VirusTotal Uyarısı Alıyorsanız</h3>
+                <p class="text-gray-400 text-sm mb-3">
+                    Yamalarımız bazı antivirüs programları tarafından yanlışlıkla tehdit olarak işaretlenebilir. Bu normal bir durumdur ve dosyalarımız zararlı değildir.
                 </p>
 
-                <h4 class="text-amber-300 font-medium text-sm mb-2">🔍 Neden False-Positive Oluşur?</h4>
-                <ul class="text-gray-300 text-sm mb-4 list-disc list-inside space-y-1">
-                    <li>Yama dosyaları oyunun orijinal dosyalarını değiştirir veya üzerine yazar</li>
-                    <li>Bazı yamalar bellek üzerinde işlem yapar (DLL injection, hooking)</li>
-                    <li>Küçük/bilinmeyen antivirüs firmaları imzasız dosyaları otomatik olarak şüpheli işaretler</li>
-                    <li>Heuristic (davranışsal) taramalar yama araçlarını crack veya malware ile karıştırabilir</li>
-                    <li>Paketlenmiş (packed) veya sıkıştırılmış .exe, .dll, .asi dosyaları şüpheli görünebilir</li>
-                    <li>Yeni yüklenen ve henüz "güvenilir" veritabanına eklenmemiş dosyalar uyarı verebilir</li>
-                </ul>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-3 mb-3">
+                    <div class="bg-black/20 rounded-lg p-3">
+                        <p class="text-amber-300 font-medium text-sm mb-2">🔍 Neden Uyarı Çıkar?</p>
+                        <ul class="text-gray-300 text-sm list-disc list-inside space-y-1">
+                            <li>Yama dosyaları oyun dosyalarını değiştirir</li>
+                            <li>Küçük antivirüs firmaları imzasız dosyaları şüpheli sayar</li>
+                            <li>Yeni yüklenen dosyalar henüz tanınan listede olmayabilir</li>
+                        </ul>
+                    </div>
+                    <div class="bg-black/20 rounded-lg p-3">
+                        <p class="text-amber-300 font-medium text-sm mb-2">📊 Uyarıyı Nasıl Değerlendirmeli?</p>
+                        <ul class="text-gray-300 text-sm list-disc list-inside space-y-1">
+                            <li>70+ motordan yalnızca 2–5 uyarı → büyük ihtimalle yanlış alarm</li>
+                            <li><span class="text-green-400 font-medium">Güvenilir motorlar:</span> Defender, Kaspersky, ESET, Bitdefender</li>
+                            <li><span class="text-amber-400 font-medium">Sık yanılan motorlar:</span> Jiangmin, Cyren, MaxSecure, Zillya</li>
+                        </ul>
+                    </div>
+                </div>
 
-                <h4 class="text-amber-300 font-medium text-sm mb-2">📊 Sonuçları Nasıl Yorumlamalı?</h4>
-                <ul class="text-gray-300 text-sm mb-4 list-disc list-inside space-y-1">
-                    <li>VirusTotal'da <span class="text-white font-medium">70+ antivirüs motoru</span> bulunur</li>
-                    <li>Bunlardan <span class="text-white font-medium">2-5 tanesinin</span> uyarı vermesi genellikle false-positive'dir</li>
-                    <li><span class="text-green-400 font-medium">Güvenilir motorlar:</span> Microsoft Defender, Kaspersky, ESET, Bitdefender, Malwarebytes, Avira</li>
-                    <li><span class="text-red-400 font-medium">Sık false-positive veren motorlar:</span> Jiangmin, Cyren, MaxSecure, SecureAge, Zillya gibi az bilinen firmalar</li>
-                    <li>Eğer büyük firmalar temiz gösteriyorsa ve sadece küçük firmalar uyarı veriyorsa, dosya büyük ihtimalle güvenlidir</li>
-                </ul>
-
-                <h4 class="text-amber-300 font-medium text-sm mb-2">✅ Güvenlik Garantimiz</h4>
-                <p class="text-gray-300 text-sm mb-2">
-                    Tüm yamalarımız tarafımızca hazırlanmakta ve test edilmektedir. Hiçbir yamada zararlı yazılım, kripto madenci, keylogger veya benzeri tehdit bulunmamaktadır.
-                </p>
-                <p class="text-gray-300 text-sm">
-                    Şüpheniz varsa veya detaylı bilgi almak isterseniz Discord sunucumuzdan bize ulaşabilirsiniz.
+                <p class="text-gray-400 text-sm border-t border-amber-500/20 pt-3">
+                    ✅ <span class="text-gray-300">Tüm yamalar ekibimiz tarafından hazırlanmış ve test edilmiştir.</span> Yine de şüpheniz varsa Discord'dan bize ulaşabilirsiniz.
                 </p>
             </div>
         </div>
