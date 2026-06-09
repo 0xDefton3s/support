@@ -1079,6 +1079,152 @@ code {
     box-shadow: 0 4px 20px rgba(168, 85, 247, 0.4);
 }
 
+/* Folder Carousel */
+.stepper-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: rgba(168, 85, 247, 0.25);
+    border: 1px solid rgba(168, 85, 247, 0.3);
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+
+.stepper-dot-active {
+    background: var(--gradient-accent);
+    border-color: transparent;
+    width: 20px;
+    border-radius: 4px;
+}
+
+/* Folder Permission Steps */
+.fstep-card {
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid rgba(168, 85, 247, 0.18);
+    background: rgba(18, 10, 24, 0.8);
+    cursor: pointer;
+    transition: border-color 0.2s ease;
+}
+
+.fstep-card:hover {
+    border-color: rgba(236, 72, 153, 0.5);
+}
+
+.fstep-badge {
+    position: absolute;
+    top: 7px;
+    left: 7px;
+    z-index: 2;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background: var(--gradient-accent);
+    color: white;
+    font-size: 0.72rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.5);
+}
+
+.fstep-img-wrap {
+    width: 100%;
+    aspect-ratio: 4/3;
+    background: #0a0612;
+    overflow: hidden;
+}
+
+.fstep-img-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+}
+
+.fstep-caption {
+    padding: 6px 8px;
+    font-size: 0.72rem;
+    color: #b8a3b8;
+    line-height: 1.3;
+    border-top: 1px solid rgba(168, 85, 247, 0.1);
+}
+
+.fstep-caption strong {
+    color: white;
+}
+
+.fstep-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.45);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.4rem;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+    bottom: 30px;
+}
+
+.fstep-card:hover .fstep-overlay {
+    opacity: 1;
+}
+
+/* Lightbox */
+.lightbox-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    background: rgba(0, 0, 0, 0.88);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s ease;
+    backdrop-filter: blur(6px);
+}
+
+.lightbox-visible {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.lightbox-overlay img {
+    width: min(88vw, 1100px);
+    height: auto;
+    max-height: 90vh;
+    border-radius: 10px;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.8);
+    object-fit: contain;
+    cursor: default;
+}
+
+.lightbox-close {
+    position: absolute;
+    top: 18px;
+    right: 22px;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.1);
+    border: 1px solid rgba(255,255,255,0.2);
+    color: white;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.lightbox-close:hover {
+    background: rgba(255,255,255,0.2);
+}
+
 /* Scrollbar - Purple-Pink Theme */
 ::-webkit-scrollbar {
     width: 8px;

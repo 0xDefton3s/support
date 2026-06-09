@@ -534,80 +534,86 @@
                     </h3>
                     <p class="text-[#b8a3b8] text-sm mb-4">"Program Files" veya "Program Files (x86)" klasöründeki oyunlarda Windows izin kısıtlamaları nedeniyle yama kurulumu başarısız olabilir.</p>
                     
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                        <!-- Yöntem 1: Klasör İzinlerini Değiştir -->
-                        <div class="problem-card p-3 md:col-span-2">
-                            <h4 class="font-medium text-pink-300 mb-2 flex items-center gap-2">
-                                <span>⚙️</span> Yöntem 1: Klasör İzinlerini Değiştir
-                            </h4>
-                            <p class="text-gray-300 text-sm mb-3">Kalıcı çözüm için klasöre tam yetki verin.</p>
-                            
-                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
-                                <div class="text-center">
-                                    <a href="images/guide/folder-step-1.webp" target="_blank" class="block bg-gray-800/50 border border-gray-600 hover:border-pink-500 rounded-lg p-3 transition-all cursor-zoom-in">
-                                        <img src="images/guide/folder-step-1.webp" alt="Adım 1" class="w-full rounded mb-2">
-                                        <p><span class="text-pink-400 font-medium">1.</span> <span class="text-gray-300">Sağ tık → Özellikler → Güvenlik sekmesine geçiş yap</span></p>
-                                    </a>
+                    <!-- Tab Navigation -->
+                    <div class="flex flex-wrap gap-2 mb-3 border-b border-gray-700 pb-3">
+                        <button onclick="showFolderTab('izin')" id="folder-tab-izin" class="av-tab av-tab-active px-3 py-1.5 rounded-lg text-sm font-medium transition-all">
+                            ⚙️ Yöntem 1: İzin Değiştir
+                        </button>
+                        <button onclick="showFolderTab('tasi')" id="folder-tab-tasi" class="av-tab px-3 py-1.5 rounded-lg text-sm font-medium transition-all">
+                            📂 Yöntem 2: Farklı Konuma Taşı <span class="text-green-400 text-xs ml-1">Önerilen</span>
+                        </button>
+                        <button onclick="showFolderTab('sahiplik')" id="folder-tab-sahiplik" class="av-tab px-3 py-1.5 rounded-lg text-sm font-medium transition-all">
+                            👤 Yöntem 3: Sahipliği Al
+                        </button>
+                    </div>
+
+                    <div>
+                        <!-- Yöntem 1: İzin Değiştir -->
+                        <div id="folder-content-izin" class="folder-content">
+                            <div class="problem-card p-3">
+                                <p class="text-gray-300 text-sm mb-3">Klasöre tam yetki verin.</p>
+
+                                <!-- 2x2 Grid -->
+                                <div class="grid grid-cols-2 gap-2">
+                                    <div onclick="openLightbox('images/guide/folder-step-1.webp')" class="fstep-card">
+                                        <div class="fstep-badge">1</div>
+                                        <div class="fstep-img-wrap"><img src="images/guide/folder-step-1.webp" alt="Adım 1"></div>
+                                        <p class="fstep-caption">Sağ tık → <strong>Özellikler</strong> → <strong>Güvenlik</strong></p>
+                                        <div class="fstep-overlay">🔍</div>
+                                    </div>
+                                    <div onclick="openLightbox('images/guide/folder-step-2.webp')" class="fstep-card">
+                                        <div class="fstep-badge">2</div>
+                                        <div class="fstep-img-wrap"><img src="images/guide/folder-step-2.webp" alt="Adım 2"></div>
+                                        <p class="fstep-caption"><strong>Düzenle</strong> butonuna tıkla</p>
+                                        <div class="fstep-overlay">🔍</div>
+                                    </div>
+                                    <div onclick="openLightbox('images/guide/folder-step-3.webp')" class="fstep-card">
+                                        <div class="fstep-badge">3</div>
+                                        <div class="fstep-img-wrap"><img src="images/guide/folder-step-3.webp" alt="Adım 3"></div>
+                                        <p class="fstep-caption">Listeden <strong>Users</strong> seçeneğini seç</p>
+                                        <div class="fstep-overlay">🔍</div>
+                                    </div>
+                                    <div onclick="openLightbox('images/guide/folder-step-4.webp')" class="fstep-card">
+                                        <div class="fstep-badge">4</div>
+                                        <div class="fstep-img-wrap"><img src="images/guide/folder-step-4.webp" alt="Adım 4"></div>
+                                        <p class="fstep-caption"><strong>Tam denetim</strong> → <span class="text-green-400">İzin Ver</span> → <strong>Uygula</strong></p>
+                                        <div class="fstep-overlay">🔍</div>
+                                    </div>
                                 </div>
-                                <div class="text-center">
-                                    <a href="images/guide/folder-step-2.webp" target="_blank" class="block bg-gray-800/50 border border-gray-600 hover:border-pink-500 rounded-lg p-3 transition-all cursor-zoom-in">
-                                        <img src="images/guide/folder-step-2.webp" alt="Adım 2" class="w-full rounded mb-2">
-                                        <p><span class="text-pink-400 font-medium">2.</span> <span class="text-gray-300">Düzenle seçeneğine tıkla</span></p>
-                                    </a>
-                                </div>
-                                <div class="text-center">
-                                    <a href="images/guide/folder-step-3.webp" target="_blank" class="block bg-gray-800/50 border border-gray-600 hover:border-pink-500 rounded-lg p-3 transition-all cursor-zoom-in">
-                                        <img src="images/guide/folder-step-3.webp" alt="Adım 3" class="w-full rounded mb-2">
-                                        <p><span class="text-pink-400 font-medium">3.</span> <span class="text-gray-300">Grup ya da kullanıcı adları kısmından Users seçeneğini seç</span></p>
-                                    </a>
-                                </div>
-                                <div class="text-center">
-                                    <a href="images/guide/folder-step-4.webp" target="_blank" class="block bg-gray-800/50 border border-gray-600 hover:border-pink-500 rounded-lg p-3 transition-all cursor-zoom-in">
-                                        <img src="images/guide/folder-step-4.webp" alt="Adım 4" class="w-full rounded mb-2">
-                                        <p><span class="text-pink-400 font-medium">4.</span> <span class="text-gray-300">Tam denetim → İzin Ver → Uygula</span></p>
-                                    </a>
-                                </div>
+                                <p class="text-gray-500 text-xs mt-2 text-center">💡 Görsele tıklayarak büyütebilirsiniz</p>
                             </div>
-                            <p class="text-gray-500 text-xs mt-3 text-center">💡 Görsele tıklayarak büyütebilirsiniz</p>
                         </div>
-                        
-                        <!-- Yöntem 2: Oyunu Farklı Konuma Taşı -->
-                        <div class="problem-card p-3">
-                            <h4 class="font-medium text-pink-300 mb-2 flex items-center gap-2">
-                                <span>📂</span> Yöntem 2: Oyunu Farklı Konuma Taşı
-                            </h4>
-                            <p class="text-gray-300 text-sm mb-2">En güvenli ve önerilen yöntem.</p>
-                            <ul class="text-gray-300 text-sm space-y-1 list-disc list-inside">
-                                <li>Oyunu <code>D:\Oyunlar</code> gibi bir klasöre kurun</li>
-                                <li>Steam: Kütüphane → Oyun → Özellikler → Yerel Dosyalar → Taşı</li>
-                                <li>Epic: Ayarlar → Kurulum konumunu değiştir</li>
-                                <li>Rockstar: Oyunu kaldırıp farklı konuma yeniden kurun</li>
-                            </ul>
-                            <p class="text-green-400 text-sm mt-2">✅ Bu yöntemle izin sorunları tamamen ortadan kalkar</p>
+
+                        <!-- Yöntem 2: Farklı Konuma Taşı -->
+                        <div id="folder-content-tasi" class="folder-content hidden">
+                            <div class="problem-card p-3">
+                                <ul class="text-gray-300 text-sm space-y-1.5 list-disc list-inside">
+                                    <li>Oyunu <code>D:\Oyunlar</code> gibi bir klasöre kurun</li>
+                                    <li>Steam: Kütüphane → Oyun → Özellikler → Yerel Dosyalar → Taşı</li>
+                                    <li>Epic: Ayarlar → Kurulum konumunu değiştir</li>
+                                    <li>Rockstar: Oyunu kaldırıp farklı konuma yeniden kurun</li>
+                                </ul>
+                                <p class="text-green-400 text-sm mt-3">✅ Bu yöntemle izin sorunları tamamen ortadan kalkar</p>
+                            </div>
                         </div>
-                        
+
                         <!-- Yöntem 3: Sahipliği Al -->
-                        <div class="problem-card p-3">
-                            <h4 class="font-medium text-pink-300 mb-2 flex items-center gap-2">
-                                <span>👤</span> Yöntem 3: Klasör Sahipliğini Al
-                            </h4>
-                            <p class="text-gray-300 text-sm mb-2">İzin değiştirme işe yaramazsa sahipliği alın.</p>
-                            <ul class="text-gray-300 text-sm space-y-1 list-disc list-inside">
-                                <li>Oyun klasörüne sağ tık → Özellikler</li>
-                                <li>Güvenlik → Gelişmiş</li>
-                                <li>Sahip: yanındaki "Değiştir" bağlantısı</li>
-                                <li>Kullanıcı adınızı yazın → Adları Denetle → Tamam</li>
-                                <li>"Alt kapsayıcılar ve nesneler üzerinde sahibi değiştir" işaretleyin</li>
-                                <li>Uygula → Tamam</li>
-                            </ul>
+                        <div id="folder-content-sahiplik" class="folder-content hidden">
+                            <div class="problem-card p-3">
+                                <p class="text-gray-400 text-sm mb-2">İzin değiştirme işe yaramazsa sahipliği alın.</p>
+                                <ul class="text-gray-300 text-sm space-y-1.5 list-disc list-inside">
+                                    <li>Oyun klasörüne sağ tık → Özellikler → Güvenlik → Gelişmiş</li>
+                                    <li>Sahip: yanındaki <span class="text-white font-medium">Değiştir</span> bağlantısına tıklayın</li>
+                                    <li>Kullanıcı adınızı yazın → Adları Denetle → Tamam</li>
+                                    <li>"Alt kapsayıcılar ve nesneler üzerinde sahibi değiştir" işaretleyin</li>
+                                    <li>Uygula → Tamam</li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
-                    
-                    <div class="mt-4 p-3 bg-gradient-to-r from-pink-900/30 to-purple-900/30 border border-pink-500/30 rounded-lg">
-                        <p class="text-pink-400 text-sm font-medium mb-1">💡 İpucu:</p>
-                        <p class="text-gray-300 text-sm">
-                            Oyunlarınızı her zaman <code>C:\Program Files</code> dışında bir konuma kurun. Örneğin <code>D:\Games</code> veya <code>D:\Oyunlar</code> klasörü oluşturup oyunları oraya kurarsanız hiçbir izin sorunu yaşamazsınız.
-                        </p>
+
+                    <div class="mt-3 p-3 bg-gradient-to-r from-pink-900/30 to-purple-900/30 border border-pink-500/30 rounded-lg">
+                        <p class="text-gray-300 text-sm">💡 Oyunlarınızı her zaman <code>C:\Program Files</code> dışına kurun — <code>D:\Oyunlar</code> gibi bir klasör oluşturup oraya kurarsanız hiç izin sorunu yaşamazsınız.</p>
                     </div>
                 </div>
 
@@ -722,6 +728,14 @@
             document.getElementById('linux-content-' + tabName).classList.remove('hidden');
             document.getElementById('linux-tab-' + tabName).classList.add('av-tab-active');
         }
+
+        function showFolderTab(tabName) {
+            document.querySelectorAll('.folder-content').forEach(el => el.classList.add('hidden'));
+            document.querySelectorAll('#klasor-izinleri .av-tab').forEach(el => el.classList.remove('av-tab-active'));
+            document.getElementById('folder-content-' + tabName).classList.remove('hidden');
+            document.getElementById('folder-tab-' + tabName).classList.add('av-tab-active');
+        }
+
 
         document.addEventListener('DOMContentLoaded', function() {
             const solutionItems = Array.from(document.querySelectorAll('.solution-item'));
@@ -844,6 +858,27 @@
             window.addEventListener('resize', recalcOpenHeights);
             updateVisibleInfo();
         });
+    </script>
+
+    <!-- Lightbox -->
+    <div id="lightbox" onclick="closeLightbox()" class="lightbox-overlay">
+        <button onclick="closeLightbox()" class="lightbox-close">✕</button>
+        <img id="lightbox-img" src="" alt="" onclick="event.stopPropagation()">
+    </div>
+
+    <script>
+        function openLightbox(src) {
+            const lb = document.getElementById('lightbox');
+            const img = document.getElementById('lightbox-img');
+            img.src = src;
+            lb.classList.add('lightbox-visible');
+            document.body.style.overflow = 'hidden';
+        }
+        function closeLightbox() {
+            document.getElementById('lightbox').classList.remove('lightbox-visible');
+            document.body.style.overflow = '';
+        }
+        document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLightbox(); });
     </script>
 </body>
 </html>
