@@ -12,3 +12,4 @@
 - [Grand Theft Auto: Vice City Nextgen Edition Türkçe Yama](https://forum.donanimhaber.com/grand-theft-auto-vice-city-nextgen-edition-turkce-yama--160549618) Platformlar : PC
 - [Bully - 2025 Türkçe Yama](https://forum.donanimhaber.com/bully-2025-turkce-yama-pc-ps2--162071840) Platformlar : PC & PS2
 - [L.A Noire - 2026 Türkçe Yama](https://forum.donanimhaber.com/l-a-noire-2026-turkce-yama--162770330) Platformlar : PC
+- [Prince of Persia Trilogy - 2026 Türkçe Yama (Beta)](https://forum.donanimhaber.com/prince-of-persia-trilogy-turkce-yama--164054235) Platformlar : PC

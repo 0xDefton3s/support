@@ -41,7 +41,7 @@
                 <!-- Subtitle -->
                 <p class="hero-subtitle text-base md:text-lg text-[#b8a3b8] mb-8 max-w-2xl mx-auto leading-relaxed">
                     Türkçe oyun yamalarınız için kapsamlı destek ve hata çözüm rehberleri. 
-                    <span class="text-pink-400"><span id="game-count-text">14</span> Türkçe Çeviri Projesi</span> için profesyonel destek.
+                    <span class="text-pink-400"><span id="game-count-text">15</span> Türkçe Çeviri Projesi</span> için profesyonel destek.
                 </p>
                 
                 <!-- CTA Buttons -->
@@ -71,7 +71,7 @@
                 <!-- Stats -->
                 <div class="hero-stats grid grid-cols-3 gap-4 max-w-lg mx-auto">
                     <div class="stat-item">
-                        <span class="stat-number" id="game-count">14</span>
+                        <span class="stat-number" id="game-count">15</span>
                         <span class="stat-label">Çeviri Projesi</span>
                     </div>
                     <div class="stat-item">
@@ -231,13 +231,26 @@
             <div class="games-toolbar max-w-3xl mx-auto mb-5">
                 <label for="game-search" class="games-toolbar-label">Oyun Ara</label>
                 <input id="game-search" type="search" class="game-search-input" placeholder="Örn: gta, red dead, bully..." autocomplete="off">
-                <p id="visible-games-info" class="games-visible-info">14 oyun listeleniyor</p>
+                <p id="visible-games-info" class="games-visible-info">15 oyun listeleniyor</p>
             </div>
             
             <!-- Year Filter (Dinamik) -->
             <div class="flex flex-wrap justify-center gap-2 mb-6" id="year-filter"></div>
             
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4" id="games-grid">
+                <!-- Prince of Persia Trilogy -->
+                <a href="oyunlar/prince-of-persia-trilogy.html" class="game-card" data-year="2026" data-keywords="sands of time warrior within the two thrones pop">
+                    <img src="images/prince-of-persia-trilogy.webp" alt="Prince of Persia Trilogy" loading="lazy" decoding="async" class="game-card-cover">
+                    <span class="absolute top-3 right-3 badge-beta rounded text-xs font-bold z-10">BETA</span>
+                    <div class="game-card-content">
+                        <h3 class="font-semibold text-white">Prince of Persia Trilogy</h3>
+                        <div class="platform-badges-bottom">
+                            <span class="px-2 py-0.5 platform-year rounded-full text-xs">2026</span>
+                            <span class="px-2 py-0.5 platform-pc rounded-full text-xs">PC</span>
+                        </div>
+                    </div>
+                </a>
+
                 <!-- L.A. Noire -->
                 <a href="oyunlar/la-noire.html" class="game-card" data-year="2026">
                     <img src="images/la-noire.webp" alt="L.A. Noire" loading="lazy" decoding="async" class="game-card-cover">
@@ -480,8 +493,9 @@
 
                 gameCards.forEach(card => {
                     const title = card.querySelector('h3')?.textContent?.toLowerCase() || '';
+                    const keywords = (card.dataset.keywords || '').toLowerCase();
                     const matchesYear = selectedYear === 'all' || card.dataset.year === selectedYear;
-                    const matchesSearch = query === '' || title.includes(query);
+                    const matchesSearch = query === '' || title.includes(query) || keywords.includes(query);
                     const showCard = matchesYear && matchesSearch;
 
                     card.style.display = showCard ? '' : 'none';
