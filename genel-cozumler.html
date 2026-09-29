@@ -359,55 +359,175 @@
                 </div>
 
                 <!-- Visual C++ -->
-                <div id="vcredist" class="solution-card solution-item p-4 scroll-mt-20">
-                    <h3 class="font-semibold flex items-center gap-2 mb-3 text-pink-400">
-                        <span>⚙️</span> Visual C++ Kurulumu
-                    </h3>
-                    <p class="text-[#b8a3b8] text-sm mb-3">Eksik DLL hataları genellikle bu paketlerin eksikliğinden kaynaklanır.</p>
+                <div id="vcredist" class="solution-card solution-item p-4 md:p-5 scroll-mt-20 md:col-span-2">
+                    <div class="flex items-center justify-between flex-wrap gap-2 mb-3">
+                        <h3 class="font-semibold flex items-center gap-2 text-pink-400 text-lg">
+                            <span>⚙️</span> Visual C++ Kurulumu
+                        </h3>
+                        <span class="text-xs px-2.5 py-1 rounded-full bg-pink-500/10 text-pink-300 border border-pink-500/20">
+                            En Sık Karşılaşılan Çözüm
+                        </span>
+                    </div>
+                    <p class="text-[#b8a3b8] text-sm mb-4">
+                        Eksik DLL hataları (<code>MSVCP140.dll</code>, <code>VCRUNTIME140.dll</code>, <code>MSVCR100.dll</code> vb.) ve <code>0xc000007b</code> uygulama başlatma hataları sistemde eksik veya hasarlı Visual C++ kütüphanelerinden kaynaklanır.
+                    </p>
                     
-                    <div class="space-y-2 text-sm">
-                        <div class="info-box success p-2">
-                            <h4 class="font-medium text-green-400 mb-1">✅ Önerilen: All-in-One</h4>
-                            <p class="text-gray-300 mb-2">2005-2022 tüm sürümleri tek seferde kurar.</p>
-                            <a href="https://www.techpowerup.com/download/visual-c-redistributable-runtime-package-all-in-one/" 
-                               target="_blank" 
-                               class="inline-block bg-green-600 hover:bg-green-700 px-2 py-1 rounded text-sm font-medium transition-colors">
-                                📦 İndir
-                            </a>
+                    <div class="grid grid-cols-1 lg:grid-cols-3 gap-4 text-sm">
+                        <!-- All-in-One Box (2 Cols on lg) -->
+                        <div class="info-box success p-4 lg:col-span-2 flex flex-col justify-between">
+                            <div>
+                                <div class="flex items-center justify-between flex-wrap gap-2 mb-2">
+                                    <h4 class="font-semibold text-green-400 text-base flex items-center gap-1.5">
+                                        <span>✅</span> Önerilen: All-in-One Paketi
+                                    </h4>
+                                    <a href="https://www.techpowerup.com/download/visual-c-redistributable-runtime-package-all-in-one/" 
+                                       target="_blank" 
+                                       class="inline-flex items-center gap-1.5 bg-green-600 hover:bg-green-700 text-white px-3.5 py-1.5 rounded-lg text-xs font-semibold transition-colors shadow">
+                                        <span>📦</span> TechPowerUp'tan İndir
+                                    </a>
+                                </div>
+                                <p class="text-gray-300 text-xs mb-3">
+                                    2005'ten 2022'ye kadar çıkmış tüm Visual C++ sürümlerini (hem 32-bit x86 hem 64-bit x64) tek bir işlemle arka planda otomatik kurar.
+                                </p>
+
+                                <!-- Adım Adım Kurulum -->
+                                <div class="bg-gray-900/70 rounded-lg p-3.5 border border-green-500/25 text-xs space-y-2 mb-3">
+                                    <p class="text-green-300 font-semibold flex items-center gap-1.5">
+                                        <span>📋</span> Kurulum Adımları (Mutlaka Uygulayın):
+                                    </p>
+                                    <ol class="text-gray-300 space-y-2 list-decimal list-inside ml-0.5">
+                                        <li>İndirdiğiniz <strong class="text-white">.zip</strong> arşivine sağ tıklayın ve <strong>"Tümünü Ayıkla"</strong> diyerek bir klasöre çıkartın.</li>
+                                        <li>Çıkarttığınız klasörün içinde bulunan <code class="text-green-400 font-bold bg-green-950/60 border border-green-500/30 px-1.5 py-0.5 rounded">install_all.bat</code> dosyasına <strong class="text-white">sağ tıklayın</strong>.</li>
+                                        <li>Menüden <span class="text-amber-300 font-bold underline underline-offset-2">"Yönetici olarak çalıştır"</span> seçeneğine tıklayın.</li>
+                                        <li>Siyah bir komut istemi (CMD) penceresi açılacak ve tüm Visual C++ paketleri sırayla otomatik kurulacaktır. Kurulum tamamlandığında pencere kendiliğinden kapanır.</li>
+                                    </ol>
+                                </div>
+                            </div>
+
+                            <div class="p-2.5 rounded-lg bg-amber-500/10 border border-amber-500/25 text-xs text-amber-200/90 flex items-start gap-2">
+                                <span class="text-sm shrink-0">⚠️</span>
+                                <div>
+                                    <strong class="text-amber-300">Kritik Uyarı:</strong> <code>install_all.bat</code> dosyasını doğrudan ZIP arşivinin içindeyken çalıştırmayın (önce klasöre çıkartın) ve mutlaka <strong>yönetici olarak çalıştırın</strong>. Normal tıklandığında Windows izin vermediği için paketler yüklenemez.
+                                </div>
+                            </div>
                         </div>
-                        <div class="problem-card p-2">
-                            <h4 class="font-medium text-pink-300 mb-1">Microsoft'tan</h4>
-                            <ul class="text-gray-300 space-y-0.5">
-                                <li><a href="https://aka.ms/vs/17/release/vc_redist.x64.exe" class="text-pink-400 hover:underline" target="_blank">VC++ 2015-2022 (x64)</a></li>
-                                <li><a href="https://aka.ms/vs/17/release/vc_redist.x86.exe" class="text-pink-400 hover:underline" target="_blank">VC++ 2015-2022 (x86)</a></li>
-                            </ul>
+
+                        <!-- Microsoft Resmi & Bilgi (1 Col on lg) -->
+                        <div class="space-y-3 lg:col-span-1 flex flex-col">
+                            <div class="problem-card p-3.5 flex-1">
+                                <h4 class="font-medium text-pink-300 mb-2 flex items-center gap-1.5">
+                                    <span>🌐</span> Microsoft Resmi İndirme (Manuel)
+                                </h4>
+                                <p class="text-gray-400 text-xs mb-3">
+                                    Sadece en güncel 2015-2022 kütüphanesi eksikse resmi Microsoft sunucularından doğrudan indirebilirsiniz:
+                                </p>
+                                <div class="space-y-2 mb-3">
+                                    <a href="https://aka.ms/vs/17/release/vc_redist.x64.exe" class="flex items-center justify-between text-xs text-pink-300 hover:text-white bg-gray-800/70 hover:bg-gray-700/70 border border-gray-700/70 rounded-lg p-2 transition-colors" target="_blank">
+                                        <span>VC++ 2015-2022 (x64)</span>
+                                        <span class="text-pink-400 font-bold">⬇️ 64-Bit</span>
+                                    </a>
+                                    <a href="https://aka.ms/vs/17/release/vc_redist.x86.exe" class="flex items-center justify-between text-xs text-pink-300 hover:text-white bg-gray-800/70 hover:bg-gray-700/70 border border-gray-700/70 rounded-lg p-2 transition-colors" target="_blank">
+                                        <span>VC++ 2015-2022 (x86)</span>
+                                        <span class="text-pink-400 font-bold">⬇️ 32-Bit</span>
+                                    </a>
+                                </div>
+                                <p class="text-gray-400 text-xs leading-relaxed border-t border-gray-700/50 pt-2.5">
+                                    💡 <strong>Önemli İpucu:</strong> 64-bit Windows kullansanız bile 32-bit oyunlar x86 paketine ihtiyaç duyar. Bu nedenle hem <strong>x86</strong> hem <strong>x64</strong> kurulmalıdır.
+                                </p>
+                            </div>
+
+                            <div class="problem-card p-3">
+                                <h4 class="font-medium text-pink-300 mb-1.5 text-xs">🔍 İlgili Hata Kodları</h4>
+                                <div class="flex flex-wrap gap-1.5">
+                                    <code class="text-xs">msvcp140.dll</code>
+                                    <code class="text-xs">vcruntime140.dll</code>
+                                    <code class="text-xs">msvcr100.dll</code>
+                                    <code class="text-xs">0xc000007b</code>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
 
                 <!-- DirectX -->
-                <div id="directx" class="solution-card solution-item p-4 scroll-mt-20">
-                    <h3 class="font-semibold flex items-center gap-2 mb-3 text-pink-400">
-                        <span>🎮</span> DirectX Kurulumu
-                    </h3>
-                    <p class="text-[#b8a3b8] text-sm mb-3">d3dx9_xx.dll veya benzeri hatalar DirectX sorunlarına işaret eder.</p>
+                <div id="directx" class="solution-card solution-item p-4 md:p-5 scroll-mt-20 md:col-span-2">
+                    <div class="flex items-center justify-between flex-wrap gap-2 mb-3">
+                        <h3 class="font-semibold flex items-center gap-2 text-pink-400 text-lg">
+                            <span>🎮</span> DirectX Kurulumu (DirectX End-User Runtimes)
+                        </h3>
+                        <span class="text-xs px-2.5 py-1 rounded-full bg-blue-500/10 text-blue-300 border border-blue-500/20">
+                            Eski & Klasik Oyunlar İçin Şart
+                        </span>
+                    </div>
+                    <p class="text-[#b8a3b8] text-sm mb-4">
+                        Windows 10 ve 11 işletim sistemleri varsayılan olarak DirectX 12 ile birlikte gelir ancak eski oyunların ihtiyaç duyduğu <strong>DirectX 9, 10 ve 11 (D3DX)</strong> kütüphanelerini barındırmaz. <code>d3dx9_xx.dll</code> veya <code>xinput1_3.dll</code> gibi hatalar bu sebeple ortaya çıkar.
+                    </p>
                     
-                    <div class="space-y-2 text-sm">
-                        <div class="problem-card p-2">
-                            <h4 class="font-medium text-pink-300 mb-1">Kurulum</h4>
-                            <p class="text-gray-300 mb-1">
-                                <a href="https://www.microsoft.com/en-us/download/details.aspx?id=35" class="text-pink-400 hover:underline" target="_blank">DirectX Web Installer</a> indirin ve kurun.
-                            </p>
-                        </div>
-                        <div class="problem-card p-2">
-                            <h4 class="font-medium text-pink-300 mb-1">Sık Hatalar</h4>
-                            <div class="flex flex-wrap gap-1">
-                                <code class="text-sm">d3dx9_43.dll</code>
-                                <code class="text-sm">XINPUT1_3.dll</code>
-                                <code class="text-sm">d3dcompiler_43.dll</code>
+                    <div class="grid grid-cols-1 lg:grid-cols-3 gap-4 text-sm">
+                        <!-- DirectX Kurulum Adımları (2 Cols on lg) -->
+                        <div class="problem-card p-4 lg:col-span-2 flex flex-col justify-between">
+                            <div>
+                                <div class="flex items-center justify-between flex-wrap gap-2 mb-2">
+                                    <h4 class="font-semibold text-pink-300 text-base flex items-center gap-1.5">
+                                        <span>📥</span> DirectX End-User Runtime Web Installer
+                                    </h4>
+                                    <a href="https://www.microsoft.com/en-us/download/details.aspx?id=35" 
+                                       target="_blank" 
+                                       class="inline-flex items-center gap-1.5 bg-blue-600 hover:bg-blue-700 text-white px-3.5 py-1.5 rounded-lg text-xs font-semibold transition-colors shadow">
+                                        <span>🌐</span> Microsoft'tan İndir
+                                    </a>
+                                </div>
+                                <p class="text-gray-300 text-xs mb-3">
+                                    Microsoft'un resmi aracıdır; sisteminizi tarayarak eksik olan tüm DirectX 9/10/11 bileşenlerini otomatik olarak indirip kurar.
+                                </p>
+
+                                <div class="bg-gray-900/70 rounded-lg p-3.5 border border-pink-500/25 text-xs space-y-2 mb-3">
+                                    <p class="text-pink-300 font-semibold flex items-center gap-1.5">
+                                        <span>📋</span> Kurulum Adımları:
+                                    </p>
+                                    <ol class="text-gray-300 space-y-2 list-decimal list-inside ml-0.5">
+                                        <li>İndirdiğiniz <code class="text-pink-300 font-semibold">dxwebsetup.exe</code> dosyasını açın ve lisans sözleşmesini kabul edin (<em>"I accept the agreement"</em>).</li>
+                                        <li>
+                                            <span class="text-amber-300 font-bold">⚠️ DİKKAT:</span> Bir sonraki ekranda karşınıza çıkan <strong class="text-white">"Install the Bing Bar" (Bing Araç Çubuğunu Yükle)</strong> kutucuğundaki <span class="text-red-400 font-bold">işareti mutlaka kaldırın</span>.
+                                        </li>
+                                        <li><strong>"Next" (İleri)</strong> butonuna tıklayarak eksik dosyaların taranmasını ve indirilmesini bekleyin.</li>
+                                        <li>Kurulum tamamlandıktan sonra bilgisayarınızı yeniden başlatmanız önerilir.</li>
+                                    </ol>
+                                </div>
+                            </div>
+
+                            <div class="p-2.5 rounded-lg bg-blue-500/10 border border-blue-500/25 text-xs text-blue-200/90 flex items-start gap-2">
+                                <span class="text-sm shrink-0">ℹ️</span>
+                                <div>
+                                    Bu kurulum mevcut DirectX 12 sürümünüzü bozmaz veya düşürmez; yalnızca eski oyunların aradığı yan kütüphaneleri (DirectX 9.0c bileşenlerini) sisteme dahil eder.
+                                </div>
                             </div>
                         </div>
-                        <p class="text-pink-300 text-sm">ℹ️ Win 10/11'de DirectX 9 bileşenlerini ayrıca kurmanız gerekir.</p>
+
+                        <!-- Sık Hatalar & DLL Listesi (1 Col on lg) -->
+                        <div class="space-y-3 lg:col-span-1 flex flex-col">
+                            <div class="problem-card p-3.5 flex-1">
+                                <h4 class="font-medium text-pink-300 mb-2 flex items-center gap-1.5">
+                                    <span>🧩</span> Sık Karşılaşılan DirectX Hataları
+                                </h4>
+                                <p class="text-gray-400 text-xs mb-3">
+                                    Aşağıdaki dosyalardan herhangi birinin eksik olduğuna dair hata alıyorsanız DirectX Web Installer bu sorunu çözer:
+                                </p>
+                                <div class="flex flex-wrap gap-1.5 mb-3">
+                                    <code class="text-xs">d3dx9_43.dll</code>
+                                    <code class="text-xs">d3dx9_31.dll</code>
+                                    <code class="text-xs">d3dx9_25.dll</code>
+                                    <code class="text-xs">xinput1_3.dll</code>
+                                    <code class="text-xs">d3dcompiler_43.dll</code>
+                                    <code class="text-xs">d3dx10_43.dll</code>
+                                    <code class="text-xs">d3dx11_43.dll</code>
+                                    <code class="text-xs">X3DAudio1_7.dll</code>
+                                </div>
+                                <p class="text-gray-400 text-xs border-t border-gray-700/50 pt-2.5">
+                                    💡 İnternetten tek tek DLL indirmek yerine daima orijinal Microsoft DirectX paketini kurun.
+                                </p>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <!-- Linux/Wine -->
