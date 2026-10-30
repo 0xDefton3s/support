@@ -2153,6 +2153,15 @@ a, button, .game-card, .quick-nav-btn, .solution-card, .stat-item {
     --theme-gradient: linear-gradient(135deg, #f59e0b 0%, #b45309 50%, #06b6d4 100%);
 }
 
+/* Prince of Persia: The Forgotten Sands Theme - Kum Fırtınası/Mistik Mavi */
+[data-game-theme="prince-of-persia-forgotten-sands"] {
+    --theme-primary: #b45309;
+    --theme-secondary: #92400e;
+    --theme-accent: #38bdf8;
+    --theme-glow: rgba(180, 83, 9, 0.45);
+    --theme-gradient: linear-gradient(135deg, #d97706 0%, #92400e 50%, #38bdf8 100%);
+}
+
 /* Bully Theme - Mavi/Sarı */
 [data-game-theme="bully"] {
     --theme-primary: #1e40af;
