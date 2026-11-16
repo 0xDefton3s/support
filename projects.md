@@ -14,3 +14,4 @@
 - [L.A Noire - 2026 Türkçe Yama](https://forum.donanimhaber.com/l-a-noire-2026-turkce-yama--162770330) Platformlar : PC
 - [Prince of Persia Trilogy - 2026 Türkçe Yama](https://forum.donanimhaber.com/prince-of-persia-trilogy-turkce-yama--164054235) Platformlar : PC
 - [Prince of Persia: The Forgotten Sands - 2026 Türkçe Yama](https://forum.donanimhaber.com/prince-of-persia-the-forgotten-sands-2026-turkce-yama--164282278) Platformlar : PC
+- [Prince of Persia (2008) - 2026 Türkçe Yama](https://forum.donanimhaber.com/prince-of-persia-2008-2026-turkce-yama--164359902) Platformlar : PC

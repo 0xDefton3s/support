@@ -2162,6 +2162,17 @@ a, button, .game-card, .quick-nav-btn, .solution-card, .stat-item {
     --theme-gradient: linear-gradient(135deg, #d97706 0%, #92400e 50%, #38bdf8 100%);
 }
 
+/* Prince of Persia (2008) Theme - Kızıl Eşarp / Elika Mavisi */
+[data-game-theme="prince-of-persia-2008"] {
+    --theme-primary: #ea580c;
+    --theme-secondary: #c2410c;
+    --theme-accent: #38bdf8;
+    --theme-primary-rgb: 234, 88, 12;
+    --theme-accent-rgb: 56, 189, 248;
+    --theme-glow: rgba(234, 88, 12, 0.45);
+    --theme-gradient: linear-gradient(135deg, #f97316 0%, #dc2626 50%, #38bdf8 100%);
+}
+
 /* Bully Theme - Mavi/Sarı */
 [data-game-theme="bully"] {
     --theme-primary: #1e40af;
